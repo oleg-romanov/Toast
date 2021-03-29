@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddEventController" customModule="Toast" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="dTH-N2-3Sc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AddEventView" customModule="Toast" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="f3h-8u-BMP">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2a8-LO-Guo">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="393"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Имя" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sGp-kK-eic">
+                                    <rect key="frame" x="16" y="35" width="382" height="50"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="EIE-rR-9Yw"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ДАТА РОЖДЕНИЯ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaM-mP-n3l">
+                                    <rect key="frame" x="16" y="110" width="382" height="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <color key="textColor" name="Lightgray"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="0qP-R3-5FI">
+                                    <rect key="frame" x="0.0" y="137" width="414" height="216"/>
+                                </datePicker>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="sGp-kK-eic" firstAttribute="top" secondItem="2a8-LO-Guo" secondAttribute="top" constant="35" id="2y4-vI-x2O"/>
+                                <constraint firstItem="0qP-R3-5FI" firstAttribute="top" secondItem="MaM-mP-n3l" secondAttribute="bottom" constant="10" id="33P-la-r0P"/>
+                                <constraint firstItem="sGp-kK-eic" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" constant="16" id="6hc-JR-pzA"/>
+                                <constraint firstAttribute="bottom" secondItem="0qP-R3-5FI" secondAttribute="bottom" constant="40" id="7ij-rv-yXH"/>
+                                <constraint firstItem="0qP-R3-5FI" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" id="OvF-ai-YCl"/>
+                                <constraint firstAttribute="trailing" secondItem="sGp-kK-eic" secondAttribute="trailing" constant="16" id="QOY-yP-Ydr"/>
+                                <constraint firstItem="MaM-mP-n3l" firstAttribute="top" secondItem="sGp-kK-eic" secondAttribute="bottom" constant="25" id="dkL-zU-ftB"/>
+                                <constraint firstItem="MaM-mP-n3l" firstAttribute="leading" secondItem="sGp-kK-eic" secondAttribute="leading" id="lft-PT-Q4r"/>
+                                <constraint firstItem="MaM-mP-n3l" firstAttribute="trailing" secondItem="sGp-kK-eic" secondAttribute="trailing" id="pYU-JP-jM0"/>
+                                <constraint firstAttribute="trailing" secondItem="0qP-R3-5FI" secondAttribute="trailing" id="x95-qV-IA6"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2a8-LO-Guo" firstAttribute="top" secondItem="f3h-8u-BMP" secondAttribute="top" id="akl-4c-YQ5"/>
+                        <constraint firstAttribute="bottom" secondItem="2a8-LO-Guo" secondAttribute="bottom" id="fi0-0M-dpJ"/>
+                        <constraint firstAttribute="trailing" secondItem="2a8-LO-Guo" secondAttribute="trailing" id="kTA-Zk-Lcy"/>
+                        <constraint firstItem="2a8-LO-Guo" firstAttribute="leading" secondItem="f3h-8u-BMP" secondAttribute="leading" id="kby-qf-ffS"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="f3h-8u-BMP" secondAttribute="bottom" id="2qg-Ic-avl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="f3h-8u-BMP" secondAttribute="trailing" id="CcG-4L-8oj"/>
+                <constraint firstItem="2a8-LO-Guo" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="ay2-oZ-eO9"/>
+                <constraint firstItem="f3h-8u-BMP" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="m24-Tj-31i"/>
+                <constraint firstItem="f3h-8u-BMP" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="uLh-kv-ito"/>
+            </constraints>
+            <connections>
+                <outlet property="birthdayLabel" destination="MaM-mP-n3l" id="O1S-Po-QV7"/>
+                <outlet property="datePicker" destination="0qP-R3-5FI" id="zXu-Iz-zMK"/>
+                <outlet property="nameTextField" destination="sGp-kK-eic" id="ziA-z2-BQQ"/>
+                <outlet property="scrollView" destination="f3h-8u-BMP" id="Ncp-9N-K9E"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="Lightgray">
+            <color red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

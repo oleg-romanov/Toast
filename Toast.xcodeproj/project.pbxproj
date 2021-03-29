@@ -3,25 +3,108 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7FCB9303582C749F78B8DD18 /* Pods_Toast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF4081C7216542D140DB5F /* Pods_Toast.framework */; };
+		EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */; };
 		EA264C7825EF72320048FD41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA264C7725EF72320048FD41 /* AppDelegate.swift */; };
-		EA264C7C25EF72320048FD41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA264C7B25EF72320048FD41 /* ViewController.swift */; };
 		EA264C8125EF72340048FD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA264C8025EF72340048FD41 /* Assets.xcassets */; };
 		EA264C8425EF72340048FD41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA264C8225EF72340048FD41 /* LaunchScreen.storyboard */; };
+		EA3C11B12604FC7600874546 /* PasswordResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11B02604FC7600874546 /* PasswordResetController.swift */; };
+		EA3C11B62604FD1000874546 /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11B52604FD1000874546 /* EnterEmailView.swift */; };
+		EA3C11B92604FD2500874546 /* EnterEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3C11B82604FD2500874546 /* EnterEmailView.xib */; };
+		EA3C11BC26050CDB00874546 /* EnterEmailNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11BB26050CDB00874546 /* EnterEmailNextView.swift */; };
+		EA5AB58D25FB6A3B000A46EE /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB56D25FB6A3B000A46EE /* EventsModel.swift */; };
+		EA5AB58E25FB6A3B000A46EE /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB56E25FB6A3B000A46EE /* EventsController.swift */; };
+		EA5AB58F25FB6A3B000A46EE /* EventsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */; };
+		EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57125FB6A3B000A46EE /* EventsView.swift */; };
+		EA5AB59125FB6A3B000A46EE /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57325FB6A3B000A46EE /* EventCell.swift */; };
+		EA5AB59225FB6A3B000A46EE /* DateSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57525FB6A3B000A46EE /* DateSectionHeader.swift */; };
+		EA5AB59325FB6A3B000A46EE /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57725FB6A3B000A46EE /* StartController.swift */; };
+		EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57C25FB6A3B000A46EE /* SignUpController.swift */; };
+		EA5AB59725FB6A3B000A46EE /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57E25FB6A3B000A46EE /* SignUpView.swift */; };
+		EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58125FB6A3B000A46EE /* AddEventController.swift */; };
+		EA5AB59A25FB6A3B000A46EE /* AddEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58325FB6A3B000A46EE /* AddEventView.swift */; };
+		EA5AB59B25FB6A3B000A46EE /* AddEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA5AB58425FB6A3B000A46EE /* AddEventView.xib */; };
+		EA5AB59C25FB6A3B000A46EE /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58625FB6A3B000A46EE /* OnboardingController.swift */; };
+		EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */; };
+		EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */; };
+		EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */; };
+		EAA0005925FB71E1007426C1 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005825FB71E1007426C1 /* SlideCell.swift */; };
+		EAA0006125FB727A007426C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005D25FB727A007426C1 /* Assets.swift */; };
+		EAA0006225FB727A007426C1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005E25FB727A007426C1 /* Text.swift */; };
+		EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */; };
+		EAA0006425FB727A007426C1 /* ButtonDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0006025FB727A007426C1 /* ButtonDefault.swift */; };
+		EAA0007325FB7652007426C1 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0007225FB7652007426C1 /* StartView.swift */; };
+		EAA0007625FB8669007426C1 /* ButtonSignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0007525FB8669007426C1 /* ButtonSignIn.swift */; };
+		EAA0007925FB8AAB007426C1 /* ButtonSignInWithEmail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0007825FB8AAB007426C1 /* ButtonSignInWithEmail.swift */; };
+		EAA0007E25FBB650007426C1 /* StyleUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0007D25FBB650007426C1 /* StyleUtils.swift */; };
+		EAA0FFEA25FB6E6D007426C1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = EAA0FFE625FB6E6D007426C1 /* Localizable.strings */; };
+		EAA0FFF125FB706A007426C1 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FFEE25FB706A007426C1 /* AuthModels.swift */; };
+		EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FFEF25FB706A007426C1 /* AuthService.swift */; };
+		EAA0FFF325FB706A007426C1 /* AuthServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */; };
+		EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABEAD492600BA93007F2020 /* SignInController.swift */; };
+		EABEAD4E2600E208007F2020 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABEAD4D2600E208007F2020 /* SignInView.swift */; };
+		EABEAD522603A0B3007F2020 /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABEAD512603A0B3007F2020 /* SignInView.xib */; };
 		EAD4653125EFA2F600B2D601 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAD4653025EFA2F600B2D601 /* README.md */; };
+		EADF79662603AA4200B56C95 /* MDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADF79642603AA4200B56C95 /* MDTextField.swift */; };
+		EADF79782603C68A00B56C95 /* MDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADF79772603C68A00B56C95 /* MDScrollView.swift */; };
+		EAEB82FF2604DCE000DCCCF9 /* ViewForInputAccesory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEB82FE2604DCE000DCCCF9 /* ViewForInputAccesory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		98A5B83985B07B3B73F27A8A /* Pods-Toast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.release.xcconfig"; path = "Target Support Files/Pods-Toast/Pods-Toast.release.xcconfig"; sourceTree = "<group>"; };
+		AAEF4081C7216542D140DB5F /* Pods_Toast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8466FCD1A2BB6D2C702416E /* Pods-Toast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.debug.xcconfig"; path = "Target Support Files/Pods-Toast/Pods-Toast.debug.xcconfig"; sourceTree = "<group>"; };
+		EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
 		EA264C7425EF72320048FD41 /* Toast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA264C7725EF72320048FD41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA264C7B25EF72320048FD41 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA264C8025EF72340048FD41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA264C8325EF72340048FD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA264C8525EF72340048FD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA3C11B02604FC7600874546 /* PasswordResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetController.swift; sourceTree = "<group>"; };
+		EA3C11B52604FD1000874546 /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
+		EA3C11B82604FD2500874546 /* EnterEmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterEmailView.xib; sourceTree = "<group>"; };
+		EA3C11BB26050CDB00874546 /* EnterEmailNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailNextView.swift; sourceTree = "<group>"; };
+		EA5AB56D25FB6A3B000A46EE /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		EA5AB56E25FB6A3B000A46EE /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
+		EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsDataSource.swift; sourceTree = "<group>"; };
+		EA5AB57125FB6A3B000A46EE /* EventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
+		EA5AB57325FB6A3B000A46EE /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		EA5AB57525FB6A3B000A46EE /* DateSectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateSectionHeader.swift; sourceTree = "<group>"; };
+		EA5AB57725FB6A3B000A46EE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		EA5AB57C25FB6A3B000A46EE /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		EA5AB57E25FB6A3B000A46EE /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		EA5AB58125FB6A3B000A46EE /* AddEventController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventController.swift; sourceTree = "<group>"; };
+		EA5AB58325FB6A3B000A46EE /* AddEventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventView.swift; sourceTree = "<group>"; };
+		EA5AB58425FB6A3B000A46EE /* AddEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventView.xib; sourceTree = "<group>"; };
+		EA5AB58625FB6A3B000A46EE /* OnboardingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
+		EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
+		EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesDataSource.swift; sourceTree = "<group>"; };
+		EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EAA0005825FB71E1007426C1 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideCell.swift; path = Toast/ViewControllers/OndoardingController/View/Cell/SlideCell.swift; sourceTree = SOURCE_ROOT; };
+		EAA0005D25FB727A007426C1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
+		EAA0005E25FB727A007426C1 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
+		EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
+		EAA0006025FB727A007426C1 /* ButtonDefault.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonDefault.swift; sourceTree = "<group>"; };
+		EAA0007225FB7652007426C1 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		EAA0007525FB8669007426C1 /* ButtonSignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSignIn.swift; sourceTree = "<group>"; };
+		EAA0007825FB8AAB007426C1 /* ButtonSignInWithEmail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSignInWithEmail.swift; sourceTree = "<group>"; };
+		EAA0007D25FBB650007426C1 /* StyleUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleUtils.swift; sourceTree = "<group>"; };
+		EAA0FFE725FB6E6D007426C1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EAA0FFE925FB6E6D007426C1 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		EAA0FFEE25FB706A007426C1 /* AuthModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
+		EAA0FFEF25FB706A007426C1 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceApi.swift; sourceTree = "<group>"; };
+		EABEAD492600BA93007F2020 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
+		EABEAD4D2600E208007F2020 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		EABEAD512603A0B3007F2020 /* SignInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInView.xib; sourceTree = "<group>"; };
 		EAD4653025EFA2F600B2D601 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EADF79642603AA4200B56C95 /* MDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTextField.swift; sourceTree = "<group>"; };
+		EADF79772603C68A00B56C95 /* MDScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDScrollView.swift; sourceTree = "<group>"; };
+		EAEB82FE2604DCE000DCCCF9 /* ViewForInputAccesory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewForInputAccesory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,18 +112,58 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FCB9303582C749F78B8DD18 /* Pods_Toast.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AAF52BE224EC7C827DAA89BA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C8466FCD1A2BB6D2C702416E /* Pods-Toast.debug.xcconfig */,
+				98A5B83985B07B3B73F27A8A /* Pods-Toast.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B75984F06E4EBFA974B40E09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAEF4081C7216542D140DB5F /* Pods_Toast.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA1960E92600B71A00E289A1 /* SignInController */ = {
+			isa = PBXGroup;
+			children = (
+				EABEAD492600BA93007F2020 /* SignInController.swift */,
+				EABEAD4C2600E1F6007F2020 /* View */,
+			);
+			path = SignInController;
+			sourceTree = "<group>";
+		};
+		EA1A1171260E29AE003FB84D /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */,
+				EAA0006025FB727A007426C1 /* ButtonDefault.swift */,
+				EAA0007525FB8669007426C1 /* ButtonSignIn.swift */,
+				EAA0007825FB8AAB007426C1 /* ButtonSignInWithEmail.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		EA264C6B25EF72320048FD41 = {
 			isa = PBXGroup;
 			children = (
 				EAD4653025EFA2F600B2D601 /* README.md */,
 				EA264C7625EF72320048FD41 /* Toast */,
 				EA264C7525EF72320048FD41 /* Products */,
+				AAF52BE224EC7C827DAA89BA /* Pods */,
+				B75984F06E4EBFA974B40E09 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,8 +178,10 @@
 		EA264C7625EF72320048FD41 /* Toast */ = {
 			isa = PBXGroup;
 			children = (
+				EAA0005B25FB727A007426C1 /* Common */,
 				EA264C8C25EF72540048FD41 /* MainFiles */,
-				EA264C8F25EF728C0048FD41 /* ViewControllers */,
+				EA5AB55225FB65E4000A46EE /* Services */,
+				EAF6E7F826120A3800345E0C /* Modules */,
 				EA264C9125EF72AC0048FD41 /* Resources */,
 			);
 			path = Toast;
@@ -72,20 +197,221 @@
 			path = MainFiles;
 			sourceTree = "<group>";
 		};
-		EA264C8F25EF728C0048FD41 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				EA264C7B25EF72320048FD41 /* ViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		EA264C9125EF72AC0048FD41 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				EA264C8025EF72340048FD41 /* Assets.xcassets */,
+				EAA0FFE625FB6E6D007426C1 /* Localizable.strings */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		EA3C11AF2604FC4200874546 /* PasswordResetController */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C11B02604FC7600874546 /* PasswordResetController.swift */,
+				EA3C11B42604FCC500874546 /* View */,
+			);
+			path = PasswordResetController;
+			sourceTree = "<group>";
+		};
+		EA3C11B42604FCC500874546 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C11B52604FD1000874546 /* EnterEmailView.swift */,
+				EA3C11B82604FD2500874546 /* EnterEmailView.xib */,
+				EA3C11BB26050CDB00874546 /* EnterEmailNextView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA5AB55225FB65E4000A46EE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0FFEE25FB706A007426C1 /* AuthModels.swift */,
+				EAA0FFEF25FB706A007426C1 /* AuthService.swift */,
+				EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EA5AB56C25FB6A3B000A46EE /* EventsController */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB56D25FB6A3B000A46EE /* EventsModel.swift */,
+				EA5AB56E25FB6A3B000A46EE /* EventsController.swift */,
+				EA5AB56F25FB6A3B000A46EE /* View */,
+			);
+			path = EventsController;
+			sourceTree = "<group>";
+		};
+		EA5AB56F25FB6A3B000A46EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */,
+				EA5AB57125FB6A3B000A46EE /* EventsView.swift */,
+				EA5AB57225FB6A3B000A46EE /* Cell */,
+				EA5AB57425FB6A3B000A46EE /* DateSectionHeader */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA5AB57225FB6A3B000A46EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB57325FB6A3B000A46EE /* EventCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EA5AB57425FB6A3B000A46EE /* DateSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB57525FB6A3B000A46EE /* DateSectionHeader.swift */,
+			);
+			path = DateSectionHeader;
+			sourceTree = "<group>";
+		};
+		EA5AB57625FB6A3B000A46EE /* StartController */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB57725FB6A3B000A46EE /* StartController.swift */,
+				EA5AB57825FB6A3B000A46EE /* VIew */,
+			);
+			path = StartController;
+			sourceTree = "<group>";
+		};
+		EA5AB57825FB6A3B000A46EE /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0007225FB7652007426C1 /* StartView.swift */,
+			);
+			path = VIew;
+			sourceTree = "<group>";
+		};
+		EA5AB57B25FB6A3B000A46EE /* SignUpController */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB57C25FB6A3B000A46EE /* SignUpController.swift */,
+				EA5AB57D25FB6A3B000A46EE /* View */,
+			);
+			path = SignUpController;
+			sourceTree = "<group>";
+		};
+		EA5AB57D25FB6A3B000A46EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB57E25FB6A3B000A46EE /* SignUpView.swift */,
+				EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA5AB58025FB6A3B000A46EE /* AddEventController */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB58125FB6A3B000A46EE /* AddEventController.swift */,
+				EA5AB58225FB6A3B000A46EE /* View */,
+			);
+			path = AddEventController;
+			sourceTree = "<group>";
+		};
+		EA5AB58225FB6A3B000A46EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB58325FB6A3B000A46EE /* AddEventView.swift */,
+				EA5AB58425FB6A3B000A46EE /* AddEventView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA5AB58525FB6A3B000A46EE /* OndoardingController */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB58625FB6A3B000A46EE /* OnboardingController.swift */,
+				EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */,
+				EA5AB58825FB6A3B000A46EE /* View */,
+				EA5AB58925FB6A3B000A46EE /* Cell */,
+			);
+			path = OndoardingController;
+			sourceTree = "<group>";
+		};
+		EA5AB58825FB6A3B000A46EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */,
+				EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA5AB58925FB6A3B000A46EE /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0005825FB71E1007426C1 /* SlideCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		EAA0005B25FB727A007426C1 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0005C25FB727A007426C1 /* Generated */,
+				EA1A1171260E29AE003FB84D /* Buttons */,
+				EAEB82FE2604DCE000DCCCF9 /* ViewForInputAccesory.swift */,
+				EADF79772603C68A00B56C95 /* MDScrollView.swift */,
+				EADF79642603AA4200B56C95 /* MDTextField.swift */,
+				EAA0007D25FBB650007426C1 /* StyleUtils.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		EAA0005C25FB727A007426C1 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0005D25FB727A007426C1 /* Assets.swift */,
+				EAA0005E25FB727A007426C1 /* Text.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		EABEAD4C2600E1F6007F2020 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EABEAD4D2600E208007F2020 /* SignInView.swift */,
+				EABEAD512603A0B3007F2020 /* SignInView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAF6E7F826120A3800345E0C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				EAF6E7F926120A6300345E0C /* Authentication */,
+				EAF6E7FA26120B1100345E0C /* Events */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		EAF6E7F926120A6300345E0C /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB58525FB6A3B000A46EE /* OndoardingController */,
+				EA5AB57625FB6A3B000A46EE /* StartController */,
+				EA1960E92600B71A00E289A1 /* SignInController */,
+				EA5AB57B25FB6A3B000A46EE /* SignUpController */,
+				EA3C11AF2604FC4200874546 /* PasswordResetController */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		EAF6E7FA26120B1100345E0C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				EA5AB56C25FB6A3B000A46EE /* EventsController */,
+				EA5AB58025FB6A3B000A46EE /* AddEventController */,
+			);
+			path = Events;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,10 +421,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA264C8825EF72340048FD41 /* Build configuration list for PBXNativeTarget "Toast" */;
 			buildPhases = (
-				EA264C9725EF77E20048FD41 /* ShellScript */,
+				78AF69025AED166E2F3671AB /* [CP] Check Pods Manifest.lock */,
+				EA264C9725EF77E20048FD41 /* Swiftlint */,
+				EADF797B2603CE7F00B56C95 /* Swiftformat */,
 				EA264C7025EF72320048FD41 /* Sources */,
 				EA264C7125EF72320048FD41 /* Frameworks */,
 				EA264C7225EF72320048FD41 /* Resources */,
+				DF346448801CD8AF2B6AE105 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,6 +459,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = EA264C6B25EF72320048FD41;
 			productRefGroup = EA264C7525EF72320048FD41 /* Products */;
@@ -148,14 +478,58 @@
 			files = (
 				EAD4653125EFA2F600B2D601 /* README.md in Resources */,
 				EA264C8425EF72340048FD41 /* LaunchScreen.storyboard in Resources */,
+				EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */,
+				EAA0FFEA25FB6E6D007426C1 /* Localizable.strings in Resources */,
+				EA3C11B92604FD2500874546 /* EnterEmailView.xib in Resources */,
+				EA5AB59B25FB6A3B000A46EE /* AddEventView.xib in Resources */,
 				EA264C8125EF72340048FD41 /* Assets.xcassets in Resources */,
+				EABEAD522603A0B3007F2020 /* SignInView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		EA264C9725EF77E20048FD41 /* ShellScript */ = {
+		78AF69025AED166E2F3671AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Toast-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DF346448801CD8AF2B6AE105 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Toast/Pods-Toast-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Toast/Pods-Toast-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Toast/Pods-Toast-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA264C9725EF77E20048FD41 /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -164,6 +538,7 @@
 			);
 			inputPaths = (
 			);
+			name = Swiftlint;
 			outputFileListPaths = (
 			);
 			outputPaths = (
@@ -172,6 +547,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n\n";
 		};
+		EADF797B2603CE7F00B56C95 /* Swiftformat */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftformat;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftformat >/dev/null; then\nswiftformat .\nelse\necho \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -179,8 +572,42 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA264C7C25EF72320048FD41 /* ViewController.swift in Sources */,
+				EAEB82FF2604DCE000DCCCF9 /* ViewForInputAccesory.swift in Sources */,
+				EA3C11B62604FD1000874546 /* EnterEmailView.swift in Sources */,
+				EA5AB58E25FB6A3B000A46EE /* EventsController.swift in Sources */,
+				EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */,
+				EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */,
+				EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */,
+				EA5AB58F25FB6A3B000A46EE /* EventsDataSource.swift in Sources */,
+				EAA0007E25FBB650007426C1 /* StyleUtils.swift in Sources */,
+				EADF79662603AA4200B56C95 /* MDTextField.swift in Sources */,
+				EA5AB58D25FB6A3B000A46EE /* EventsModel.swift in Sources */,
+				EAA0006425FB727A007426C1 /* ButtonDefault.swift in Sources */,
+				EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */,
+				EA5AB59A25FB6A3B000A46EE /* AddEventView.swift in Sources */,
+				EA3C11B12604FC7600874546 /* PasswordResetController.swift in Sources */,
+				EA5AB59725FB6A3B000A46EE /* SignUpView.swift in Sources */,
+				EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */,
+				EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */,
+				EAA0006125FB727A007426C1 /* Assets.swift in Sources */,
+				EAA0007325FB7652007426C1 /* StartView.swift in Sources */,
+				EAA0006225FB727A007426C1 /* Text.swift in Sources */,
+				EAA0FFF325FB706A007426C1 /* AuthServiceApi.swift in Sources */,
+				EAA0005925FB71E1007426C1 /* SlideCell.swift in Sources */,
+				EAA0007925FB8AAB007426C1 /* ButtonSignInWithEmail.swift in Sources */,
+				EAA0007625FB8669007426C1 /* ButtonSignIn.swift in Sources */,
+				EA5AB59125FB6A3B000A46EE /* EventCell.swift in Sources */,
+				EA5AB59C25FB6A3B000A46EE /* OnboardingController.swift in Sources */,
+				EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */,
+				EA5AB59325FB6A3B000A46EE /* StartController.swift in Sources */,
+				EA3C11BC26050CDB00874546 /* EnterEmailNextView.swift in Sources */,
+				EABEAD4E2600E208007F2020 /* SignInView.swift in Sources */,
+				EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */,
 				EA264C7825EF72320048FD41 /* AppDelegate.swift in Sources */,
+				EADF79782603C68A00B56C95 /* MDScrollView.swift in Sources */,
+				EAA0FFF125FB706A007426C1 /* AuthModels.swift in Sources */,
+				EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */,
+				EA5AB59225FB6A3B000A46EE /* DateSectionHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +620,15 @@
 				EA264C8325EF72340048FD41 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		EAA0FFE625FB6E6D007426C1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EAA0FFE725FB6E6D007426C1 /* en */,
+				EAA0FFE925FB6E6D007426C1 /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -316,6 +752,7 @@
 		};
 		EA264C8925EF72340048FD41 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8466FCD1A2BB6D2C702416E /* Pods-Toast.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -336,6 +773,7 @@
 		};
 		EA264C8A25EF72340048FD41 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98A5B83985B07B3B73F27A8A /* Pods-Toast.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

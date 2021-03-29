@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  Toast
+
+  Created by Олег Романов on 22.08.2020.
+  Copyright © 2020 Oleg Romanov. All rights reserved.
+*/
+
+
+
+PersonsModel.Category = "Друзья";
+
+
+Onboarding.Next = "Далее";
+Onboarding.Skip = "Пропустить";
+Onboarding.Start = "Начать";
+
+
+Persons.Title = "Люди";
+Persons.Done = "Готово";
+Persons.Message = "добавлен в список";
+
+
+AddPerson.Add = "Добавить";
+AddPerson.Done = "Готово";
+
+
+SignIn.WithGoogle = "Продолжить с Google";
+SignIn.WithEmail = "Продолжить с Email";
+SignIn.WithFacebook = "Продолжить с Facebook";
+SignIn.WithApple = "Продолжить с Apple";
+SignIn.AsGuest = "Продолжить как гость";
+

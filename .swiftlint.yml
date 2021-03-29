@@ -47,7 +47,7 @@ excluded:
 
 function_body_length:
   warning: 60
-  error: 150
+  error: 120
 file_length:
   warning: 500
   error: 700
