@@ -15,6 +15,8 @@ protocol AddEventControllerDelegate: AnyObject {
 class AddEventController: UIViewController {
     lazy var custonView: AddEventView? = view as? AddEventView
     weak var delegate: AddEventControllerDelegate?
+    var presenter: AddEventViewOutput?
+    var encoder = JSONEncoder()
 
     init() {
         super.init(nibName: "AddEventView", bundle: Bundle(for: AddEventView.self))
@@ -29,7 +31,7 @@ class AddEventController: UIViewController {
 
     private func setupStyle() {
         navigationItem.largeTitleDisplayMode = .never
-        navigationItem.title = Text.AddPerson.add
+        navigationItem.title = Text.AddEvent.add
         navigationItem.rightBarButtonItem = custonView?.doneButton
     }
 
@@ -41,13 +43,25 @@ class AddEventController: UIViewController {
     }
 
     @objc private func doneBottonClicked() {
-        guard
-            let name = custonView?.nameTextField.text,
-            let birthdate = custonView?.datePicker.date,
-            name.isEmpty == false
-        else { return }
-        let newPerson = Event(name: name, birthdate: birthdate, category: "none")
-        delegate?.addEvent(newPerson)
+//        guard
+//            let name = custonView?.nameTextField.text,
+//            let birthdate = custonView?.datePicker.date,
+//            name.isEmpty == false
+//        else { return }
+        // MOCK
+
+//        let newPerson = Event(name: name, date: birthdate, category: "none")
+//        delegate?.addEvent(newPerson)
+        let dateFormatter = DateFormatter()
+        let date = Date(timeIntervalSinceNow: 12312)
+        dateFormatter.timeStyle = .short
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let day = dateFormatter.string(from: date)
+        print(day)
+        let event = Event(name: "BBB", description: "Addf", date: Date(), eventTypeId: 1, categoryId: 1)
+        presenter?.createEvent(event: event)
         navigationController?.popViewController(animated: true)
     }
 }
+
+extension AddEventController: AddEventViewInput {}

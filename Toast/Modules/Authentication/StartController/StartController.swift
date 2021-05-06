@@ -13,6 +13,8 @@ class StartController: UIViewController {
 
     lazy var customView: StartView? = StartView()
 
+    var presenter: StartViewOutput?
+
     // MARK: - Life cycle
 
     override func loadView() {
@@ -41,7 +43,12 @@ class StartController: UIViewController {
     }
 
     @objc private func signInWithEmailTapped() {
-        navigationController?.pushViewController(SignInController(), animated: true)
+        let signInVC = SignInController()
+        let signInPresenter = SignInPresenter(view: signInVC)
+        signInVC.presenter = signInPresenter
+        navigationController?.pushViewController(signInVC, animated: true)
         navigationItem.backButtonTitle = ""
     }
 }
+
+extension StartController: StartViewInput {}

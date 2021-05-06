@@ -17,7 +17,7 @@ class AddEventView: UIView {
     @IBOutlet var datePicker: UIDatePicker!
 
     lazy var doneButton = UIBarButtonItem(
-        title: Text.AddPerson.done, style: .done, target: nil, action: nil
+        title: Text.AddEvent.done, style: .done, target: nil, action: nil
     )
 
     // MARK: - Init

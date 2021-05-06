@@ -9,12 +9,10 @@ import SnapKit
 import UIKit
 
 class StartView: UIView {
-    struct Appearance {
+    struct Appearance: Grid {
         static let titleText: String = "TOAST"
-        static let titleFontSize: CGFloat = 25
         static let titleFontWeight: UIFont.Weight = .bold
         static let subTitleText: String = "Списки событий"
-        static let subTitleFontSize: CGFloat = 18
         static let subTitleFontWeight: UIFont.Weight = .regular
         static let heightOfButton: CGFloat = 40
         static let buttonWidth: CGFloat = UIScreen.main.bounds.width - 80
@@ -23,6 +21,8 @@ class StartView: UIView {
     }
 
     // MARK: - Properties
+
+    var appearance: Appearance
 
     private lazy var logoImageView = UIImageView(image: Assets.logo.image)
 
@@ -38,21 +38,21 @@ class StartView: UIView {
         let button = UIButton()
         button.setTitle(Text.SignIn.continueAsGuest, for: .normal)
         button.setTitleColor(Assets.blue.color, for: .normal)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: appearance.sSpace, weight: .semibold)
         return button
     }()
 
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = Appearance.titleText
-        label.font = .systemFont(ofSize: Appearance.titleFontSize, weight: Appearance.titleFontWeight)
+        label.font = .systemFont(ofSize: appearance.mSpace, weight: Appearance.titleFontWeight)
         return label
     }()
 
     private lazy var subTitleLabel: UILabel = {
         let label = UILabel()
         label.text = Appearance.subTitleText
-        label.font = .systemFont(ofSize: Appearance.subTitleFontSize, weight: Appearance.subTitleFontWeight)
+        label.font = .systemFont(ofSize: Appearance.xxxl, weight: Appearance.subTitleFontWeight)
         label.textColor = Assets.gray.color
         return label
     }()
@@ -73,14 +73,15 @@ class StartView: UIView {
         return layout
     }()
 
-    init() {
+    init(appearance: Appearance = Appearance()) {
+        self.appearance = appearance
         super.init(frame: UIScreen.main.bounds)
         commonInit()
     }
 
+    @available(*, unavailable)
     required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
+        fatalError("init(coder:) has not been implemented")
     }
 
     private func commonInit() {
@@ -108,26 +109,26 @@ class StartView: UIView {
     private func makeConstraints() {
         titleLabel.snp.makeConstraints { make in
             if ScreenSize.current != .sizeIPhoneSE {
-                make.top.equalToSuperview().inset(81)
+                make.top.equalToSuperview().inset(appearance.xxxlSpace + appearance.xxsSpace)
             } else {
-                make.top.equalToSuperview().inset(40)
+                make.top.equalToSuperview().inset(appearance.xlSpace)
             }
             make.centerX.equalToSuperview()
         }
         logoImageView.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom).offset(18)
+            make.top.equalTo(titleLabel.snp.bottom).offset(appearance.sSpace)
             make.centerX.equalToSuperview()
             make.size.equalTo(100)
         }
         subTitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(logoImageView.snp.bottom).offset(18)
+            make.top.equalTo(logoImageView.snp.bottom).offset(appearance.sSpace)
             make.centerX.equalToSuperview()
         }
         signInWithEmail.snp.makeConstraints { make in
             if ScreenSize.current != .sizeIPhoneSE {
-                make.bottom.equalTo(signInAsGuest.snp.top).inset(-72)
+                make.bottom.equalTo(signInAsGuest.snp.top).inset(-appearance.xxxlSpace)
             } else {
-                make.bottom.equalTo(signInAsGuest.snp.top).inset(-30)
+                make.bottom.equalTo(signInAsGuest.snp.top).inset(-appearance.lSpace)
             }
             // на se коэфф: 0,5; на 7: 0,7 на 10: 1
             make.centerX.equalToSuperview()
@@ -138,33 +139,33 @@ class StartView: UIView {
             make.centerX.equalToSuperview()
             make.height.equalTo(Appearance.heightOfButton)
             make.width.equalTo(Appearance.buttonWidth)
-            make.bottom.equalTo(signInWithEmail.snp.top).inset(-72)
+            make.bottom.equalTo(signInWithEmail.snp.top).inset(-appearance.xxxlSpace)
         }
         signInWithFacebook.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(Appearance.heightOfButton)
             make.width.equalTo(Appearance.buttonWidth)
-            make.bottom.equalTo(signInWithGoogle.snp.top).inset(-22)
+            make.bottom.equalTo(signInWithGoogle.snp.top).inset(-appearance.mSpace)
         }
         signInWithApple.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(Appearance.heightOfButton)
             make.width.equalTo(Appearance.buttonWidth)
-            make.bottom.equalTo(signInWithFacebook.snp.top).inset(-22)
+            make.bottom.equalTo(signInWithFacebook.snp.top).inset(-appearance.mSpace)
         }
         signInAsGuest.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             if ScreenSize.current != .sizeIPhoneSE {
-                make.bottom.equalToSuperview().inset(Appearance.bottomPaddingLastButton)
+                make.bottom.equalToSuperview().inset(appearance.xxxlSpace + appearance.xxsSpace)
             } else {
-                make.bottom.equalToSuperview().inset(Appearance.bottomPaddingLastButton - 60)
+                make.bottom.equalToSuperview().inset(appearance.mSpace - appearance.xxxsSpace)
             }
         }
         lineView.snp.makeConstraints { make in
             make.height.equalTo(1)
             make.width.equalTo(Appearance.lineViewWidth)
             make.centerX.equalToSuperview()
-            make.bottom.equalTo(signInWithEmail.snp.top).inset(-34)
+            make.bottom.equalTo(signInWithEmail.snp.top).inset(-appearance.xlSpace)
         }
     }
 }

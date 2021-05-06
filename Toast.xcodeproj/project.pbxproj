@@ -8,15 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		7FCB9303582C749F78B8DD18 /* Pods_Toast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF4081C7216542D140DB5F /* Pods_Toast.framework */; };
+		EA02BD54261F451300F1B1A6 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02BD53261F451300F1B1A6 /* Grid.swift */; };
+		EA02BD57261F461100F1B1A6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02BD56261F461100F1B1A6 /* Keys.swift */; };
 		EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */; };
+		EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */; };
+		EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FD26419F90008C5450 /* AddEventProtocols.swift */; };
+		EA2077022641A35F008C5450 /* EventModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2077012641A35F008C5450 /* EventModels.swift */; };
+		EA2077042641A674008C5450 /* EventService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2077032641A674008C5450 /* EventService.swift */; };
+		EA2077062641A687008C5450 /* EventServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2077052641A687008C5450 /* EventServiceApi.swift */; };
 		EA264C7825EF72320048FD41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA264C7725EF72320048FD41 /* AppDelegate.swift */; };
 		EA264C8125EF72340048FD41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA264C8025EF72340048FD41 /* Assets.xcassets */; };
 		EA264C8425EF72340048FD41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA264C8225EF72340048FD41 /* LaunchScreen.storyboard */; };
-		EA3C11B12604FC7600874546 /* PasswordResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11B02604FC7600874546 /* PasswordResetController.swift */; };
+		EA3C11B12604FC7600874546 /* EnterEmailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11B02604FC7600874546 /* EnterEmailController.swift */; };
 		EA3C11B62604FD1000874546 /* EnterEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11B52604FD1000874546 /* EnterEmailView.swift */; };
 		EA3C11B92604FD2500874546 /* EnterEmailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA3C11B82604FD2500874546 /* EnterEmailView.xib */; };
 		EA3C11BC26050CDB00874546 /* EnterEmailNextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA3C11BB26050CDB00874546 /* EnterEmailNextView.swift */; };
-		EA5AB58D25FB6A3B000A46EE /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB56D25FB6A3B000A46EE /* EventsModel.swift */; };
+		EA5AB58D25FB6A3B000A46EE /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB56D25FB6A3B000A46EE /* Event.swift */; };
 		EA5AB58E25FB6A3B000A46EE /* EventsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB56E25FB6A3B000A46EE /* EventsController.swift */; };
 		EA5AB58F25FB6A3B000A46EE /* EventsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */; };
 		EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB57125FB6A3B000A46EE /* EventsView.swift */; };
@@ -32,7 +39,6 @@
 		EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */; };
 		EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */; };
 		EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */; };
-		EAA0005925FB71E1007426C1 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005825FB71E1007426C1 /* SlideCell.swift */; };
 		EAA0006125FB727A007426C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005D25FB727A007426C1 /* Assets.swift */; };
 		EAA0006225FB727A007426C1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005E25FB727A007426C1 /* Text.swift */; };
 		EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */; };
@@ -45,9 +51,20 @@
 		EAA0FFF125FB706A007426C1 /* AuthModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FFEE25FB706A007426C1 /* AuthModels.swift */; };
 		EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FFEF25FB706A007426C1 /* AuthService.swift */; };
 		EAA0FFF325FB706A007426C1 /* AuthServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */; };
+		EAAECF8926120F83000564C2 /* SlideCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECF8826120F83000564C2 /* SlideCell.swift */; };
+		EAAECF8E26120FFF000564C2 /* PasswordResetController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECF8D26120FFF000564C2 /* PasswordResetController.swift */; };
+		EAAECF9D26147D35000564C2 /* PasswordReset.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECF9C26147D35000564C2 /* PasswordReset.swift */; };
+		EAAECFA026147D7B000564C2 /* PasswordResetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECF9F26147D7B000564C2 /* PasswordResetPresenter.swift */; };
+		EAAECFA526148EEE000564C2 /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECFA426148EEE000564C2 /* StartPresenter.swift */; };
+		EAAECFA926148F4E000564C2 /* StartProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECFA826148F4E000564C2 /* StartProtocols.swift */; };
+		EAAECFAD26149648000564C2 /* SignInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECFAC26149648000564C2 /* SignInPresenter.swift */; };
+		EAAECFB126149665000564C2 /* SignInProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECFB026149665000564C2 /* SignInProtocols.swift */; };
+		EAAECFB62614CD8C000564C2 /* PasswordResetProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAECFB52614CD8C000564C2 /* PasswordResetProtocols.swift */; };
 		EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABEAD492600BA93007F2020 /* SignInController.swift */; };
 		EABEAD4E2600E208007F2020 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABEAD4D2600E208007F2020 /* SignInView.swift */; };
 		EABEAD522603A0B3007F2020 /* SignInView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EABEAD512603A0B3007F2020 /* SignInView.xib */; };
+		EAC65806261DCE7B003EC46B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC65805261DCE7B003EC46B /* SignUpPresenter.swift */; };
+		EAC65809261DCE8F003EC46B /* SignUpProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAC65808261DCE8F003EC46B /* SignUpProtocols.swift */; };
 		EAD4653125EFA2F600B2D601 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = EAD4653025EFA2F600B2D601 /* README.md */; };
 		EADF79662603AA4200B56C95 /* MDTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADF79642603AA4200B56C95 /* MDTextField.swift */; };
 		EADF79782603C68A00B56C95 /* MDScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADF79772603C68A00B56C95 /* MDScrollView.swift */; };
@@ -58,17 +75,24 @@
 		98A5B83985B07B3B73F27A8A /* Pods-Toast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.release.xcconfig"; path = "Target Support Files/Pods-Toast/Pods-Toast.release.xcconfig"; sourceTree = "<group>"; };
 		AAEF4081C7216542D140DB5F /* Pods_Toast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Toast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8466FCD1A2BB6D2C702416E /* Pods-Toast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.debug.xcconfig"; path = "Target Support Files/Pods-Toast/Pods-Toast.debug.xcconfig"; sourceTree = "<group>"; };
+		EA02BD53261F451300F1B1A6 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		EA02BD56261F461100F1B1A6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
+		EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
+		EA2076FD26419F90008C5450 /* AddEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventProtocols.swift; sourceTree = "<group>"; };
+		EA2077012641A35F008C5450 /* EventModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventModels.swift; sourceTree = "<group>"; };
+		EA2077032641A674008C5450 /* EventService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventService.swift; sourceTree = "<group>"; };
+		EA2077052641A687008C5450 /* EventServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventServiceApi.swift; sourceTree = "<group>"; };
 		EA264C7425EF72320048FD41 /* Toast.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Toast.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA264C7725EF72320048FD41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA264C8025EF72340048FD41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA264C8325EF72340048FD41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA264C8525EF72340048FD41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA3C11B02604FC7600874546 /* PasswordResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetController.swift; sourceTree = "<group>"; };
+		EA3C11B02604FC7600874546 /* EnterEmailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailController.swift; sourceTree = "<group>"; };
 		EA3C11B52604FD1000874546 /* EnterEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailView.swift; sourceTree = "<group>"; };
 		EA3C11B82604FD2500874546 /* EnterEmailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EnterEmailView.xib; sourceTree = "<group>"; };
 		EA3C11BB26050CDB00874546 /* EnterEmailNextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterEmailNextView.swift; sourceTree = "<group>"; };
-		EA5AB56D25FB6A3B000A46EE /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
+		EA5AB56D25FB6A3B000A46EE /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		EA5AB56E25FB6A3B000A46EE /* EventsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsController.swift; sourceTree = "<group>"; };
 		EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsDataSource.swift; sourceTree = "<group>"; };
 		EA5AB57125FB6A3B000A46EE /* EventsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsView.swift; sourceTree = "<group>"; };
@@ -84,7 +108,6 @@
 		EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesDataSource.swift; sourceTree = "<group>"; };
 		EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		EAA0005825FB71E1007426C1 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideCell.swift; path = Toast/ViewControllers/OndoardingController/View/Cell/SlideCell.swift; sourceTree = SOURCE_ROOT; };
 		EAA0005D25FB727A007426C1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EAA0005E25FB727A007426C1 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
@@ -98,9 +121,20 @@
 		EAA0FFEE25FB706A007426C1 /* AuthModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthModels.swift; sourceTree = "<group>"; };
 		EAA0FFEF25FB706A007426C1 /* AuthService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthServiceApi.swift; sourceTree = "<group>"; };
+		EAAECF8826120F83000564C2 /* SlideCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideCell.swift; path = Toast/Modules/Authentication/OndoardingController/View/Cell/SlideCell.swift; sourceTree = SOURCE_ROOT; };
+		EAAECF8D26120FFF000564C2 /* PasswordResetController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetController.swift; sourceTree = "<group>"; };
+		EAAECF9C26147D35000564C2 /* PasswordReset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordReset.swift; sourceTree = "<group>"; };
+		EAAECF9F26147D7B000564C2 /* PasswordResetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetPresenter.swift; sourceTree = "<group>"; };
+		EAAECFA426148EEE000564C2 /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		EAAECFA826148F4E000564C2 /* StartProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartProtocols.swift; sourceTree = "<group>"; };
+		EAAECFAC26149648000564C2 /* SignInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInPresenter.swift; sourceTree = "<group>"; };
+		EAAECFB026149665000564C2 /* SignInProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInProtocols.swift; sourceTree = "<group>"; };
+		EAAECFB52614CD8C000564C2 /* PasswordResetProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordResetProtocols.swift; sourceTree = "<group>"; };
 		EABEAD492600BA93007F2020 /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		EABEAD4D2600E208007F2020 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		EABEAD512603A0B3007F2020 /* SignInView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignInView.xib; sourceTree = "<group>"; };
+		EAC65805261DCE7B003EC46B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		EAC65808261DCE8F003EC46B /* SignUpProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpProtocols.swift; sourceTree = "<group>"; };
 		EAD4653025EFA2F600B2D601 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EADF79642603AA4200B56C95 /* MDTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDTextField.swift; sourceTree = "<group>"; };
 		EADF79772603C68A00B56C95 /* MDScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MDScrollView.swift; sourceTree = "<group>"; };
@@ -139,6 +173,8 @@
 		EA1960E92600B71A00E289A1 /* SignInController */ = {
 			isa = PBXGroup;
 			children = (
+				EAAECFB026149665000564C2 /* SignInProtocols.swift */,
+				EAAECFAC26149648000564C2 /* SignInPresenter.swift */,
 				EABEAD492600BA93007F2020 /* SignInController.swift */,
 				EABEAD4C2600E1F6007F2020 /* View */,
 			);
@@ -154,6 +190,26 @@
 				EAA0007825FB8AAB007426C1 /* ButtonSignInWithEmail.swift */,
 			);
 			path = Buttons;
+			sourceTree = "<group>";
+		};
+		EA2076FF2641A2CE008C5450 /* AuthService */ = {
+			isa = PBXGroup;
+			children = (
+				EAA0FFEE25FB706A007426C1 /* AuthModels.swift */,
+				EAA0FFEF25FB706A007426C1 /* AuthService.swift */,
+				EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */,
+			);
+			path = AuthService;
+			sourceTree = "<group>";
+		};
+		EA2077002641A2E1008C5450 /* EventService */ = {
+			isa = PBXGroup;
+			children = (
+				EA2077012641A35F008C5450 /* EventModels.swift */,
+				EA2077032641A674008C5450 /* EventService.swift */,
+				EA2077052641A687008C5450 /* EventServiceApi.swift */,
+			);
+			path = EventService;
 			sourceTree = "<group>";
 		};
 		EA264C6B25EF72320048FD41 = {
@@ -206,13 +262,13 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		EA3C11AF2604FC4200874546 /* PasswordResetController */ = {
+		EA3C11AF2604FC4200874546 /* EnterEmailController */ = {
 			isa = PBXGroup;
 			children = (
-				EA3C11B02604FC7600874546 /* PasswordResetController.swift */,
+				EA3C11B02604FC7600874546 /* EnterEmailController.swift */,
 				EA3C11B42604FCC500874546 /* View */,
 			);
-			path = PasswordResetController;
+			path = EnterEmailController;
 			sourceTree = "<group>";
 		};
 		EA3C11B42604FCC500874546 /* View */ = {
@@ -228,9 +284,8 @@
 		EA5AB55225FB65E4000A46EE /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				EAA0FFEE25FB706A007426C1 /* AuthModels.swift */,
-				EAA0FFEF25FB706A007426C1 /* AuthService.swift */,
-				EAA0FFF025FB706A007426C1 /* AuthServiceApi.swift */,
+				EA2076FF2641A2CE008C5450 /* AuthService */,
+				EA2077002641A2E1008C5450 /* EventService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -238,7 +293,7 @@
 		EA5AB56C25FB6A3B000A46EE /* EventsController */ = {
 			isa = PBXGroup;
 			children = (
-				EA5AB56D25FB6A3B000A46EE /* EventsModel.swift */,
+				EA5AB56D25FB6A3B000A46EE /* Event.swift */,
 				EA5AB56E25FB6A3B000A46EE /* EventsController.swift */,
 				EA5AB56F25FB6A3B000A46EE /* View */,
 			);
@@ -275,6 +330,8 @@
 		EA5AB57625FB6A3B000A46EE /* StartController */ = {
 			isa = PBXGroup;
 			children = (
+				EAAECFA826148F4E000564C2 /* StartProtocols.swift */,
+				EAAECFA426148EEE000564C2 /* StartPresenter.swift */,
 				EA5AB57725FB6A3B000A46EE /* StartController.swift */,
 				EA5AB57825FB6A3B000A46EE /* VIew */,
 			);
@@ -292,6 +349,8 @@
 		EA5AB57B25FB6A3B000A46EE /* SignUpController */ = {
 			isa = PBXGroup;
 			children = (
+				EAC65808261DCE8F003EC46B /* SignUpProtocols.swift */,
+				EAC65805261DCE7B003EC46B /* SignUpPresenter.swift */,
 				EA5AB57C25FB6A3B000A46EE /* SignUpController.swift */,
 				EA5AB57D25FB6A3B000A46EE /* View */,
 			);
@@ -310,6 +369,8 @@
 		EA5AB58025FB6A3B000A46EE /* AddEventController */ = {
 			isa = PBXGroup;
 			children = (
+				EA2076FD26419F90008C5450 /* AddEventProtocols.swift */,
+				EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */,
 				EA5AB58125FB6A3B000A46EE /* AddEventController.swift */,
 				EA5AB58225FB6A3B000A46EE /* View */,
 			);
@@ -348,7 +409,7 @@
 		EA5AB58925FB6A3B000A46EE /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				EAA0005825FB71E1007426C1 /* SlideCell.swift */,
+				EAAECF8826120F83000564C2 /* SlideCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -362,6 +423,7 @@
 				EADF79772603C68A00B56C95 /* MDScrollView.swift */,
 				EADF79642603AA4200B56C95 /* MDTextField.swift */,
 				EAA0007D25FBB650007426C1 /* StyleUtils.swift */,
+				EA02BD53261F451300F1B1A6 /* Grid.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -373,6 +435,32 @@
 				EAA0005E25FB727A007426C1 /* Text.swift */,
 			);
 			path = Generated;
+			sourceTree = "<group>";
+		};
+		EAAECF8C26120FBA000564C2 /* PasswordResetController */ = {
+			isa = PBXGroup;
+			children = (
+				EAAECF9F26147D7B000564C2 /* PasswordResetPresenter.swift */,
+				EAAECFB52614CD8C000564C2 /* PasswordResetProtocols.swift */,
+				EAAECF8D26120FFF000564C2 /* PasswordResetController.swift */,
+				EAAECF912612121C000564C2 /* View */,
+			);
+			path = PasswordResetController;
+			sourceTree = "<group>";
+		};
+		EAAECF912612121C000564C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EAAECF9C26147D35000564C2 /* PasswordReset.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EAAECF9226121691000564C2 /* UpdatePasswordController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UpdatePasswordController;
 			sourceTree = "<group>";
 		};
 		EABEAD4C2600E1F6007F2020 /* View */ = {
@@ -396,11 +484,14 @@
 		EAF6E7F926120A6300345E0C /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				EA02BD56261F461100F1B1A6 /* Keys.swift */,
 				EA5AB58525FB6A3B000A46EE /* OndoardingController */,
 				EA5AB57625FB6A3B000A46EE /* StartController */,
 				EA1960E92600B71A00E289A1 /* SignInController */,
 				EA5AB57B25FB6A3B000A46EE /* SignUpController */,
-				EA3C11AF2604FC4200874546 /* PasswordResetController */,
+				EA3C11AF2604FC4200874546 /* EnterEmailController */,
+				EAAECF8C26120FBA000564C2 /* PasswordResetController */,
+				EAAECF9226121691000564C2 /* UpdatePasswordController */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -573,41 +664,58 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAEB82FF2604DCE000DCCCF9 /* ViewForInputAccesory.swift in Sources */,
+				EA02BD57261F461100F1B1A6 /* Keys.swift in Sources */,
 				EA3C11B62604FD1000874546 /* EnterEmailView.swift in Sources */,
 				EA5AB58E25FB6A3B000A46EE /* EventsController.swift in Sources */,
+				EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */,
+				EAAECF8926120F83000564C2 /* SlideCell.swift in Sources */,
 				EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */,
 				EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */,
 				EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */,
 				EA5AB58F25FB6A3B000A46EE /* EventsDataSource.swift in Sources */,
 				EAA0007E25FBB650007426C1 /* StyleUtils.swift in Sources */,
 				EADF79662603AA4200B56C95 /* MDTextField.swift in Sources */,
-				EA5AB58D25FB6A3B000A46EE /* EventsModel.swift in Sources */,
+				EA5AB58D25FB6A3B000A46EE /* Event.swift in Sources */,
+				EA02BD54261F451300F1B1A6 /* Grid.swift in Sources */,
+				EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */,
 				EAA0006425FB727A007426C1 /* ButtonDefault.swift in Sources */,
 				EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */,
+				EAAECF8E26120FFF000564C2 /* PasswordResetController.swift in Sources */,
+				EAAECFA026147D7B000564C2 /* PasswordResetPresenter.swift in Sources */,
 				EA5AB59A25FB6A3B000A46EE /* AddEventView.swift in Sources */,
-				EA3C11B12604FC7600874546 /* PasswordResetController.swift in Sources */,
+				EA3C11B12604FC7600874546 /* EnterEmailController.swift in Sources */,
 				EA5AB59725FB6A3B000A46EE /* SignUpView.swift in Sources */,
+				EAC65806261DCE7B003EC46B /* SignUpPresenter.swift in Sources */,
+				EAAECFAD26149648000564C2 /* SignInPresenter.swift in Sources */,
+				EA2077042641A674008C5450 /* EventService.swift in Sources */,
+				EAAECFB126149665000564C2 /* SignInProtocols.swift in Sources */,
 				EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */,
 				EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */,
 				EAA0006125FB727A007426C1 /* Assets.swift in Sources */,
+				EAAECFA526148EEE000564C2 /* StartPresenter.swift in Sources */,
+				EAC65809261DCE8F003EC46B /* SignUpProtocols.swift in Sources */,
 				EAA0007325FB7652007426C1 /* StartView.swift in Sources */,
 				EAA0006225FB727A007426C1 /* Text.swift in Sources */,
 				EAA0FFF325FB706A007426C1 /* AuthServiceApi.swift in Sources */,
-				EAA0005925FB71E1007426C1 /* SlideCell.swift in Sources */,
 				EAA0007925FB8AAB007426C1 /* ButtonSignInWithEmail.swift in Sources */,
 				EAA0007625FB8669007426C1 /* ButtonSignIn.swift in Sources */,
 				EA5AB59125FB6A3B000A46EE /* EventCell.swift in Sources */,
+				EAAECFB62614CD8C000564C2 /* PasswordResetProtocols.swift in Sources */,
 				EA5AB59C25FB6A3B000A46EE /* OnboardingController.swift in Sources */,
+				EA2077022641A35F008C5450 /* EventModels.swift in Sources */,
 				EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */,
 				EA5AB59325FB6A3B000A46EE /* StartController.swift in Sources */,
 				EA3C11BC26050CDB00874546 /* EnterEmailNextView.swift in Sources */,
+				EA2077062641A687008C5450 /* EventServiceApi.swift in Sources */,
 				EABEAD4E2600E208007F2020 /* SignInView.swift in Sources */,
 				EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */,
+				EAAECF9D26147D35000564C2 /* PasswordReset.swift in Sources */,
 				EA264C7825EF72320048FD41 /* AppDelegate.swift in Sources */,
 				EADF79782603C68A00B56C95 /* MDScrollView.swift in Sources */,
 				EAA0FFF125FB706A007426C1 /* AuthModels.swift in Sources */,
 				EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */,
 				EA5AB59225FB6A3B000A46EE /* DateSectionHeader.swift in Sources */,
+				EAAECFA926148F4E000564C2 /* StartProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

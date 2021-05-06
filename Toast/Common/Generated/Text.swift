@@ -10,11 +10,11 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum Text {
-    internal enum AddPerson {
+    internal enum AddEvent {
         /// Добавить
-        internal static let add = Text.tr("Localizable", "AddPerson.Add")
+        internal static let add = Text.tr("Localizable", "AddEvent.Add")
         /// Готово
-        internal static let done = Text.tr("Localizable", "AddPerson.Done")
+        internal static let done = Text.tr("Localizable", "AddEvent.Done")
     }
 
     internal enum Onboarding {
@@ -26,18 +26,18 @@ internal enum Text {
         internal static let start = Text.tr("Localizable", "Onboarding.Start")
     }
 
-    internal enum Persons {
+    internal enum Events {
         /// Готово
-        internal static let done = Text.tr("Localizable", "Persons.Done")
+        internal static let done = Text.tr("Localizable", "Events.Done")
         /// добавлен в список
-        internal static let message = Text.tr("Localizable", "Persons.Message")
+        internal static let message = Text.tr("Localizable", "Events.Message")
         /// Люди
-        internal static let title = Text.tr("Localizable", "Persons.Title")
+        internal static let title = Text.tr("Localizable", "Events.Title")
     }
 
-    internal enum PersonsModel {
+    internal enum EventsModel {
         /// Друзья
-        internal static let category = Text.tr("Localizable", "PersonsModel.Category")
+        internal static let category = Text.tr("Localizable", "EventsModel.Category")
     }
 
     internal enum SignIn {

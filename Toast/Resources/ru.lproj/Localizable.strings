@@ -8,7 +8,7 @@
 
 
 
-PersonsModel.Category = "Друзья";
+EventsModel.Category = "Друзья";
 
 
 Onboarding.Next = "Далее";
@@ -16,13 +16,13 @@ Onboarding.Skip = "Пропустить";
 Onboarding.Start = "Начать";
 
 
-Persons.Title = "Люди";
-Persons.Done = "Готово";
-Persons.Message = "добавлен в список";
+Events.Title = "События";
+Events.Done = "Готово";
+Events.Message = "Добавлен в список";
 
 
-AddPerson.Add = "Добавить";
-AddPerson.Done = "Готово";
+AddEvent.Add = "Добавить";
+AddEvent.Done = "Готово";
 
 
 SignIn.WithGoogle = "Продолжить с Google";

@@ -26,7 +26,7 @@ final class EventsDataSource: NSObject {
     func updateData(_ data: [Event]) {
         self.data = []
         let groupped = Dictionary(grouping: data, by: { person in
-            Calendar.current.component(.month, from: person.birthdate ?? Date())
+            Calendar.current.component(.month, from: person.date ?? Date())
         })
         groupped.keys.forEach { [weak self] key in
             guard let array = groupped[key] else { return }
@@ -37,39 +37,39 @@ final class EventsDataSource: NSObject {
     }
 
     func addEvent(_ event: Event) {
-        guard let personBirthdate = event.birthdate else { return }
-        for index in data.indices {
-            guard let currentPersonBirthdate = data[index].first?.birthdate
-            else { continue }
-            let personMonth: Int = Calendar.current.component(.month, from: personBirthdate)
-            let currentPersonMonth: Int = Calendar.current.component(.month, from: currentPersonBirthdate)
-            if personMonth == currentPersonMonth {
-                data[index].append(event)
-                sortData()
-                tableView?.reloadSections(IndexSet(index ... index), with: .automatic)
-                return
-            }
-        }
-        data.append([event])
-        sortData()
-        tableView?.reloadData()
+//        guard let personBirthdate = event.date else { return }
+//        for index in data.indices {
+//            guard let currentPersonBirthdate = data[index].first?.date
+//            else { continue }
+//            let personMonth: Int = Calendar.current.component(.month, from: personBirthdate)
+//            let currentPersonMonth: Int = Calendar.current.component(.month, from: currentPersonBirthdate)
+//            if personMonth == currentPersonMonth {
+//                data[index].append(event)
+//                sortData()
+//                tableView?.reloadSections(IndexSet(index ... index), with: .automatic)
+//                return
+//            }
+//        }
+//        data.append([event])
+//        sortData()
+//        tableView?.reloadData()
     }
 
     private func sortData() {
-        data = data.sorted { array1, array2 in
-            guard let date1 = array1.first?.birthdate, let date2 = array2.first?.birthdate else { return false }
-            let day1 = Calendar.current.component(.month, from: date1)
-            let day2 = Calendar.current.component(.month, from: date2)
-            return day1 < day2
-        }
-        for index in data.indices {
-            data[index] = data[index].sorted { p1, p2 in
-                guard let date1 = p1.birthdate, let date2 = p2.birthdate else { return false }
-                let day1 = Calendar.current.component(.day, from: date1)
-                let day2 = Calendar.current.component(.day, from: date2)
-                return day1 < day2
-            }
-        }
+//        data = data.sorted { array1, array2 in
+//            guard let date1 = array1.first?.date, let date2 = array2.first?.date else { return false }
+//            let day1 = Calendar.current.component(.month, from: date1)
+//            let day2 = Calendar.current.component(.month, from: date2)
+//            return day1 < day2
+//        }
+//        for index in data.indices {
+//            data[index] = data[index].sorted { p1, p2 in
+//                guard let date1 = p1.date, let date2 = p2.date else { return false }
+//                let day1 = Calendar.current.component(.day, from: date1)
+//                let day2 = Calendar.current.component(.day, from: date2)
+//                return day1 < day2
+//            }
+//        }
     }
 }
 
@@ -99,7 +99,7 @@ extension EventsDataSource: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let date = data[section].first?.birthdate else { return nil }
+        guard let date = data[section].first?.date else { return nil }
         let view = DateSectionHeader()
         view.configure(date: date)
         return view

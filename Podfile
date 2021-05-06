@@ -10,4 +10,6 @@ target 'Toast' do
   pod 'Moya', '~> 14.0'
   pod 'SnapKit', '~> 5.0'
   pod 'SPAlert'
+  pod 'KeychainSwift'
+  pod 'SwiftGen'qx
 end

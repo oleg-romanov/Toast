@@ -9,11 +9,16 @@
 import Foundation
 import Moya
 
-class AuthService {
-    let dataProvider = MoyaProvider<AuthServiceApi>()
-    static var shared = AuthService()
+protocol AuthServiceProtocol {
+    func signIn(email: String, password: String, completion: @escaping (Result<TokenResponse, Error>) -> Void)
+    func signUp(name: String, email: String, password: String, completion: @escaping (Result<TokenResponse, Error>) -> Void)
+}
 
-    private init() {}
+class AuthService: AuthServiceProtocol {
+    let dataProvider = MoyaProvider<AuthServiceApi>(plugins: [NetworkLoggerPlugin()])
+//    static var shared = AuthService()
+
+//    init() {}
 
     func signIn(
         email: String, password: String,
@@ -22,7 +27,8 @@ class AuthService {
         dataProvider.request(.signIn(email: email, password: password)) { result in
             switch result {
             case let .success(moyaResponse):
-                guard (200 ... 299).contains(moyaResponse.statusCode) else {
+                guard (200 ... 299).contains(moyaResponse.statusCode)
+                else {
                     let message = try? moyaResponse.map(String.self, atKeyPath: "message")
                     completion(.failure(CustomError(errorDescription: message)))
                     return
@@ -41,25 +47,24 @@ class AuthService {
 
     func signUp(name: String, email: String, password: String,
                 completion: @escaping (Result<TokenResponse, Error>) -> Void)
-    {
-        dataProvider.request(.signUp(username: name, email: email, password: password)) {
-            result in
-            switch result {
-            case let .success(moyaResponse):
-                guard (200 ... 299).contains(moyaResponse.statusCode) else {
-                    let message = try? moyaResponse.map(String.self, atKeyPath: "message")
-                    completion(.failure(CustomError(errorDescription: message)))
-                    return
-                }
-                do {
-                    let tokenResponse = try moyaResponse.map(TokenResponse.self)
-                    completion(.success(tokenResponse))
-                } catch {
-                    completion(.failure(error))
-                }
-            case let .failure(error):
+    { dataProvider.request(.signUp(username: name, email: email, password: password)) { result in
+        switch result {
+        case let .success(moyaResponse):
+            guard (200 ... 299).contains(moyaResponse.statusCode)
+            else {
+                let message = try? moyaResponse.map(String.self, atKeyPath: "message")
+                completion(.failure(CustomError(errorDescription: message)))
+                return
+            }
+            do {
+                let tokenResponse = try moyaResponse.map(TokenResponse.self)
+                completion(.success(tokenResponse))
+            } catch {
                 completion(.failure(error))
             }
+        case let .failure(error):
+            completion(.failure(error))
         }
+    }
     }
 }

@@ -102,6 +102,7 @@
             <connections>
                 <outlet property="emailTextField" destination="9oJ-pi-8O1" id="X8g-l2-QYC"/>
                 <outlet property="passwordRecoveryButton" destination="xNi-af-c3t" id="MjA-ez-sc3"/>
+                <outlet property="passwordTextField" destination="59Y-hb-aX6" id="Eyw-M9-vOt"/>
                 <outlet property="registrationButton" destination="gko-L2-cih" id="NRK-c2-JUd"/>
                 <outlet property="scrollView" destination="4er-Mh-kM2" id="DGL-xR-7OC"/>
             </connections>

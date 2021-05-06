@@ -17,7 +17,7 @@ class SignUpView: UIView {
     @IBOutlet var passwordTextField: MDTextField!
     @IBOutlet var confirmPassTextField: MDTextField!
 
-    private lazy var signUpButton = ButtonDefault(title: "Зарегистрироваться")
+    lazy var signUpButton = ButtonDefault(title: "Зарегистрироваться")
 
     // MARK: - Init
 

@@ -22,8 +22,12 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 //            let navigationController = UINavigationController(rootViewController: EventsContoller())
 //            window?.rootViewController = navigationController
 //        }
-        let controller = UINavigationController(rootViewController: StartController())
-        window?.rootViewController = controller
+        let viewController = StartController()
+        let presenter = StartPresenter(view: viewController)
+        viewController.presenter = presenter
+
+        let nav = UINavigationController(rootViewController: viewController)
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
         return true
     }

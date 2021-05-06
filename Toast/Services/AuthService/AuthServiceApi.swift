@@ -6,6 +6,7 @@
 //  Copyright © 2021 Oleg Romanov. All rights reserved.
 //
 
+import KeychainSwift
 import Moya
 
 enum AuthServiceApi {
@@ -14,9 +15,9 @@ enum AuthServiceApi {
 }
 
 extension AuthServiceApi: TargetType {
-    // тот самый url
     var baseURL: URL {
-        return URL(string: "http://192.168.1.31:8080")!
+        return URL(string: "http://localhost:8080")!
+//        return URL(string: "http://192.168.1.196:8080")!
     }
 
     var path: String {
@@ -28,7 +29,7 @@ extension AuthServiceApi: TargetType {
         }
     }
 
-    var method: Method {
+    var method: Moya.Method {
         return .post
     }
 

@@ -23,13 +23,13 @@ final class EventsContoller: UIViewController {
     override func viewDidLoad() {
         setupStyle()
         addActionHandlers()
-        customView.updateData(Event.generateData())
+//        customView.updateData(Event.generateData())
     }
 
     // MARK: - Init
 
     private func setupStyle() {
-        navigationItem.title = Text.Persons.title
+        navigationItem.title = Text.Events.title
         navigationItem.rightBarButtonItem = customView.addPersonButton
     }
 
@@ -41,9 +41,11 @@ final class EventsContoller: UIViewController {
     }
 
     @objc private func addPersonButtonClicked() {
-        let nextController = AddEventController()
-        nextController.delegate = self
-        navigationController?.pushViewController(nextController, animated: true)
+        let addEventController = AddEventController()
+        let addEventPresenter = AddEventPresener(view: addEventController)
+        addEventController.presenter = addEventPresenter
+        addEventController.delegate = self
+        navigationController?.pushViewController(addEventController, animated: true)
     }
 }
 
@@ -53,8 +55,8 @@ extension EventsContoller: AddEventControllerDelegate {
     func addEvent(_ event: Event) {
         customView.addEvent(event)
         SPAlert.present(
-            title: Text.Persons.done,
-            message: "\(event.name)" + Text.Persons.message,
+            title: Text.Events.done,
+            message: "\(event.name)" + Text.Events.message,
             preset: .done
         )
     }

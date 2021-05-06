@@ -13,9 +13,10 @@ class SignInView: UIView {
 
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var emailTextField: MDTextField!
+    @IBOutlet var passwordTextField: MDTextField!
     @IBOutlet var passwordRecoveryButton: UIButton!
     @IBOutlet var registrationButton: UIButton!
-    private lazy var signInButton = ButtonDefault(title: "Войти")
+    lazy var signInButton = ButtonDefault(title: "Войти")
 
     // MARK: - Init
 
@@ -30,7 +31,7 @@ class SignInView: UIView {
             make.width.equalTo(UIScreen.main.bounds.width - 32)
             make.height.equalTo(50)
             make.centerX.equalToSuperview()
-            make.bottom.equalToSuperview().inset(20)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(20)
         }
     }
 
@@ -65,7 +66,7 @@ class SignInView: UIView {
     private func adjustContentInset(_ contentInset: CGFloat) {
         scrollView.contentInset.bottom = contentInset
         signInButton.snp.updateConstraints { make in
-            make.bottom.equalToSuperview().inset(contentInset + 20)
+            make.bottom.equalTo(safeAreaLayoutGuide).inset(contentInset + 20)
         }
         UIView.animate(withDuration: 0.1) {
             self.layoutIfNeeded()
