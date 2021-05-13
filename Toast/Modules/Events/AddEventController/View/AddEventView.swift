@@ -15,6 +15,10 @@ class AddEventView: UIView {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var birthdayLabel: UILabel!
     @IBOutlet var datePicker: UIDatePicker!
+    @IBOutlet var arrowImageViewCategory: UIImageView!
+    @IBOutlet var arrowImageViewType: UIImageView!
+    @IBOutlet var categoryButton: UIButton!
+    @IBOutlet var typeButton: UIButton!
 
     lazy var doneButton = UIBarButtonItem(
         title: Text.AddEvent.done, style: .done, target: nil, action: nil
@@ -23,16 +27,16 @@ class AddEventView: UIView {
     // MARK: - Init
 
     override func awakeFromNib() {
-        commonInit()
+        addActionHandlers()
     }
 
-    private func commonInit() {
-        addActionHandlers()
-        setupStyle()
+    @IBAction func action(_ sender: Any) {
+        print("so")
     }
 
     private func setupStyle() {
-        datePicker.maximumDate = Date()
+        arrowImageViewCategory.image = Assets.arrowIcon.image
+        arrowImageViewType.image = Assets.arrowIcon.image
     }
 
     deinit {

@@ -13,15 +13,22 @@ enum CreateEventResult {
     case failure(error: String)
 }
 
+enum GetAllEventsResult {
+    case success(events: [Event])
+    case failure(error: Error)
+}
+
 protocol EventServiceProtocol {
     func createEvent(event: Event, completion: @escaping (CreateEventResult) -> Void)
+    func getAllEvents(completion: @escaping (GetAllEventsResult) -> Void)
 }
 
 class EventService: EventServiceProtocol {
     let dataProvider = MoyaProvider<EventServiceApi>(plugins: [
         NetworkLoggerPlugin(),
-        AccessTokenPlugin(tokenClosure: { _ in "типо кейчейн" ?? "" })
-] )
+//        NetworkLoggerPlugin(),
+//        AccessTokenPlugin(tokenClosure: { _ in "типо кейчейн" ?? "" }),
+    ])
 
     func createEvent(event: Event, completion: @escaping (CreateEventResult) -> Void) {
         print(event)
@@ -44,6 +51,28 @@ class EventService: EventServiceProtocol {
                 }
             case let .failure(error):
                 completion(.failure(error: "\(error)"))
+            }
+        }
+    }
+
+    func getAllEvents(completion: @escaping (GetAllEventsResult) -> Void) {
+        dataProvider.request(.getAllEvents) { result in
+            switch result {
+            case let .success(moyaResponse):
+                guard (200 ... 299).contains(moyaResponse.statusCode)
+                else {
+                    let message = try? moyaResponse.map(String.self, atKeyPath: "message")
+                    completion(.failure(error: CustomError(errorDescription: message)))
+                    return
+                }
+                do {
+                    let dataResponse = try moyaResponse.map([Event].self)
+                    completion(.success(events: dataResponse))
+                } catch {
+                    completion(.failure(error: error))
+                }
+            case let .failure(error):
+                completion(.failure(error: error))
             }
         }
     }

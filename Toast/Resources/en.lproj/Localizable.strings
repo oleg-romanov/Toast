@@ -30,3 +30,5 @@ SignIn.WithEmail = "Continue with Email";
 SignIn.WithFacebook = "Continue with Facebook";
 SignIn.WithApple = "Continue with Apple";
 SignIn.AsGuest = "Continue as a guest";
+
+Categories.Title = "Categories";

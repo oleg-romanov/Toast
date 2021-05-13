@@ -23,7 +23,18 @@ final class EventsContoller: UIViewController {
     override func viewDidLoad() {
         setupStyle()
         addActionHandlers()
+        let button: UIButton = {
+            let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            button.setTitle("sdgddg", for: .normal)
+            return button
+        }()
+        view.addSubview(button)
+        button.addTarget(self, action: #selector(someMethod), for: .touchUpInside)
 //        customView.updateData(Event.generateData())
+    }
+
+    @objc func someMethod() {
+        print("")
     }
 
     // MARK: - Init

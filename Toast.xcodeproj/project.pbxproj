@@ -10,6 +10,10 @@
 		7FCB9303582C749F78B8DD18 /* Pods_Toast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEF4081C7216542D140DB5F /* Pods_Toast.framework */; };
 		EA02BD54261F451300F1B1A6 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02BD53261F451300F1B1A6 /* Grid.swift */; };
 		EA02BD57261F461100F1B1A6 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02BD56261F461100F1B1A6 /* Keys.swift */; };
+		EA070205264C0AEC00B5DE96 /* EventsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA070204264C0AEC00B5DE96 /* EventsPresenter.swift */; };
+		EA070207264C0AFE00B5DE96 /* EventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA070206264C0AFE00B5DE96 /* EventsProtocols.swift */; };
+		EA07020A264C647800B5DE96 /* CategoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA070209264C647800B5DE96 /* CategoryModels.swift */; };
+		EA07020C264C648700B5DE96 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA07020B264C648700B5DE96 /* CategoryService.swift */; };
 		EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */; };
 		EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */; };
 		EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FD26419F90008C5450 /* AddEventProtocols.swift */; };
@@ -39,6 +43,13 @@
 		EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */; };
 		EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */; };
 		EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */; };
+		EA952E4626494C5C00B0A882 /* CategoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */; };
+		EA952E4826494D3A00B0A882 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4726494D3A00B0A882 /* CategoryController.swift */; };
+		EA952E4A26494D4C00B0A882 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */; };
+		EA952E4C26494D6400B0A882 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4B26494D6400B0A882 /* CategoryView.swift */; };
+		EA952E4E2649554000B0A882 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4D2649554000B0A882 /* CategoryDataSource.swift */; };
+		EA952E5026495A2000B0A882 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4F26495A2000B0A882 /* Category.swift */; };
+		EA952E5226495B0700B0A882 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E5126495B0700B0A882 /* CategoryCell.swift */; };
 		EAA0006125FB727A007426C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005D25FB727A007426C1 /* Assets.swift */; };
 		EAA0006225FB727A007426C1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005E25FB727A007426C1 /* Text.swift */; };
 		EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */; };
@@ -77,6 +88,10 @@
 		C8466FCD1A2BB6D2C702416E /* Pods-Toast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Toast.debug.xcconfig"; path = "Target Support Files/Pods-Toast/Pods-Toast.debug.xcconfig"; sourceTree = "<group>"; };
 		EA02BD53261F451300F1B1A6 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		EA02BD56261F461100F1B1A6 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		EA070204264C0AEC00B5DE96 /* EventsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsPresenter.swift; sourceTree = "<group>"; };
+		EA070206264C0AFE00B5DE96 /* EventsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProtocols.swift; sourceTree = "<group>"; };
+		EA070209264C647800B5DE96 /* CategoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModels.swift; sourceTree = "<group>"; };
+		EA07020B264C648700B5DE96 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
 		EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
 		EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
 		EA2076FD26419F90008C5450 /* AddEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventProtocols.swift; sourceTree = "<group>"; };
@@ -108,6 +123,13 @@
 		EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesDataSource.swift; sourceTree = "<group>"; };
 		EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProtocols.swift; sourceTree = "<group>"; };
+		EA952E4726494D3A00B0A882 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
+		EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		EA952E4B26494D6400B0A882 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
+		EA952E4D2649554000B0A882 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
+		EA952E4F26495A2000B0A882 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		EA952E5126495B0700B0A882 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		EAA0005D25FB727A007426C1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EAA0005E25FB727A007426C1 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
@@ -168,6 +190,15 @@
 				AAEF4081C7216542D140DB5F /* Pods_Toast.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA070208264C645A00B5DE96 /* CategoryService */ = {
+			isa = PBXGroup;
+			children = (
+				EA070209264C647800B5DE96 /* CategoryModels.swift */,
+				EA07020B264C648700B5DE96 /* CategoryService.swift */,
+			);
+			path = CategoryService;
 			sourceTree = "<group>";
 		};
 		EA1960E92600B71A00E289A1 /* SignInController */ = {
@@ -286,6 +317,7 @@
 			children = (
 				EA2076FF2641A2CE008C5450 /* AuthService */,
 				EA2077002641A2E1008C5450 /* EventService */,
+				EA070208264C645A00B5DE96 /* CategoryService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -293,8 +325,10 @@
 		EA5AB56C25FB6A3B000A46EE /* EventsController */ = {
 			isa = PBXGroup;
 			children = (
-				EA5AB56D25FB6A3B000A46EE /* Event.swift */,
+				EA070206264C0AFE00B5DE96 /* EventsProtocols.swift */,
+				EA070204264C0AEC00B5DE96 /* EventsPresenter.swift */,
 				EA5AB56E25FB6A3B000A46EE /* EventsController.swift */,
+				EA5AB56D25FB6A3B000A46EE /* Event.swift */,
 				EA5AB56F25FB6A3B000A46EE /* View */,
 			);
 			path = EventsController;
@@ -303,8 +337,8 @@
 		EA5AB56F25FB6A3B000A46EE /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */,
 				EA5AB57125FB6A3B000A46EE /* EventsView.swift */,
+				EA5AB57025FB6A3B000A46EE /* EventsDataSource.swift */,
 				EA5AB57225FB6A3B000A46EE /* Cell */,
 				EA5AB57425FB6A3B000A46EE /* DateSectionHeader */,
 			);
@@ -414,6 +448,28 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EA952E4326494C0300B0A882 /* CategoryController */ = {
+			isa = PBXGroup;
+			children = (
+				EA952E4F26495A2000B0A882 /* Category.swift */,
+				EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */,
+				EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */,
+				EA952E4726494D3A00B0A882 /* CategoryController.swift */,
+				EA952E4426494C3600B0A882 /* View */,
+			);
+			path = CategoryController;
+			sourceTree = "<group>";
+		};
+		EA952E4426494C3600B0A882 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA952E4B26494D6400B0A882 /* CategoryView.swift */,
+				EA952E4D2649554000B0A882 /* CategoryDataSource.swift */,
+				EA952E5126495B0700B0A882 /* CategoryCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EAA0005B25FB727A007426C1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +557,7 @@
 			children = (
 				EA5AB56C25FB6A3B000A46EE /* EventsController */,
 				EA5AB58025FB6A3B000A46EE /* AddEventController */,
+				EA952E4326494C0300B0A882 /* CategoryController */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -663,10 +720,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA952E4A26494D4C00B0A882 /* CategoryPresenter.swift in Sources */,
 				EAEB82FF2604DCE000DCCCF9 /* ViewForInputAccesory.swift in Sources */,
 				EA02BD57261F461100F1B1A6 /* Keys.swift in Sources */,
 				EA3C11B62604FD1000874546 /* EnterEmailView.swift in Sources */,
 				EA5AB58E25FB6A3B000A46EE /* EventsController.swift in Sources */,
+				EA952E4C26494D6400B0A882 /* CategoryView.swift in Sources */,
 				EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */,
 				EAAECF8926120F83000564C2 /* SlideCell.swift in Sources */,
 				EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */,
@@ -679,16 +738,20 @@
 				EA02BD54261F451300F1B1A6 /* Grid.swift in Sources */,
 				EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */,
 				EAA0006425FB727A007426C1 /* ButtonDefault.swift in Sources */,
+				EA952E4826494D3A00B0A882 /* CategoryController.swift in Sources */,
 				EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */,
+				EA070207264C0AFE00B5DE96 /* EventsProtocols.swift in Sources */,
 				EAAECF8E26120FFF000564C2 /* PasswordResetController.swift in Sources */,
 				EAAECFA026147D7B000564C2 /* PasswordResetPresenter.swift in Sources */,
 				EA5AB59A25FB6A3B000A46EE /* AddEventView.swift in Sources */,
 				EA3C11B12604FC7600874546 /* EnterEmailController.swift in Sources */,
+				EA952E4626494C5C00B0A882 /* CategoryProtocols.swift in Sources */,
 				EA5AB59725FB6A3B000A46EE /* SignUpView.swift in Sources */,
 				EAC65806261DCE7B003EC46B /* SignUpPresenter.swift in Sources */,
 				EAAECFAD26149648000564C2 /* SignInPresenter.swift in Sources */,
 				EA2077042641A674008C5450 /* EventService.swift in Sources */,
 				EAAECFB126149665000564C2 /* SignInProtocols.swift in Sources */,
+				EA952E4E2649554000B0A882 /* CategoryDataSource.swift in Sources */,
 				EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */,
 				EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */,
 				EAA0006125FB727A007426C1 /* Assets.swift in Sources */,
@@ -698,6 +761,7 @@
 				EAA0006225FB727A007426C1 /* Text.swift in Sources */,
 				EAA0FFF325FB706A007426C1 /* AuthServiceApi.swift in Sources */,
 				EAA0007925FB8AAB007426C1 /* ButtonSignInWithEmail.swift in Sources */,
+				EA952E5026495A2000B0A882 /* Category.swift in Sources */,
 				EAA0007625FB8669007426C1 /* ButtonSignIn.swift in Sources */,
 				EA5AB59125FB6A3B000A46EE /* EventCell.swift in Sources */,
 				EAAECFB62614CD8C000564C2 /* PasswordResetProtocols.swift in Sources */,
@@ -716,6 +780,10 @@
 				EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */,
 				EA5AB59225FB6A3B000A46EE /* DateSectionHeader.swift in Sources */,
 				EAAECFA926148F4E000564C2 /* StartProtocols.swift in Sources */,
+				EA07020A264C647800B5DE96 /* CategoryModels.swift in Sources */,
+				EA952E5226495B0700B0A882 /* CategoryCell.swift in Sources */,
+				EA070205264C0AEC00B5DE96 /* EventsPresenter.swift in Sources */,
+				EA07020C264C648700B5DE96 /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

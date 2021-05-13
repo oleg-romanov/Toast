@@ -31,3 +31,5 @@ SignIn.WithFacebook = "Продолжить с Facebook";
 SignIn.WithApple = "Продолжить с Apple";
 SignIn.AsGuest = "Продолжить как гость";
 
+Categories.Title = "Категории";
+

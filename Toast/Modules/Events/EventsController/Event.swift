@@ -9,12 +9,9 @@
 import UIKit
 
 struct Event: Codable {
-    // MARK: - Properties
-
     var name: String
     var description: String
     var date: Date
-    var eventTypeId: Int
     var categoryId: Int
 }
 

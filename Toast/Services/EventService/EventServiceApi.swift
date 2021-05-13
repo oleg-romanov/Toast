@@ -10,6 +10,7 @@ import Moya
 
 enum EventServiceApi {
     case createEvent(event: Event)
+    case getAllEvents
 }
 
 extension EventServiceApi: AccessTokenAuthorizable {
@@ -30,11 +31,18 @@ extension EventServiceApi: TargetType {
         switch self {
         case .createEvent:
             return "/event"
+        case .getAllEvents:
+            return "/event"
         }
     }
 
     var method: Moya.Method {
-        return .post
+        switch self {
+        case .createEvent:
+            return .post
+        case .getAllEvents:
+            return .get
+        }
     }
 
     var sampleData: Data {
@@ -48,9 +56,11 @@ extension EventServiceApi: TargetType {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             encoder.dateEncodingStrategy = .formatted(dateFormatter)
-            let requestBody = CreateEventRequest(name: event.name, description: event.description, date: event.date, eventTypeId: event.eventTypeId, categoryId: event.categoryId)
+            let requestBody = CreateEventRequest(name: event.name, description: event.description, date: event.date, categoryId: event.categoryId)
             print(Task.requestJSONEncodable(requestBody))
             return .requestCustomJSONEncodable(requestBody, encoder: encoder)
+        case .getAllEvents:
+            return .requestPlain
         }
     }
 

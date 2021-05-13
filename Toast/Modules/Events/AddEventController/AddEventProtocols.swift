@@ -7,7 +7,9 @@
 
 import Foundation
 
-protocol AddEventViewInput: AnyObject {}
+protocol AddEventViewInput: AnyObject {
+//    func presentCategories()
+}
 
 protocol AddEventViewOutput: AnyObject {
     func createEvent(event: Event)
