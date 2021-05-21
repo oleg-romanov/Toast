@@ -28,9 +28,15 @@ class EventService: EventServiceProtocol {
         NetworkLoggerPlugin(),
     ])
 
+    let decoder = JSONDecoder()
+
+    let dateFormatter = DateFormatter()
+
     func createEvent(event: EventDto, completion: @escaping (CreateEventResult) -> Void) {
-        print(event)
-        dataProvider.request(.createEvent(event: event)) { result in
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
+        dataProvider.request(.createEvent(event: event)) { [weak self] result in
+            guard let strongSelf = self else { return }
             switch result {
             case let .success(moyaResponse):
                 guard (200 ... 299).contains(moyaResponse.statusCode)
@@ -40,8 +46,7 @@ class EventService: EventServiceProtocol {
                     return
                 }
                 do {
-                    let dataResponse = try moyaResponse.map(Event.self)
-                    print(dataResponse)
+                    let dataResponse = try strongSelf.decoder.decode(Event.self, from: moyaResponse.data)
                     completion(.success(event: dataResponse))
                 } catch {
                     completion(.failure(error: error))
@@ -53,11 +58,10 @@ class EventService: EventServiceProtocol {
     }
 
     func getAllEvents(completion: @escaping (GetAllEventsResult) -> Void) {
-        let decoder = JSONDecoder()
-        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
         decoder.dateDecodingStrategy = .formatted(dateFormatter)
-        dataProvider.request(.getAllEvents) { result in
+        dataProvider.request(.getAllEvents) { [weak self] result in
+            guard let strongSelf = self else { return }
             switch result {
             case let .success(moyaResponse):
                 guard (200 ... 299).contains(moyaResponse.statusCode)
@@ -67,8 +71,7 @@ class EventService: EventServiceProtocol {
                     return
                 }
                 do {
-                    let dataResponse = try decoder.decode([Event].self, from: moyaResponse.data)
-//                    let dataResponse = try moyaResponse.map([Event].self)
+                    let dataResponse = try strongSelf.decoder.decode([Event].self, from: moyaResponse.data)
                     completion(.success(events: dataResponse))
                 } catch {
                     completion(.failure(error: error))

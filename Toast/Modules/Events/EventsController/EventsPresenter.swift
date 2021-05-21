@@ -27,8 +27,8 @@ extension EventsPresenter: EventsViewOutput {
             switch result {
             case let .success(events: events):
                 self?.view?.loadEvents(events: events)
-                print(events)
             case let .failure(error: error):
+                // TODO: Сделать показ ошибки
                 break
             }
         }

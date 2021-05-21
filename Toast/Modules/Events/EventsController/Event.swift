@@ -19,7 +19,7 @@ struct Event: Decodable {
     var id: Int
     var name: String
     var description: String
-    var date: String
+    var date: Date
     var category: Category
     var user: User
 }

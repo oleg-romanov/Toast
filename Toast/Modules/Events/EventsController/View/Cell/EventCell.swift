@@ -70,6 +70,7 @@ final class EventCell: UITableViewCell {
         nameLabel.snp.makeConstraints { make in
             make.leading.equalTo(16)
             make.top.equalTo(13)
+            make.trailing.equalTo(16)
         }
 
         dateLabel.snp.makeConstraints { make in
@@ -88,7 +89,7 @@ final class EventCell: UITableViewCell {
 
     func configure(cell: Event) {
         nameLabel.text = cell.name
-//        dateLabel.text = dayAndMonthDateFormatter.string(for: cell.date)
-//        categoryLabel.text = cell.category
+        dateLabel.text = dayAndMonthDateFormatter.string(for: cell.date)
+        categoryLabel.text = cell.category.name
     }
 }

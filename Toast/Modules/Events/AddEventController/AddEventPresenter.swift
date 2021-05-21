@@ -26,12 +26,10 @@ extension AddEventPresener: AddEventViewOutput {
         service.createEvent(event: event) { [weak self] result in
             switch result {
             case let .success(event: event):
-                print(event)
                 complition(.success(()))
-            case let .failure(error):
+            case let .failure(error): // mistake here
                 complition(.failure(error))
                 self?.view?.showError(error: error)
-                print(error)
             }
         }
     }

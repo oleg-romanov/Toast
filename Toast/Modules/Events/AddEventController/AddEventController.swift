@@ -79,7 +79,7 @@ class AddEventController: UIViewController {
             case .success():
                 self?.navigationController?.popViewController(animated: true)
             case let .failure(error):
-                print("Ошибка: \(error)")
+                print("Ошибкаaaa: \(error)")
             }
         }
     }

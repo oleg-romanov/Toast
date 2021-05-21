@@ -20,8 +20,7 @@ final class DateSectionHeader: UIView {
 
     private let monthDateFormatter: DateFormatter = {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMMM"
-        dateFormatter.locale = Locale(identifier: "Ru")
+        dateFormatter.dateFormat = "LLLL"
         return dateFormatter
     }()
 
