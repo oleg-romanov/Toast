@@ -7,7 +7,10 @@
 
 import Foundation
 
-protocol CategoryViewInput: AnyObject {}
+protocol CategoryViewInput: AnyObject {
+    func reloadCategories()
+    func loadCategories(categories: [Category])
+}
 
 protocol CategoryViewOutput: AnyObject {
     func getAllCategories()

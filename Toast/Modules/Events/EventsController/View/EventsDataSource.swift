@@ -18,21 +18,21 @@ final class EventsDataSource: NSObject {
 
     func setTableView(_ tableView: UITableView) {
         self.tableView = tableView
-        tableView.dataSource = self
         tableView.delegate = self
         tableView.register(EventCell.self, forCellReuseIdentifier: "TableCell")
     }
 
     func updateData(_ data: [Event]) {
         self.data = []
-        let groupped = Dictionary(grouping: data, by: { person in
-            Calendar.current.component(.month, from: person.date ?? Date())
+        let groupped = Dictionary(grouping: data, by: { event in
+            Calendar.current.component(.month, from: Date())
         })
         groupped.keys.forEach { [weak self] key in
             guard let array = groupped[key] else { return }
             self?.data.append(array)
         }
         sortData()
+        print("\(data.count)")
         tableView?.reloadData()
     }
 
@@ -64,7 +64,11 @@ final class EventsDataSource: NSObject {
 //        }
 //        for index in data.indices {
 //            data[index] = data[index].sorted { p1, p2 in
-//                guard let date1 = p1.date, let date2 = p2.date else { return false }
+//                guard
+//                    let date1 = p1.date, let date2 = p2.date
+//                else {
+//                    return false
+//                }
 //                let day1 = Calendar.current.component(.day, from: date1)
 //                let day2 = Calendar.current.component(.day, from: date2)
 //                return day1 < day2
@@ -99,9 +103,9 @@ extension EventsDataSource: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        guard let date = data[section].first?.date else { return nil }
+//        guard let date = data[section].first?.date else { return nil }
         let view = DateSectionHeader()
-        view.configure(date: date)
+//        view.configure(date: date)
         return view
     }
 }

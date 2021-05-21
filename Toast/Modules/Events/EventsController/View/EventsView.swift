@@ -32,6 +32,7 @@ final class EventsView: UIView {
     init() {
         super.init(frame: UIScreen.main.bounds)
         commonInit()
+        tableView.dataSource = dataSource
     }
 
     @available(*, unavailable)

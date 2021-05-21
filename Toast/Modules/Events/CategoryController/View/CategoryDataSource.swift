@@ -7,14 +7,27 @@
 
 import UIKit
 
+protocol CategoryDelegate: AnyObject {
+    func sendCategoryId(categoryId: Int)
+}
+
 class CategoryDataSource: NSObject {
     var data: [Category] = []
+
+    weak var delegate: CategoryDelegate?
+
+    var closure: ((Int) -> Void)?
 
     var tableView: UITableView
 
     init(tableView: UITableView) {
         self.tableView = tableView
-        tableView.register(CategoryCell.self, forCellReuseIdentifier: "Cell")
+        tableView.register(UINib(nibName: "CategoryCell", bundle: .main), forCellReuseIdentifier: "Cell")
+    }
+
+    func updateData(_ data: [Category]) {
+        self.data = data
+        tableView.reloadData()
     }
 }
 
@@ -29,12 +42,21 @@ extension CategoryDataSource: UITableViewDataSource {
         }
         let category = data[indexPath.row]
         cell.configure(category: category)
+
         return cell
     }
 }
 
 extension CategoryDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+        let cell = tableView.cellForRow(at: indexPath)
+        if cell?.accessoryType != .checkmark {
+            cell?.accessoryType = .checkmark
+            closure?(data[indexPath.row].id)
+            delegate?.sendCategoryId(categoryId: data[indexPath.row].id)
+        } else if cell?.accessoryType == .checkmark {
+            cell?.accessoryType = .none
+        }
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }

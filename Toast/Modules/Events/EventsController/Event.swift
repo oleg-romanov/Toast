@@ -8,44 +8,22 @@
 
 import UIKit
 
-struct Event: Codable {
+struct EventDto: Encodable {
     var name: String
     var description: String
     var date: Date
     var categoryId: Int
 }
 
-// MARK: - Static
+struct Event: Decodable {
+    var id: Int
+    var name: String
+    var description: String
+    var date: String
+    var category: Category
+    var user: User
+}
 
-//    static func generateData() -> [Event] {
-//        let dateFormatter = DateFormatter()
-//        dateFormatter.dateFormat = "dd.MM.yyyy"
-//
-//       let event1 = Event(
-//           name: "Михаил",
-//           date: dateFormatter.date(from: "25.03.1997"),
-//           category: "Друзья"
-//       )
-//       let event2 = Event(
-//           name: "Дмитрий",
-//           date: dateFormatter.date(from: "11.03.1999"),
-//           category: "Друзья"
-//       )
-//       let event3 = Event(
-//           name: "Валерия",
-//           date: dateFormatter.date(from: "05.04.1997"),
-//           category: "Друзья"
-//       )
-//       let event4 = Event(
-//           name: "Олег",
-//           date: dateFormatter.date(from: "30.03.2001"),
-//           category: "Коллеги"
-//       )
-//       let event5 = Event(
-//           name: "Айдар",
-//           date: dateFormatter.date(from: "04.12.1998"),
-//           category: "Друзья"
-//       )
-//
-//        return [event1, event2, event3, event4, event5]
-//    }
+struct User: Codable {
+    var name: String
+}

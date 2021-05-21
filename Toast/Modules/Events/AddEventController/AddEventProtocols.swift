@@ -9,8 +9,9 @@ import Foundation
 
 protocol AddEventViewInput: AnyObject {
 //    func presentCategories()
+    func showError(error: Error)
 }
 
 protocol AddEventViewOutput: AnyObject {
-    func createEvent(event: Event)
+    func createEvent(event: EventDto, complition: @escaping (Result<Void, Error>) -> Void)
 }

@@ -13,7 +13,6 @@ final class AddEventPresener {
 
     private let keychain = KeychainSwift(keyPrefix: Keys.keyPrefix)
 
-    //
     private let service: EventServiceProtocol
 
     init(view: AddEventViewInput, service: EventServiceProtocol = EventService()) {
@@ -23,14 +22,15 @@ final class AddEventPresener {
 }
 
 extension AddEventPresener: AddEventViewOutput {
-    func createEvent(event: Event) {
+    func createEvent(event: EventDto, complition: @escaping (Result<Void, Error>) -> Void) {
         service.createEvent(event: event) { [weak self] result in
             switch result {
             case let .success(event: event):
                 print(event)
-//                self?.view?.presentEvents()
+                complition(.success(()))
             case let .failure(error):
-//                self?.view?.showError(message: error.localizedDescription)
+                complition(.failure(error))
+                self?.view?.showError(error: error)
                 print(error)
             }
         }

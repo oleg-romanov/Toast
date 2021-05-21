@@ -19,10 +19,12 @@ struct CreateEventRequest: Encodable {
 }
 
 struct EventResponse: Decodable {
+    let id: Int
     let name: String
     let description: String
     let date: Date
-    let categoryId: Int
+    let category: Category
+    let user: User
 }
 
 struct GetAllEventsResponse: Decodable {

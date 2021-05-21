@@ -12,16 +12,35 @@ class CategoryController: UIViewController {
 
     var presenter: CategoryViewOutput?
 
+    var closure: ((Int) -> Void)?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
-        setupStyle()
+        customView.dataSource.delegate = self
+        setup()
     }
 
-    private func setupStyle() {
+    override func viewWillAppear(_ animated: Bool) {
+        reloadCategories()
+    }
+
+    private func setup() {
         navigationItem.title = Text.Categories.title
 //        navigationItem.rightBarButtonItem = customView.addPersonButton
     }
 }
 
-extension CategoryController: CategoryViewInput {}
+extension CategoryController: CategoryViewInput {
+    func reloadCategories() {
+        presenter?.getAllCategories()
+    }
+
+    func loadCategories(categories: [Category]) {
+        customView.updateData(categories)
+    }
+}
+
+extension CategoryController: CategoryDelegate {
+    func sendCategoryId(categoryId: Int) {}
+}

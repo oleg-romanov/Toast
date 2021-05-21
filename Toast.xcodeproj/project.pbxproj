@@ -50,6 +50,8 @@
 		EA952E4E2649554000B0A882 /* CategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4D2649554000B0A882 /* CategoryDataSource.swift */; };
 		EA952E5026495A2000B0A882 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4F26495A2000B0A882 /* Category.swift */; };
 		EA952E5226495B0700B0A882 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E5126495B0700B0A882 /* CategoryCell.swift */; };
+		EA9B71232653B03A00C8233F /* CategoryServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */; };
+		EA9B712526540CBE00C8233F /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9B712426540CBE00C8233F /* CategoryCell.xib */; };
 		EAA0006125FB727A007426C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005D25FB727A007426C1 /* Assets.swift */; };
 		EAA0006225FB727A007426C1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005E25FB727A007426C1 /* Text.swift */; };
 		EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */; };
@@ -130,6 +132,8 @@
 		EA952E4D2649554000B0A882 /* CategoryDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDataSource.swift; sourceTree = "<group>"; };
 		EA952E4F26495A2000B0A882 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		EA952E5126495B0700B0A882 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceApi.swift; sourceTree = "<group>"; };
+		EA9B712426540CBE00C8233F /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		EAA0005D25FB727A007426C1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EAA0005E25FB727A007426C1 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
@@ -197,6 +201,7 @@
 			children = (
 				EA070209264C647800B5DE96 /* CategoryModels.swift */,
 				EA07020B264C648700B5DE96 /* CategoryService.swift */,
+				EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */,
 			);
 			path = CategoryService;
 			sourceTree = "<group>";
@@ -466,6 +471,7 @@
 				EA952E4B26494D6400B0A882 /* CategoryView.swift */,
 				EA952E4D2649554000B0A882 /* CategoryDataSource.swift */,
 				EA952E5126495B0700B0A882 /* CategoryCell.swift */,
+				EA9B712426540CBE00C8233F /* CategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,6 +637,7 @@
 				EA3C11B92604FD2500874546 /* EnterEmailView.xib in Resources */,
 				EA5AB59B25FB6A3B000A46EE /* AddEventView.xib in Resources */,
 				EA264C8125EF72340048FD41 /* Assets.xcassets in Resources */,
+				EA9B712526540CBE00C8233F /* CategoryCell.xib in Resources */,
 				EABEAD522603A0B3007F2020 /* SignInView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,6 +737,7 @@
 				EAAECF8926120F83000564C2 /* SlideCell.swift in Sources */,
 				EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */,
 				EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */,
+				EA9B71232653B03A00C8233F /* CategoryServiceApi.swift in Sources */,
 				EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */,
 				EA5AB58F25FB6A3B000A46EE /* EventsDataSource.swift in Sources */,
 				EAA0007E25FBB650007426C1 /* StyleUtils.swift in Sources */,

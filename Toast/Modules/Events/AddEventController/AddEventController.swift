@@ -6,18 +6,19 @@
 //  Copyright © 2020 Oleg Romanov. All rights reserved.
 //
 
+import SPAlert
 import UIKit
 
-protocol AddEventControllerDelegate: AnyObject {
-    func addEvent(_ person: Event)
-}
+// protocol AddEventControllerDelegate: AnyObject {
+//    func addEvent(_ person: Event)
+// }
 
 class AddEventController: UIViewController {
     // MARK: - Properties
 
     lazy var customView: AddEventView? = view as? AddEventView
 
-    weak var delegate: AddEventControllerDelegate?
+//    weak var delegate: AddEventControllerDelegate?
 
     var presenter: AddEventViewOutput?
 
@@ -60,28 +61,30 @@ class AddEventController: UIViewController {
     }
 
     @objc private func doneBottonClicked() {
-//        guard
-//            let name = custonView?.nameTextField.text,
-//            let birthdate = custonView?.datePicker.date,
-//            name.isEmpty == false
-//        else { return }
-        // MOCK
-
-//        let newPerson = Event(name: name, date: birthdate, category: "none")
-//        delegate?.addEvent(newPerson)
+        guard
+            let name = customView?.nameTextField.text,
+            let date = customView?.datePicker.date
+        else {
+            return
+        }
         let dateFormatter = DateFormatter()
-        let date = Date(timeIntervalSinceNow: 12312)
         dateFormatter.timeStyle = .short
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let day = dateFormatter.string(from: date)
-        print(day)
-        let event = Event(name: "TesssstEvent1", description: "Cool description", date: Date(), categoryId: 1)
-        presenter?.createEvent(event: event)
-        navigationController?.popViewController(animated: true)
+
+        let event = EventDto(name: name, description: "Cool description", date: date, categoryId: 2)
+        print(event)
+        presenter?.createEvent(event: event) { [weak self] result in
+            switch result {
+            case .success():
+                self?.navigationController?.popViewController(animated: true)
+            case let .failure(error):
+                print("Ошибка: \(error)")
+            }
+        }
     }
 
     @objc func categoryButtonClicked() {
-        print("юхууу, я вызван")
         let categoriesVC = CategoryController()
         let categoriesPresenter = CategoryPresenter(view: categoriesVC)
         categoriesVC.presenter = categoriesPresenter
@@ -94,4 +97,12 @@ class AddEventController: UIViewController {
     }
 }
 
-extension AddEventController: AddEventViewInput {}
+extension AddEventController: AddEventViewInput {
+    func showError(error: Error) {
+        SPAlert.present(message: error.localizedDescription)
+    }
+}
+
+extension AddEventController: CategoryDelegate {
+    func sendCategoryId(categoryId: Int) {}
+}

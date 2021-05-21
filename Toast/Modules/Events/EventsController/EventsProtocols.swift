@@ -7,8 +7,11 @@
 
 import Foundation
 
-protocol EventsViewInput: AnyObject {}
+protocol EventsViewInput: AnyObject {
+    func reloadEvents()
+    func loadEvents(events: [Event])
+}
 
 protocol EventsViewOutput: AnyObject {
-    func getAllEvents() -> [Event]
+    func getAllEvents()
 }

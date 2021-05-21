@@ -88,7 +88,7 @@ final class EventCell: UITableViewCell {
 
     func configure(cell: Event) {
         nameLabel.text = cell.name
-        dateLabel.text = dayAndMonthDateFormatter.string(for: cell.date)
+//        dateLabel.text = dayAndMonthDateFormatter.string(for: cell.date)
 //        categoryLabel.text = cell.category
     }
 }

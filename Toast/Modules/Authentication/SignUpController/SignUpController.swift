@@ -19,7 +19,7 @@ class SignUpController: UIViewController {
 
     init() {
         super.init(nibName: "SignUpView", bundle: Bundle(for: SignUpView.self))
-        setupStyle()
+        setup()
     }
 
     @available(*, unavailable)
@@ -27,8 +27,8 @@ class SignUpController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setupStyle() {
-        addActionHandlers()
+    private func setup() {
+        presenter = SignUpPresenter(view: self)
     }
 
     // MARK: - Life cycle
@@ -36,6 +36,7 @@ class SignUpController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Регистрация"
+        addActionHandlers()
     }
 
     // MARK: - Action handlers
@@ -61,6 +62,8 @@ class SignUpController: UIViewController {
 extension SignUpController: SignUpInput {
     func presentEvents() {
         let eventsVC = EventsContoller()
+        let eventsPresenter = EventsPresenter(view: eventsVC)
+        eventsVC.presenter = eventsPresenter
         let navigationController = UINavigationController(rootViewController: eventsVC)
         guard let window = AppDelegate.shared?.window
         else {
