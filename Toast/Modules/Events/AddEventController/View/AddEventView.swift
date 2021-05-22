@@ -128,6 +128,5 @@ extension AddEventView: UITextViewDelegate {
             SPAlert.present(message: "Описание не должно превышать 200 символов")
         }
         return updatedText.count <= 200
-        
     }
 }

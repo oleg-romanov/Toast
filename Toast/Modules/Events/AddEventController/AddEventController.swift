@@ -63,11 +63,12 @@ class AddEventController: UIViewController {
     @objc private func doneBottonClicked() {
         guard
             let name = customView?.nameTextField.text,
-            let date = customView?.datePicker.date
+            let date = customView?.datePicker.date,
+            let descriptionTextView = customView?.descriptionTextView.text
         else {
             return
         }
-        let event = EventDto(name: name, description: "Cool description", date: date, categoryId: 2)
+        let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: 2)
         presenter?.createEvent(event: event) { [weak self] result in
             switch result {
             case .success():
