@@ -68,6 +68,15 @@ class AddEventController: UIViewController {
         else {
             return
         }
+        // Доделать обработку пустых полей
+        switch String.empty {
+        case name:
+            print("name пустой")
+            return
+        default:
+            print()
+        }
+
         let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: 2)
         presenter?.createEvent(event: event) { [weak self] result in
             switch result {

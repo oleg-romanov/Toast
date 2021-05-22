@@ -37,7 +37,6 @@ final class EventsDataSource: NSObject {
     }
 
     func addEvent(_ event: Event) {
-//        guard let personBirthdate = event.date else { return }
         for index in data.indices {
             guard let currentPersonBirthdate = data[index].first?.date
             else { continue }
@@ -64,11 +63,6 @@ final class EventsDataSource: NSObject {
         }
         for index in data.indices {
             data[index] = data[index].sorted { p1, p2 in
-//                guard
-//                    let date1 = p1.date, let date2 = p2.date
-//                else {
-//                    return false
-//                }
                 let day1 = Calendar.current.component(.day, from: p1.date)
                 let day2 = Calendar.current.component(.day, from: p2.date)
                 return day1 < day2

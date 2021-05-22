@@ -22,6 +22,7 @@ class CategoryView: UIView {
 
     private var tableView: UITableView = {
         let tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
+        tableView.tableFooterView = UIView()
         return tableView
     }()
 

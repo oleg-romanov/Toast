@@ -18,4 +18,8 @@ class CategoryCell: UITableViewCell {
         name = category.name
         nameLabel.text = name
     }
+
+    func addCategoryConfigure() {
+        nameLabel.text = "Добавить категорию"
+    }
 }

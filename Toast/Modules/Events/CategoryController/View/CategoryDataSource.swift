@@ -14,6 +14,8 @@ protocol CategoryDelegate: AnyObject {
 class CategoryDataSource: NSObject {
     var data: [Category] = []
 
+    var oneCellChosen: Bool = false
+
     var closure: ((Int) -> Void)?
 
     var tableView: UITableView
@@ -31,16 +33,19 @@ class CategoryDataSource: NSObject {
 
 extension CategoryDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        data.count
+        data.count + 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? CategoryCell else {
             fatalError("Can't dequeue cell")
         }
-        let category = data[indexPath.row]
-        cell.configure(category: category)
-
+        if indexPath.row < data.count {
+            let category = data[indexPath.row]
+            cell.configure(category: category)
+        } else {
+            cell.addCategoryConfigure()
+        }
         return cell
     }
 }
@@ -48,14 +53,19 @@ extension CategoryDataSource: UITableViewDataSource {
 extension CategoryDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        if cell?.accessoryType != .checkmark {
-            cell?.accessoryType = .checkmark
-            if let closure = closure {
-                closure(data[indexPath.row].id)
+
+        if indexPath.row < tableView.numberOfRows(inSection: 0) - 1 {
+            if cell?.accessoryType != .checkmark, !oneCellChosen {
+                oneCellChosen = true
+                cell?.accessoryType = .checkmark
+                if let closure = closure {
+                    closure(data[indexPath.row].id)
+                }
+            } else if cell?.accessoryType == .checkmark {
+                cell?.accessoryType = .none
+                oneCellChosen = false
             }
-        } else if cell?.accessoryType == .checkmark {
-            cell?.accessoryType = .none
-        }
+        } else {}
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
