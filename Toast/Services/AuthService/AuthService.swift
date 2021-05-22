@@ -16,9 +16,6 @@ protocol AuthServiceProtocol {
 
 class AuthService: AuthServiceProtocol {
     let dataProvider = MoyaProvider<AuthServiceApi>(plugins: [NetworkLoggerPlugin()])
-//    static var shared = AuthService()
-
-//    init() {}
 
     func signIn(
         email: String, password: String,

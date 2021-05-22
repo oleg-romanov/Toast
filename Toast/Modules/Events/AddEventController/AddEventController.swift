@@ -67,19 +67,13 @@ class AddEventController: UIViewController {
         else {
             return
         }
-        let dateFormatter = DateFormatter()
-        dateFormatter.timeStyle = .short
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        let day = dateFormatter.string(from: date)
-
         let event = EventDto(name: name, description: "Cool description", date: date, categoryId: 2)
-        print(event)
         presenter?.createEvent(event: event) { [weak self] result in
             switch result {
             case .success():
                 self?.navigationController?.popViewController(animated: true)
             case let .failure(error):
-                print("Ошибкаaaa: \(error)")
+                print("Ошибка: \(error)")
             }
         }
     }
@@ -87,6 +81,11 @@ class AddEventController: UIViewController {
     @objc func categoryButtonClicked() {
         let categoriesVC = CategoryController()
         let categoriesPresenter = CategoryPresenter(view: categoriesVC)
+
+        categoriesVC.customView.dataSource.closure = { id in
+            print(id)
+        }
+
         categoriesVC.presenter = categoriesPresenter
         navigationController?.pushViewController(categoriesVC, animated: true)
         navigationItem.backButtonTitle = ""

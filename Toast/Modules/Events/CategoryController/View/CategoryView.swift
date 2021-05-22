@@ -8,6 +8,9 @@
 import SnapKit
 import UIKit
 
+// Чисто для теста
+import SPAlert
+
 class CategoryView: UIView {
     // MARK: - Properties
 

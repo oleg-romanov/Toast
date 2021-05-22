@@ -14,8 +14,6 @@ protocol CategoryDelegate: AnyObject {
 class CategoryDataSource: NSObject {
     var data: [Category] = []
 
-    weak var delegate: CategoryDelegate?
-
     var closure: ((Int) -> Void)?
 
     var tableView: UITableView
@@ -52,8 +50,9 @@ extension CategoryDataSource: UITableViewDelegate {
         let cell = tableView.cellForRow(at: indexPath)
         if cell?.accessoryType != .checkmark {
             cell?.accessoryType = .checkmark
-            closure?(data[indexPath.row].id)
-            delegate?.sendCategoryId(categoryId: data[indexPath.row].id)
+            if let closure = closure {
+                closure(data[indexPath.row].id)
+            }
         } else if cell?.accessoryType == .checkmark {
             cell?.accessoryType = .none
         }

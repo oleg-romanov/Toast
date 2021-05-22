@@ -8,16 +8,13 @@
 import UIKit
 
 class CategoryController: UIViewController {
-    lazy var customView = CategoryView()
+    var customView = CategoryView()
 
     var presenter: CategoryViewOutput?
-
-    var closure: ((Int) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         view = customView
-        customView.dataSource.delegate = self
         setup()
     }
 
@@ -39,8 +36,4 @@ extension CategoryController: CategoryViewInput {
     func loadCategories(categories: [Category]) {
         customView.updateData(categories)
     }
-}
-
-extension CategoryController: CategoryDelegate {
-    func sendCategoryId(categoryId: Int) {}
 }

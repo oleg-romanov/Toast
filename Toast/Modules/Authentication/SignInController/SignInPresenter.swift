@@ -24,11 +24,9 @@ final class SignInPresenter {
 
 extension SignInPresenter: SignInViewOutput {
     func signInWithEmail(email: String, password: String) {
-        //
         service.signIn(email: email, password: password) { [weak self] result in
             switch result {
             case let .success(tokenResponse):
-                print(tokenResponse.token)
                 self?.keychain.set(tokenResponse.token, forKey: Keys.token)
                 self?.view?.presentEvents()
             case let .failure(error):

@@ -52,6 +52,9 @@
 		EA952E5226495B0700B0A882 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E5126495B0700B0A882 /* CategoryCell.swift */; };
 		EA9B71232653B03A00C8233F /* CategoryServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */; };
 		EA9B712526540CBE00C8233F /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9B712426540CBE00C8233F /* CategoryCell.xib */; };
+		EA9B71282659444500C8233F /* DetailedEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B71272659444500C8233F /* DetailedEventController.swift */; };
+		EA9B712B2659446100C8233F /* DetailedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B712A2659446100C8233F /* DetailedEventView.swift */; };
+		EA9B712D2659576400C8233F /* DetailedEventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B712C2659576400C8233F /* DetailedEventDataSource.swift */; };
 		EAA0006125FB727A007426C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005D25FB727A007426C1 /* Assets.swift */; };
 		EAA0006225FB727A007426C1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005E25FB727A007426C1 /* Text.swift */; };
 		EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */; };
@@ -134,6 +137,9 @@
 		EA952E5126495B0700B0A882 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceApi.swift; sourceTree = "<group>"; };
 		EA9B712426540CBE00C8233F /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		EA9B71272659444500C8233F /* DetailedEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventController.swift; sourceTree = "<group>"; };
+		EA9B712A2659446100C8233F /* DetailedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventView.swift; sourceTree = "<group>"; };
+		EA9B712C2659576400C8233F /* DetailedEventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventDataSource.swift; sourceTree = "<group>"; };
 		EAA0005D25FB727A007426C1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EAA0005E25FB727A007426C1 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
@@ -476,6 +482,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		EA9B71262659440200C8233F /* DetailedEventController */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B71272659444500C8233F /* DetailedEventController.swift */,
+				EA9B71292659445000C8233F /* View */,
+			);
+			path = DetailedEventController;
+			sourceTree = "<group>";
+		};
+		EA9B71292659445000C8233F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA9B712A2659446100C8233F /* DetailedEventView.swift */,
+				EA9B712C2659576400C8233F /* DetailedEventDataSource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		EAA0005B25FB727A007426C1 /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -562,6 +586,7 @@
 			isa = PBXGroup;
 			children = (
 				EA5AB56C25FB6A3B000A46EE /* EventsController */,
+				EA9B71262659440200C8233F /* DetailedEventController */,
 				EA5AB58025FB6A3B000A46EE /* AddEventController */,
 				EA952E4326494C0300B0A882 /* CategoryController */,
 			);
@@ -763,6 +788,7 @@
 				EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */,
 				EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */,
 				EAA0006125FB727A007426C1 /* Assets.swift in Sources */,
+				EA9B71282659444500C8233F /* DetailedEventController.swift in Sources */,
 				EAAECFA526148EEE000564C2 /* StartPresenter.swift in Sources */,
 				EAC65809261DCE8F003EC46B /* SignUpProtocols.swift in Sources */,
 				EAA0007325FB7652007426C1 /* StartView.swift in Sources */,
@@ -773,6 +799,7 @@
 				EAA0007625FB8669007426C1 /* ButtonSignIn.swift in Sources */,
 				EA5AB59125FB6A3B000A46EE /* EventCell.swift in Sources */,
 				EAAECFB62614CD8C000564C2 /* PasswordResetProtocols.swift in Sources */,
+				EA9B712B2659446100C8233F /* DetailedEventView.swift in Sources */,
 				EA5AB59C25FB6A3B000A46EE /* OnboardingController.swift in Sources */,
 				EA2077022641A35F008C5450 /* EventModels.swift in Sources */,
 				EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */,
@@ -786,6 +813,7 @@
 				EADF79782603C68A00B56C95 /* MDScrollView.swift in Sources */,
 				EAA0FFF125FB706A007426C1 /* AuthModels.swift in Sources */,
 				EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */,
+				EA9B712D2659576400C8233F /* DetailedEventDataSource.swift in Sources */,
 				EA5AB59225FB6A3B000A46EE /* DateSectionHeader.swift in Sources */,
 				EAAECFA926148F4E000564C2 /* StartProtocols.swift in Sources */,
 				EA07020A264C647800B5DE96 /* CategoryModels.swift in Sources */,

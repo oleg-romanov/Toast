@@ -6,6 +6,7 @@
 //  Copyright © 2020 Oleg Romanov. All rights reserved.
 //
 
+import SPAlert
 import UIKit
 
 class AddEventView: UIView {
@@ -19,6 +20,7 @@ class AddEventView: UIView {
     @IBOutlet var arrowImageViewType: UIImageView!
     @IBOutlet var categoryButton: UIButton!
     @IBOutlet var typeButton: UIButton!
+    @IBOutlet var descriptionTextView: UITextView!
 
     lazy var doneButton = UIBarButtonItem(
         title: Text.AddEvent.done, style: .done, target: nil, action: nil
@@ -28,13 +30,16 @@ class AddEventView: UIView {
 
     override func awakeFromNib() {
         addActionHandlers()
-    }
-
-    @IBAction func action(_ sender: Any) {
-        print("so")
+        setupStyle()
     }
 
     private func setupStyle() {
+        descriptionTextView.delegate = self
+        descriptionTextView.text = "Нажмите, чтобы добавить описание"
+        descriptionTextView.textColor = .lightGray
+        descriptionTextView.textContainer.maximumNumberOfLines = 8
+        descriptionTextView.sizeToFit()
+        descriptionTextView.isScrollEnabled = false
         arrowImageViewCategory.image = Assets.arrowIcon.image
         arrowImageViewType.image = Assets.arrowIcon.image
     }
@@ -90,5 +95,38 @@ class AddEventView: UIView {
 
     private func adjustContentInset(_ contentInset: CGFloat) {
         scrollView.contentInset.bottom = contentInset
+    }
+}
+
+extension AddEventView: UITextViewDelegate {
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if descriptionTextView.textColor == .lightGray {
+            UIView.transition(with: descriptionTextView, duration: 0.3, options: .transitionCrossDissolve) {
+                self.descriptionTextView.text = nil
+            }
+            descriptionTextView.textColor = .black
+        }
+    }
+
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if descriptionTextView.text.isEmpty {
+            UIView.transition(with: descriptionTextView, duration: 0.3, options: .transitionCrossDissolve) {
+                self.descriptionTextView.text = "Нажмите, чтобы добавить описание (Не более 200 символов)"
+            }
+            descriptionTextView.textColor = .lightGray
+        }
+    }
+
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        let currentText = textView.text ?? ""
+        guard let stringRange = Range(range, in: currentText) else {
+            SPAlert.present(message: "Описание не должго превышать 200 символов")
+            return false
+        }
+        let updatedText = currentText.replacingCharacters(in: stringRange, with: text)
+        if updatedText.count == 200 {
+            SPAlert.present(message: "Описание не должно превышать 200 символов")
+        }
+        return updatedText.count <= 200
     }
 }

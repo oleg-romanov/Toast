@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import KeychainSwift // KeychainAccess
+import KeychainSwift
 
 final class SignUpPresenter {
     private weak var view: SignUpInput?
@@ -28,8 +28,6 @@ extension SignUpPresenter: SignUpOutput {
             case let .success(tokenResponse):
                 self?.keychain.set(tokenResponse.token, forKey: Keys.token)
                 self?.view?.presentEvents()
-                AppDelegate.shared?.window?.rootViewController = EventsContoller()
-
             case let .failure(error):
                 self?.view?.showError(message: error.localizedDescription)
             }
