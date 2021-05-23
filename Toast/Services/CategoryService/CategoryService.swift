@@ -10,7 +10,7 @@ import Moya
 
 enum CreateCategoryResult {
     case success(category: Category)
-    case failure(error: String)
+    case failure(error: Error)
 }
 
 enum GetAllCategoriesResult {
@@ -19,7 +19,7 @@ enum GetAllCategoriesResult {
 }
 
 protocol CategoryServiceProtocol {
-    func createCategory(category: Category, completion: @escaping (CreateCategoryResult) -> Void)
+    func createCategory(category: CategoryDto, completion: @escaping (CreateCategoryResult) -> Void)
     func getAllCategories(completion: @escaping (GetAllCategoriesResult) -> Void)
 }
 
@@ -28,7 +28,7 @@ class CategoryService: CategoryServiceProtocol {
         NetworkLoggerPlugin(),
     ])
 
-    func createCategory(category: Category, completion: @escaping (CreateCategoryResult) -> Void) {
+    func createCategory(category: CategoryDto, completion: @escaping (CreateCategoryResult) -> Void) {
         print(category)
         dataProvider.request(.createCategory(category: category)) { result in
             switch result {
@@ -36,7 +36,7 @@ class CategoryService: CategoryServiceProtocol {
                 guard (200 ... 299).contains(moyaResponse.statusCode)
                 else {
                     let message = try? moyaResponse.map(String.self, atKeyPath: "message")
-                    completion(.failure(error: message!))
+                    completion(.failure(error: CustomError(errorDescription: message)))
                     return
                 }
                 do {
@@ -44,10 +44,10 @@ class CategoryService: CategoryServiceProtocol {
                     print(dataResponse)
                     completion(.success(category: dataResponse))
                 } catch {
-                    completion(.failure(error: "Mistake"))
+                    completion(.failure(error: error))
                 }
             case let .failure(error):
-                completion(.failure(error: "\(error)"))
+                completion(.failure(error: error))
             }
         }
     }

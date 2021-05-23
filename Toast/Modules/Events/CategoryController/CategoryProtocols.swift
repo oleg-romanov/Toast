@@ -10,6 +10,7 @@ import Foundation
 protocol CategoryViewInput: AnyObject {
     func reloadCategories()
     func loadCategories(categories: [Category])
+    func presentAddCategory()
 }
 
 protocol CategoryViewOutput: AnyObject {

@@ -24,6 +24,8 @@ class AddEventController: UIViewController {
 
     var encoder = JSONEncoder()
 
+    private var categoryId = -1
+
     // MARK: - Init
 
     init() {
@@ -72,12 +74,18 @@ class AddEventController: UIViewController {
         switch String.empty {
         case name:
             print("name пустой")
+            SPAlert.present(message: "Введите название события", haptic: .error)
             return
         default:
             print()
         }
 
-        let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: 2)
+        if categoryId == -1 {
+            SPAlert.present(message: "Необходимо выбрать категорию", haptic: .error)
+            return
+        }
+
+        let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: categoryId)
         presenter?.createEvent(event: event) { [weak self] result in
             switch result {
             case .success():
@@ -91,11 +99,10 @@ class AddEventController: UIViewController {
     @objc func categoryButtonClicked() {
         let categoriesVC = CategoryController()
         let categoriesPresenter = CategoryPresenter(view: categoriesVC)
-
-        categoriesVC.customView.dataSource.closure = { id in
-            print(id)
+        categoriesVC.customView.dataSource?.closure = { [weak self] categoryId, name in
+            self?.categoryId = categoryId
+            self?.customView?.categoryButton.setTitle(name, for: .normal)
         }
-
         categoriesVC.presenter = categoriesPresenter
         navigationController?.pushViewController(categoriesVC, animated: true)
         navigationItem.backButtonTitle = ""

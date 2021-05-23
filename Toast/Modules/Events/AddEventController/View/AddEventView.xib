@@ -60,7 +60,7 @@
                                         <constraint firstAttribute="height" constant="44" id="Lec-f7-mWp"/>
                                     </constraints>
                                     <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    <state key="normal" title="Друзья">
+                                    <state key="normal" title="Выберите категорию">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                 </button>

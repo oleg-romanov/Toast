@@ -8,7 +8,6 @@
 import Foundation
 
 struct CreateCategoryRequest: Encodable {
-    let id: Int
     let name: String
 }
 

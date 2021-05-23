@@ -26,7 +26,7 @@ class CategoryView: UIView {
         return tableView
     }()
 
-    lazy var dataSource = CategoryDataSource(tableView: tableView)
+    var dataSource: CategoryDataSource?
 
     lazy var delegate = CategoryDataSource(tableView: tableView)
 
@@ -55,7 +55,13 @@ class CategoryView: UIView {
 
     private func makeConstraints() {}
 
+    // MARK: - Internal methods
+
+    func initDataSource() {
+        dataSource = CategoryDataSource(tableView: tableView)
+    }
+
     func updateData(_ categories: [Category]) {
-        dataSource.updateData(categories)
+        dataSource?.updateData(categories)
     }
 }

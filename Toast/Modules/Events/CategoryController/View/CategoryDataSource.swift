@@ -16,13 +16,19 @@ class CategoryDataSource: NSObject {
 
     var oneCellChosen: Bool = false
 
-    var closure: ((Int) -> Void)?
+    var closure: ((Int, String) -> Void)?
+
+    var addCategoryClosure: (() -> Void)?
 
     var tableView: UITableView
 
     init(tableView: UITableView) {
         self.tableView = tableView
-        tableView.register(UINib(nibName: "CategoryCell", bundle: .main), forCellReuseIdentifier: "Cell")
+        self.tableView.register(UINib(nibName: "CategoryCell", bundle: .main), forCellReuseIdentifier: "Cell")
+//
+        super.init()
+        tableView.dataSource = self
+        tableView.delegate = self
     }
 
     func updateData(_ data: [Category]) {
@@ -58,14 +64,14 @@ extension CategoryDataSource: UITableViewDelegate {
             if cell?.accessoryType != .checkmark, !oneCellChosen {
                 oneCellChosen = true
                 cell?.accessoryType = .checkmark
-                if let closure = closure {
-                    closure(data[indexPath.row].id)
-                }
+                closure?(data[indexPath.row].id, data[indexPath.row].name)
             } else if cell?.accessoryType == .checkmark {
                 cell?.accessoryType = .none
                 oneCellChosen = false
             }
-        } else {}
+        } else {
+            addCategoryClosure?()
+        }
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

@@ -10,7 +10,7 @@ import KeychainSwift
 import Moya
 
 enum CategoryServiceApi {
-    case createCategory(category: Category)
+    case createCategory(category: CategoryDto)
     case getAllCategories
 }
 
@@ -52,7 +52,7 @@ extension CategoryServiceApi: TargetType {
     var task: Task {
         switch self {
         case let .createCategory(category):
-            let requestBody = CreateCategoryRequest(id: category.id, name: category.name)
+            let requestBody = CreateCategoryRequest(name: category.name)
             return .requestJSONEncodable(requestBody)
         case .getAllCategories:
             return .requestPlain
