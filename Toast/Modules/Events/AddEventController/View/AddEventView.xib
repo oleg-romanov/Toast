@@ -86,7 +86,7 @@
                                         <constraint firstAttribute="height" constant="44" id="TZw-eE-eiI"/>
                                     </constraints>
                                     <inset key="titleEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                    <state key="normal" title="Друзья">
+                                    <state key="normal" title="Выберите тип события">
                                         <color key="titleColor" systemColor="labelColor"/>
                                     </state>
                                 </button>

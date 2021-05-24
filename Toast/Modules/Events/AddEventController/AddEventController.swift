@@ -25,6 +25,7 @@ class AddEventController: UIViewController {
     var encoder = JSONEncoder()
 
     private var categoryId = -1
+    private var eventTypeId = -1
 
     // MARK: - Init
 
@@ -85,7 +86,7 @@ class AddEventController: UIViewController {
             return
         }
 
-        let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: categoryId)
+        let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: categoryId, eventTypeId: eventTypeId)
         presenter?.createEvent(event: event) { [weak self] result in
             switch result {
             case .success():
@@ -109,7 +110,15 @@ class AddEventController: UIViewController {
     }
 
     @objc func typeButtonClicked() {
-        print("еееее роцк!")
+        let eventTypesVC = EventTypeController()
+        let eventTypesPresenter = EventTypePresenter(view: eventTypesVC)
+        eventTypesVC.customView.dataSource?.closure = { [weak self] eventTypeId, name in
+            self?.eventTypeId = eventTypeId
+            self?.customView?.typeButton.setTitle(name, for: .normal)
+        }
+        eventTypesVC.presenter = eventTypesPresenter
+        navigationController?.pushViewController(eventTypesVC, animated: true)
+        navigationItem.backButtonTitle = ""
     }
 }
 

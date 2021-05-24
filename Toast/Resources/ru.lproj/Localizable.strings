@@ -33,3 +33,5 @@ SignIn.AsGuest = "Продолжить как гость";
 
 Categories.Title = "Категории";
 
+EventTypes.Title = "Типы событий";
+

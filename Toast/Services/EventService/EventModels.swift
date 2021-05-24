@@ -16,6 +16,7 @@ struct CreateEventRequest: Encodable {
     let description: String
     let date: Date
     let categoryId: Int
+    let eventTypeId: Int
 }
 
 struct EventResponse: Decodable {
@@ -24,6 +25,7 @@ struct EventResponse: Decodable {
     let description: String
     let date: Date
     let category: Category
+    let eventType: EventType
     let user: User
 }
 

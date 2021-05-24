@@ -56,7 +56,7 @@ extension EventServiceApi: TargetType {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             encoder.dateEncodingStrategy = .formatted(dateFormatter)
-            let requestBody = CreateEventRequest(name: event.name, description: event.description, date: event.date, categoryId: event.categoryId)
+            let requestBody = CreateEventRequest(name: event.name, description: event.description, date: event.date, categoryId: event.categoryId, eventTypeId: event.eventTypeId)
             return .requestCustomJSONEncodable(requestBody, encoder: encoder)
         case .getAllEvents:
             return .requestPlain

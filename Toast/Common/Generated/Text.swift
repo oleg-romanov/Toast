@@ -40,6 +40,11 @@ internal enum Text {
         internal static let title = Text.tr("Localizable", "Categories.Title")
     }
 
+    internal enum EventTypes {
+        /// Типы событий
+        internal static let title = Text.tr("Localizable", "EventTypes.Title")
+    }
+
     internal enum EventsModel {
         /// Друзья
         internal static let category = Text.tr("Localizable", "EventsModel.Category")

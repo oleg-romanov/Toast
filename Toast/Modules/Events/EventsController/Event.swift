@@ -13,6 +13,7 @@ struct EventDto: Encodable {
     var description: String
     var date: Date
     var categoryId: Int
+    var eventTypeId: Int
 }
 
 struct Event: Decodable {
@@ -21,6 +22,7 @@ struct Event: Decodable {
     var description: String
     var date: Date
     var category: Category
+    var eventType: EventType
     var user: User
 }
 

@@ -14,6 +14,23 @@
 		EA070207264C0AFE00B5DE96 /* EventsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA070206264C0AFE00B5DE96 /* EventsProtocols.swift */; };
 		EA07020A264C647800B5DE96 /* CategoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA070209264C647800B5DE96 /* CategoryModels.swift */; };
 		EA07020C264C648700B5DE96 /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA07020B264C648700B5DE96 /* CategoryService.swift */; };
+		EA140841265C27B4008DADF0 /* EventTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14083C265C27B3008DADF0 /* EventTypePresenter.swift */; };
+		EA140842265C27B4008DADF0 /* EventType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14083D265C27B3008DADF0 /* EventType.swift */; };
+		EA140843265C27B4008DADF0 /* EventTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14083E265C27B3008DADF0 /* EventTypeController.swift */; };
+		EA140844265C27B4008DADF0 /* EventTypeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14083F265C27B3008DADF0 /* EventTypeProtocols.swift */; };
+		EA14084A265C27BE008DADF0 /* EventTypeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140847265C27BE008DADF0 /* EventTypeDataSource.swift */; };
+		EA14084B265C27BE008DADF0 /* EventTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140848265C27BE008DADF0 /* EventTypeView.swift */; };
+		EA14084C265C27BE008DADF0 /* EventTypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140849265C27BE008DADF0 /* EventTypeCell.swift */; };
+		EA140853265C2B5B008DADF0 /* AddEventTypeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14084E265C2B5B008DADF0 /* AddEventTypeController.swift */; };
+		EA140854265C2B5B008DADF0 /* AddEventTypeProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14084F265C2B5B008DADF0 /* AddEventTypeProtocols.swift */; };
+		EA140855265C2B5B008DADF0 /* AddEventTypePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140850265C2B5B008DADF0 /* AddEventTypePresenter.swift */; };
+		EA140856265C2B5B008DADF0 /* EventTypeDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140851265C2B5B008DADF0 /* EventTypeDto.swift */; };
+		EA14085A265C2B62008DADF0 /* AddEventTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140859265C2B62008DADF0 /* AddEventTypeView.swift */; };
+		EA140860265C2E4D008DADF0 /* EventTypeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14085D265C2E4D008DADF0 /* EventTypeModels.swift */; };
+		EA140861265C2E4D008DADF0 /* EventTypeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14085E265C2E4D008DADF0 /* EventTypeService.swift */; };
+		EA140862265C2E4D008DADF0 /* EventTypeServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14085F265C2E4D008DADF0 /* EventTypeServiceApi.swift */; };
+		EA140863265C31BF008DADF0 /* AddEventTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA140858265C2B62008DADF0 /* AddEventTypeView.xib */; };
+		EA140864265C323E008DADF0 /* EventTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA140846265C27BE008DADF0 /* EventTypeCell.xib */; };
 		EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */; };
 		EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */; };
 		EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FD26419F90008C5450 /* AddEventProtocols.swift */; };
@@ -103,6 +120,23 @@
 		EA070206264C0AFE00B5DE96 /* EventsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsProtocols.swift; sourceTree = "<group>"; };
 		EA070209264C647800B5DE96 /* CategoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModels.swift; sourceTree = "<group>"; };
 		EA07020B264C648700B5DE96 /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		EA14083C265C27B3008DADF0 /* EventTypePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypePresenter.swift; sourceTree = "<group>"; };
+		EA14083D265C27B3008DADF0 /* EventType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventType.swift; sourceTree = "<group>"; };
+		EA14083E265C27B3008DADF0 /* EventTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeController.swift; sourceTree = "<group>"; };
+		EA14083F265C27B3008DADF0 /* EventTypeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeProtocols.swift; sourceTree = "<group>"; };
+		EA140846265C27BE008DADF0 /* EventTypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventTypeCell.xib; sourceTree = "<group>"; };
+		EA140847265C27BE008DADF0 /* EventTypeDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeDataSource.swift; sourceTree = "<group>"; };
+		EA140848265C27BE008DADF0 /* EventTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeView.swift; sourceTree = "<group>"; };
+		EA140849265C27BE008DADF0 /* EventTypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTypeCell.swift; sourceTree = "<group>"; };
+		EA14084E265C2B5B008DADF0 /* AddEventTypeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTypeController.swift; sourceTree = "<group>"; };
+		EA14084F265C2B5B008DADF0 /* AddEventTypeProtocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTypeProtocols.swift; sourceTree = "<group>"; };
+		EA140850265C2B5B008DADF0 /* AddEventTypePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventTypePresenter.swift; sourceTree = "<group>"; };
+		EA140851265C2B5B008DADF0 /* EventTypeDto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeDto.swift; sourceTree = "<group>"; };
+		EA140858265C2B62008DADF0 /* AddEventTypeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddEventTypeView.xib; sourceTree = "<group>"; };
+		EA140859265C2B62008DADF0 /* AddEventTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventTypeView.swift; sourceTree = "<group>"; };
+		EA14085D265C2E4D008DADF0 /* EventTypeModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeModels.swift; sourceTree = "<group>"; };
+		EA14085E265C2E4D008DADF0 /* EventTypeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeService.swift; sourceTree = "<group>"; };
+		EA14085F265C2E4D008DADF0 /* EventTypeServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeServiceApi.swift; sourceTree = "<group>"; };
 		EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
 		EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
 		EA2076FD26419F90008C5450 /* AddEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventProtocols.swift; sourceTree = "<group>"; };
@@ -224,6 +258,60 @@
 			path = CategoryService;
 			sourceTree = "<group>";
 		};
+		EA14083A265C2694008DADF0 /* EventTypeController */ = {
+			isa = PBXGroup;
+			children = (
+				EA14083D265C27B3008DADF0 /* EventType.swift */,
+				EA14083E265C27B3008DADF0 /* EventTypeController.swift */,
+				EA14083C265C27B3008DADF0 /* EventTypePresenter.swift */,
+				EA14083F265C27B3008DADF0 /* EventTypeProtocols.swift */,
+				EA14084D265C27CE008DADF0 /* View */,
+			);
+			path = EventTypeController;
+			sourceTree = "<group>";
+		};
+		EA14083B265C26C7008DADF0 /* AddEventTypeController */ = {
+			isa = PBXGroup;
+			children = (
+				EA14084E265C2B5B008DADF0 /* AddEventTypeController.swift */,
+				EA140850265C2B5B008DADF0 /* AddEventTypePresenter.swift */,
+				EA14084F265C2B5B008DADF0 /* AddEventTypeProtocols.swift */,
+				EA140851265C2B5B008DADF0 /* EventTypeDto.swift */,
+				EA14085B265C2B69008DADF0 /* View */,
+			);
+			path = AddEventTypeController;
+			sourceTree = "<group>";
+		};
+		EA14084D265C27CE008DADF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA140849265C27BE008DADF0 /* EventTypeCell.swift */,
+				EA140846265C27BE008DADF0 /* EventTypeCell.xib */,
+				EA140847265C27BE008DADF0 /* EventTypeDataSource.swift */,
+				EA140848265C27BE008DADF0 /* EventTypeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA14085B265C2B69008DADF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA140859265C2B62008DADF0 /* AddEventTypeView.swift */,
+				EA140858265C2B62008DADF0 /* AddEventTypeView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA14085C265C2DE0008DADF0 /* EventTypeService */ = {
+			isa = PBXGroup;
+			children = (
+				EA14085D265C2E4D008DADF0 /* EventTypeModels.swift */,
+				EA14085E265C2E4D008DADF0 /* EventTypeService.swift */,
+				EA14085F265C2E4D008DADF0 /* EventTypeServiceApi.swift */,
+			);
+			path = EventTypeService;
+			sourceTree = "<group>";
+		};
 		EA1960E92600B71A00E289A1 /* SignInController */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +429,7 @@
 				EA2076FF2641A2CE008C5450 /* AuthService */,
 				EA2077002641A2E1008C5450 /* EventService */,
 				EA070208264C645A00B5DE96 /* CategoryService */,
+				EA14085C265C2DE0008DADF0 /* EventTypeService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -623,6 +712,8 @@
 				EA5AB58025FB6A3B000A46EE /* AddEventController */,
 				EA952E4326494C0300B0A882 /* CategoryController */,
 				EA69620A265A4EEC008BB5D0 /* AddCategoryController */,
+				EA14083A265C2694008DADF0 /* EventTypeController */,
+				EA14083B265C26C7008DADF0 /* AddEventTypeController */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -689,6 +780,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA140864265C323E008DADF0 /* EventTypeCell.xib in Resources */,
+				EA140863265C31BF008DADF0 /* AddEventTypeView.xib in Resources */,
 				EAD4653125EFA2F600B2D601 /* README.md in Resources */,
 				EA264C8425EF72340048FD41 /* LaunchScreen.storyboard in Resources */,
 				EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */,
@@ -787,7 +880,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA140844265C27B4008DADF0 /* EventTypeProtocols.swift in Sources */,
 				EA952E4A26494D4C00B0A882 /* CategoryPresenter.swift in Sources */,
+				EA14084C265C27BE008DADF0 /* EventTypeCell.swift in Sources */,
+				EA140862265C2E4D008DADF0 /* EventTypeServiceApi.swift in Sources */,
+				EA140842265C27B4008DADF0 /* EventType.swift in Sources */,
+				EA140854265C2B5B008DADF0 /* AddEventTypeProtocols.swift in Sources */,
 				EAEB82FF2604DCE000DCCCF9 /* ViewForInputAccesory.swift in Sources */,
 				EA02BD57261F461100F1B1A6 /* Keys.swift in Sources */,
 				EA3C11B62604FD1000874546 /* EnterEmailView.swift in Sources */,
@@ -810,23 +908,31 @@
 				EA952E4826494D3A00B0A882 /* CategoryController.swift in Sources */,
 				EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */,
 				EA070207264C0AFE00B5DE96 /* EventsProtocols.swift in Sources */,
+				EA140855265C2B5B008DADF0 /* AddEventTypePresenter.swift in Sources */,
+				EA140860265C2E4D008DADF0 /* EventTypeModels.swift in Sources */,
 				EAAECF8E26120FFF000564C2 /* PasswordResetController.swift in Sources */,
 				EAAECFA026147D7B000564C2 /* PasswordResetPresenter.swift in Sources */,
+				EA140841265C27B4008DADF0 /* EventTypePresenter.swift in Sources */,
 				EA5AB59A25FB6A3B000A46EE /* AddEventView.swift in Sources */,
 				EA3C11B12604FC7600874546 /* EnterEmailController.swift in Sources */,
 				EA952E4626494C5C00B0A882 /* CategoryProtocols.swift in Sources */,
+				EA14084A265C27BE008DADF0 /* EventTypeDataSource.swift in Sources */,
+				EA14084B265C27BE008DADF0 /* EventTypeView.swift in Sources */,
 				EA5AB59725FB6A3B000A46EE /* SignUpView.swift in Sources */,
 				EAC65806261DCE7B003EC46B /* SignUpPresenter.swift in Sources */,
 				EAAECFAD26149648000564C2 /* SignInPresenter.swift in Sources */,
 				EA2077042641A674008C5450 /* EventService.swift in Sources */,
+				EA140856265C2B5B008DADF0 /* EventTypeDto.swift in Sources */,
 				EAAECFB126149665000564C2 /* SignInProtocols.swift in Sources */,
 				EA952E4E2649554000B0A882 /* CategoryDataSource.swift in Sources */,
+				EA140843265C27B4008DADF0 /* EventTypeController.swift in Sources */,
 				EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */,
 				EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */,
 				EAA0006125FB727A007426C1 /* Assets.swift in Sources */,
 				EA9B71282659444500C8233F /* DetailedEventController.swift in Sources */,
 				EAAECFA526148EEE000564C2 /* StartPresenter.swift in Sources */,
 				EAC65809261DCE8F003EC46B /* SignUpProtocols.swift in Sources */,
+				EA14085A265C2B62008DADF0 /* AddEventTypeView.swift in Sources */,
 				EAA0007325FB7652007426C1 /* StartView.swift in Sources */,
 				EAA0006225FB727A007426C1 /* Text.swift in Sources */,
 				EAA0FFF325FB706A007426C1 /* AuthServiceApi.swift in Sources */,
@@ -844,6 +950,7 @@
 				EA5AB59325FB6A3B000A46EE /* StartController.swift in Sources */,
 				EA3C11BC26050CDB00874546 /* EnterEmailNextView.swift in Sources */,
 				EA2077062641A687008C5450 /* EventServiceApi.swift in Sources */,
+				EA140861265C2E4D008DADF0 /* EventTypeService.swift in Sources */,
 				EABEAD4E2600E208007F2020 /* SignInView.swift in Sources */,
 				EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */,
 				EAAECF9D26147D35000564C2 /* PasswordReset.swift in Sources */,
@@ -859,6 +966,7 @@
 				EA07020A264C647800B5DE96 /* CategoryModels.swift in Sources */,
 				EA952E5226495B0700B0A882 /* CategoryCell.swift in Sources */,
 				EA070205264C0AEC00B5DE96 /* EventsPresenter.swift in Sources */,
+				EA140853265C2B5B008DADF0 /* AddEventTypeController.swift in Sources */,
 				EA07020C264C648700B5DE96 /* CategoryService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

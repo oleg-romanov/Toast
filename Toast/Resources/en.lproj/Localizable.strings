@@ -32,3 +32,5 @@ SignIn.WithApple = "Continue with Apple";
 SignIn.AsGuest = "Continue as a guest";
 
 Categories.Title = "Categories";
+
+EventTypes.Title = "EventTypes";
