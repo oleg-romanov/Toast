@@ -17,5 +17,3 @@ Generator resources
 ```
 swiftgen
 ```
-Some modules have architecture like in the scheme:
-![Architecture](Architecture.png)
