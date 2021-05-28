@@ -83,6 +83,7 @@
 		EA69620C265A5009008BB5D0 /* AddCategoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620B265A5009008BB5D0 /* AddCategoryProtocols.swift */; };
 		EA69620E265A5029008BB5D0 /* AddCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620D265A5029008BB5D0 /* AddCategoryPresenter.swift */; };
 		EA696210265A5037008BB5D0 /* AddCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620F265A5037008BB5D0 /* AddCategoryController.swift */; };
+		EA6B9A162661011600EF9CB1 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B9A152661011600EF9CB1 /* Tabbar.swift */; };
 		EA952E4626494C5C00B0A882 /* CategoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */; };
 		EA952E4826494D3A00B0A882 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4726494D3A00B0A882 /* CategoryController.swift */; };
 		EA952E4A26494D4C00B0A882 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */; };
@@ -208,6 +209,7 @@
 		EA69620B265A5009008BB5D0 /* AddCategoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryProtocols.swift; sourceTree = "<group>"; };
 		EA69620D265A5029008BB5D0 /* AddCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryPresenter.swift; sourceTree = "<group>"; };
 		EA69620F265A5037008BB5D0 /* AddCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryController.swift; sourceTree = "<group>"; };
+		EA6B9A152661011600EF9CB1 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
 		EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProtocols.swift; sourceTree = "<group>"; };
 		EA952E4726494D3A00B0A882 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 			children = (
 				EA264C8525EF72340048FD41 /* Info.plist */,
 				EA264C8225EF72340048FD41 /* LaunchScreen.storyboard */,
+				EA6B9A152661011600EF9CB1 /* Tabbar.swift */,
 				EA264C7725EF72320048FD41 /* AppDelegate.swift */,
 				EA140892265ED7F8008DADF0 /* DeepLinks */,
 			);
@@ -1071,6 +1074,7 @@
 				EAAECFB62614CD8C000564C2 /* PasswordResetProtocols.swift in Sources */,
 				EA5AB59C25FB6A3B000A46EE /* OnboardingController.swift in Sources */,
 				EA64A995266021E100D8093A /* ProfilePresenter.swift in Sources */,
+				EA6B9A162661011600EF9CB1 /* Tabbar.swift in Sources */,
 				EA2077022641A35F008C5450 /* EventModels.swift in Sources */,
 				EA64A9A32660363C00D8093A /* DeepLinkType.swift in Sources */,
 				EA69620C265A5009008BB5D0 /* AddCategoryProtocols.swift in Sources */,

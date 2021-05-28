@@ -25,15 +25,18 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
             let presenter = StartPresenter(view: viewController)
             viewController.presenter = presenter
             firstController = viewController
+            let nav = UINavigationController(rootViewController: firstController)
+            window?.rootViewController = nav
         } else {
             let viewController = EventsContoller()
             let presenter = EventsPresenter(view: viewController)
             viewController.presenter = presenter
             firstController = viewController
+            let tabbar = Tabbar()
+            window?.rootViewController = tabbar
         }
 
-        let nav = UINavigationController(rootViewController: firstController)
-        window?.rootViewController = nav
+//        let nav = UINavigationController(rootViewController: firstController)
         window?.makeKeyAndVisible()
         DeepLinkNavigator.shared.window = window
         return true

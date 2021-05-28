@@ -81,8 +81,9 @@ extension SignInController: SignInViewInput {
         guard let window = AppDelegate.shared?.window else {
             return
         }
+        let tabbar = Tabbar()
         UIWindow.transition(with: window, duration: 0.3, options: .transitionFlipFromLeft, animations: {
-            window.rootViewController = navigationController
+            window.rootViewController = tabbar
         })
     }
 }

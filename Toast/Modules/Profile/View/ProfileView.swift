@@ -31,6 +31,7 @@ class ProfileView: UIView {
     }
 
     private func setup() {
+        backgroundColor = .blue
         addSubviews()
         makeConstraints()
     }
@@ -42,13 +43,13 @@ class ProfileView: UIView {
 
     private func makeConstraints() {
         nameLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(40)
+            make.top.equalToSuperview().offset(440)
             make.centerX.equalToSuperview()
             make.height.equalTo(40)
             make.width.equalToSuperview()
         }
         logoutButton.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).inset(60)
+            make.top.equalTo(nameLabel.snp.bottom).inset(160)
             make.width.equalTo(UIScreen.main.bounds.width - 32)
             make.centerX.equalToSuperview()
         }
