@@ -28,7 +28,13 @@ class ProfileController: UIViewController {
         setup()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        presenter?.getProfile()
+    }
+
     func setup() {
+        navigationItem.title = "Профиль"
         addActionHandlers()
     }
 
@@ -48,7 +54,11 @@ class ProfileController: UIViewController {
 }
 
 extension ProfileController: ProfileViewInput {
-    func setupProfile(user: User) {
+    func presentProfileName(user: User) {
         customView?.nameLabel.text = user.name
+    }
+
+    func setupProfile() {
+        presenter?.getProfile()
     }
 }

@@ -13,6 +13,9 @@ class ProfileView: UIView {
 
     var nameLabel: UILabel = {
         let label = UILabel()
+        label.text = "Имя пользователя"
+        label.font = .systemFont(ofSize: 24, weight: .bold)
+        label.textColor = Assets.gray.color
         return label
     }()
 
@@ -31,7 +34,7 @@ class ProfileView: UIView {
     }
 
     private func setup() {
-        backgroundColor = .blue
+        backgroundColor = Assets.background1.color
         addSubviews()
         makeConstraints()
     }
@@ -43,15 +46,16 @@ class ProfileView: UIView {
 
     private func makeConstraints() {
         nameLabel.snp.makeConstraints { make in
-            make.top.equalToSuperview().offset(440)
+            make.top.equalToSuperview().offset(150)
             make.centerX.equalToSuperview()
             make.height.equalTo(40)
-            make.width.equalToSuperview()
+            make.width.equalTo(UIScreen.main.bounds.width - 32)
         }
         logoutButton.snp.makeConstraints { make in
-            make.top.equalTo(nameLabel.snp.bottom).inset(160)
+            make.top.equalTo(nameLabel.snp.bottom).offset(80)
             make.width.equalTo(UIScreen.main.bounds.width - 32)
-            make.centerX.equalToSuperview()
+            make.leading.equalTo(16)
+            make.height.equalTo(50)
         }
     }
 }

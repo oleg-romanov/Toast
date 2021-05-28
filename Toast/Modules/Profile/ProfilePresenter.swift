@@ -22,11 +22,11 @@ final class ProfilePresenter {
 }
 
 extension ProfilePresenter: ProfileViewOutput {
-    func getProfile(user: User) {
+    func getProfile() {
         service.getProfile { [weak self] result in
             switch result {
             case let .success(user: user):
-                self?.view?.setupProfile(user: user)
+                self?.view?.presentProfileName(user: user)
             case let .failure(error: error):
                 print(error)
             }

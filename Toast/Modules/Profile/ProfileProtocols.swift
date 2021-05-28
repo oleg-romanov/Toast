@@ -8,9 +8,10 @@
 import Foundation
 
 protocol ProfileViewInput: AnyObject {
-    func setupProfile(user: User)
+    func setupProfile()
+    func presentProfileName(user: User)
 }
 
 protocol ProfileViewOutput: AnyObject {
-    func getProfile(user: User)
+    func getProfile()
 }
