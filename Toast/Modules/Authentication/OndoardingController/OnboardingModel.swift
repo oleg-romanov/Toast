@@ -15,19 +15,19 @@ struct Slide {
     static func generateSlides() -> [Slide] {
         let slide1 = Slide(
             title: "Добро пожаловать!",
-            subtitle: "текст текст текст текст"
+            subtitle: "В TOAST"
         )
         let slide2 = Slide(
-            title: "Крутой функсия",
-            subtitle: "текст текст текст текст текст текст текст текст текст текст тексттекст текст текст текст текст текст текст текст"
+            title: "TOAST",
+            subtitle: "Это упорядоченный список запланированных событий, которыми можно поделиться с кем угодно"
         )
         let slide3 = Slide(
-            title: "wg",
-            subtitle: "sds"
+            title: "Регистрация",
+            subtitle: "Для того, чтобы начать полноценно пользоваться приложением, необходимо зарегистрироваться. После успешной регистрации Вы попадете на экран где сможете создать свое первое событие!"
         )
         let slide4 = Slide(
-            title: "k.f",
-            subtitle: "dmvk"
+            title: "Нет времени ждать",
+            subtitle: "Приступим!"
         )
 
         return [slide1, slide2, slide3, slide4]

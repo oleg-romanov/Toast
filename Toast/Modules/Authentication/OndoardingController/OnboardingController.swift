@@ -58,6 +58,10 @@ final class OnboardingController: UIViewController {
 
     private func showPersons() {
 //        let navigationController = UINavigationController(rootViewController: PersonsContoller())
-        AppDelegate.shared?.window?.rootViewController = StartController()
+        let startVC = StartController()
+        let startPresenter = StartPresenter(view: startVC)
+        startVC.presenter = startPresenter
+        let nav = UINavigationController(rootViewController: startVC)
+        AppDelegate.shared?.window?.rootViewController = nav
     }
 }

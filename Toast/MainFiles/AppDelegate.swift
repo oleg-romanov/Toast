@@ -20,23 +20,23 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         AppDelegate.shared = self
         let firstController: UIViewController
+        let vc: UIViewController
         if keychain.get(Keys.token) == nil {
-            let viewController = StartController()
-            let presenter = StartPresenter(view: viewController)
-            viewController.presenter = presenter
-            firstController = viewController
-            let nav = UINavigationController(rootViewController: firstController)
-            window?.rootViewController = nav
+            if UserDefaults.standard.bool(forKey: "isNotFirst") {
+                let viewController = StartController()
+                let presenter = StartPresenter(view: viewController)
+                viewController.presenter = presenter
+                firstController = viewController
+                vc = UINavigationController(rootViewController: firstController)
+                UserDefaults.standard.set(true, forKey: "isNotFIrst")
+            } else {
+                vc = OnboardingController()
+            }
+            window?.rootViewController = vc
         } else {
-            let viewController = EventsContoller()
-            let presenter = EventsPresenter(view: viewController)
-            viewController.presenter = presenter
-            firstController = viewController
             let tabbar = Tabbar()
             window?.rootViewController = tabbar
         }
-
-//        let nav = UINavigationController(rootViewController: firstController)
         window?.makeKeyAndVisible()
         DeepLinkNavigator.shared.window = window
         return true
