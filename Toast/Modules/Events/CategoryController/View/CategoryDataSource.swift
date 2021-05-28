@@ -18,6 +18,8 @@ class CategoryDataSource: NSObject {
 
     var closure: ((Int, String) -> Void)?
 
+    var selectedCellForIndexPath: IndexPath?
+
     var addCategoryClosure: (() -> Void)?
 
     var tableView: UITableView
@@ -59,19 +61,17 @@ extension CategoryDataSource: UITableViewDataSource {
 extension CategoryDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-
-        if indexPath.row < tableView.numberOfRows(inSection: 0) - 1 {
-            if cell?.accessoryType != .checkmark, !oneCellChosen {
-                oneCellChosen = true
-                cell?.accessoryType = .checkmark
-                closure?(data[indexPath.row].id, data[indexPath.row].name)
-            } else if cell?.accessoryType == .checkmark {
-                cell?.accessoryType = .none
-                oneCellChosen = false
-            }
+        if let selectedIndexPath = selectedCellForIndexPath {
+            tableView.cellForRow(at: selectedIndexPath)?.accessoryType = .none
+        }
+        if indexPath.row != tableView.numberOfRows(inSection: 0) - 1 {
+            selectedCellForIndexPath = indexPath
+            cell?.accessoryType = .checkmark
         } else {
             addCategoryClosure?()
+            return
         }
+        closure?(data[indexPath.row].id, data[indexPath.row].name)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

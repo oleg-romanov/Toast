@@ -13,14 +13,23 @@ final class EventsDataSource: NSObject {
 
     private var data: [[Event]] = []
     private var tableView: UITableView?
+    var detailedEventClosure: ((Event) -> Void)?
+
+    init(tableView: UITableView) {
+        self.tableView = tableView
+        tableView.register(EventCell.self, forCellReuseIdentifier: "TableCell")
+        super.init()
+        tableView.dataSource = self
+        tableView.delegate = self
+    }
 
     // MARK: - Internal methods
 
-    func setTableView(_ tableView: UITableView) {
-        self.tableView = tableView
-        tableView.delegate = self
-        tableView.register(EventCell.self, forCellReuseIdentifier: "TableCell")
-    }
+//    func setTableView(_ tableView: UITableView) {
+//        self.tableView = tableView
+//        tableView.delegate = self
+//        tableView.register(EventCell.self, forCellReuseIdentifier: "TableCell")
+//    }
 
     func updateData(_ data: [Event]) {
         self.data = []
@@ -108,6 +117,7 @@ extension EventsDataSource: UITableViewDataSource {
 
 extension EventsDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        detailedEventClosure?(data[indexPath.section][indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }

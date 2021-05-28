@@ -12,6 +12,7 @@ import Moya
 enum EventServiceApi {
     case createEvent(event: EventDto)
     case getAllEvents
+    case getEvent(id: Int)
 }
 
 extension EventServiceApi: AccessTokenAuthorizable {
@@ -24,7 +25,7 @@ extension EventServiceApi: TargetType {
     }
 
     var baseURL: URL {
-        return URL(string: "http://localhost:8080")!
+        return URL(string: URLPath.path)!
     }
 
     var path: String {
@@ -33,6 +34,8 @@ extension EventServiceApi: TargetType {
             return "/event"
         case .getAllEvents:
             return "/event"
+        case let .getEvent(id):
+            return "/event/\(id)"
         }
     }
 
@@ -41,6 +44,8 @@ extension EventServiceApi: TargetType {
         case .createEvent:
             return .post
         case .getAllEvents:
+            return .get
+        case .getEvent:
             return .get
         }
     }
@@ -59,6 +64,8 @@ extension EventServiceApi: TargetType {
             let requestBody = CreateEventRequest(name: event.name, description: event.description, date: event.date, categoryId: event.categoryId, eventTypeId: event.eventTypeId)
             return .requestCustomJSONEncodable(requestBody, encoder: encoder)
         case .getAllEvents:
+            return .requestPlain
+        case .getEvent:
             return .requestPlain
         }
     }

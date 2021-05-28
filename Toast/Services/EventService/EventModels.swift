@@ -26,9 +26,13 @@ struct EventResponse: Decodable {
     let date: Date
     let category: Category
     let eventType: EventType
-    let user: User
+    let user: [User]
 }
 
 struct GetAllEventsResponse: Decodable {
     let events: [Event]
+}
+
+struct GetOneEvent: Decodable {
+    let event: Event
 }

@@ -25,7 +25,7 @@ final class EventsView: UIView {
         barButtonSystemItem: .add, target: nil, action: nil
     )
 
-    private var dataSource = EventsDataSource()
+    var dataSource: EventsDataSource?
 
     // MARK: - Init
 
@@ -46,9 +46,13 @@ final class EventsView: UIView {
         makeConstraints()
     }
 
+    func initDataSource() {
+        dataSource = EventsDataSource(tableView: tableView)
+    }
+
     private func setupStyle() {
         backgroundColor = Assets.background1.color
-        dataSource.setTableView(tableView)
+//        dataSource.setTableView(tableView)
     }
 
     private func addSubviews() {
@@ -64,10 +68,10 @@ final class EventsView: UIView {
     // MARK: - Internal Methods
 
     func addEvent(_ event: Event) {
-        dataSource.addEvent(event)
+        dataSource?.addEvent(event)
     }
 
     func updateData(_ data: [Event]) {
-        dataSource.updateData(data)
+        dataSource?.updateData(data)
     }
 }

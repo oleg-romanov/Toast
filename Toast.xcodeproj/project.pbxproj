@@ -31,6 +31,17 @@
 		EA140862265C2E4D008DADF0 /* EventTypeServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14085F265C2E4D008DADF0 /* EventTypeServiceApi.swift */; };
 		EA140863265C31BF008DADF0 /* AddEventTypeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA140858265C2B62008DADF0 /* AddEventTypeView.xib */; };
 		EA140864265C323E008DADF0 /* EventTypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA140846265C27BE008DADF0 /* EventTypeCell.xib */; };
+		EA140879265C5FF0008DADF0 /* EventViewModelItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140878265C5FF0008DADF0 /* EventViewModelItem.swift */; };
+		EA14087B265C6143008DADF0 /* EventViewModelItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14087A265C6143008DADF0 /* EventViewModelItems.swift */; };
+		EA14087D265C642F008DADF0 /* EventViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14087C265C642F008DADF0 /* EventViewModel.swift */; };
+		EA140880265C68F7008DADF0 /* EventDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA14087F265C68F7008DADF0 /* EventDescriptionCell.swift */; };
+		EA140882265C691A008DADF0 /* EventDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA140881265C691A008DADF0 /* EventDescriptionCell.xib */; };
+		EA140887265C6BE2008DADF0 /* EventDateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140886265C6BE2008DADF0 /* EventDateCell.swift */; };
+		EA140889265C6C13008DADF0 /* EventParticipantsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140888265C6C13008DADF0 /* EventParticipantsCell.swift */; };
+		EA14088B265C6C5C008DADF0 /* EventDateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA14088A265C6C5C008DADF0 /* EventDateCell.xib */; };
+		EA14088F265C6C8C008DADF0 /* EventParticipantsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA14088E265C6C8C008DADF0 /* EventParticipantsCell.xib */; };
+		EA140891265D048C008DADF0 /* DetailedEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140890265D048C008DADF0 /* DetailedEventController.swift */; };
+		EA140894265F8AB4008DADF0 /* URLPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA140893265F8AB4008DADF0 /* URLPath.swift */; };
 		EA1AC23B2604CCD7001C9C2D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */; };
 		EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */; };
 		EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA2076FD26419F90008C5450 /* AddEventProtocols.swift */; };
@@ -60,6 +71,15 @@
 		EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */; };
 		EA5AB59F25FB6A3B000A46EE /* SlidesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */; };
 		EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */; };
+		EA64A993266021D300D8093A /* ProfileProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A992266021D300D8093A /* ProfileProtocols.swift */; };
+		EA64A995266021E100D8093A /* ProfilePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A994266021E100D8093A /* ProfilePresenter.swift */; };
+		EA64A997266021ED00D8093A /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A996266021ED00D8093A /* ProfileController.swift */; };
+		EA64A99A2660220A00D8093A /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A9992660220A00D8093A /* ProfileView.swift */; };
+		EA64A99F2660235100D8093A /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A99C2660235100D8093A /* ProfileService.swift */; };
+		EA64A9A02660235100D8093A /* ProfileModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A99D2660235100D8093A /* ProfileModels.swift */; };
+		EA64A9A12660235100D8093A /* ProfileServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A99E2660235100D8093A /* ProfileServiceApi.swift */; };
+		EA64A9A32660363C00D8093A /* DeepLinkType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A9A22660363C00D8093A /* DeepLinkType.swift */; };
+		EA64A9A52660384700D8093A /* DeepLinkNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA64A9A42660384700D8093A /* DeepLinkNavigator.swift */; };
 		EA69620C265A5009008BB5D0 /* AddCategoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620B265A5009008BB5D0 /* AddCategoryProtocols.swift */; };
 		EA69620E265A5029008BB5D0 /* AddCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620D265A5029008BB5D0 /* AddCategoryPresenter.swift */; };
 		EA696210265A5037008BB5D0 /* AddCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620F265A5037008BB5D0 /* AddCategoryController.swift */; };
@@ -72,9 +92,6 @@
 		EA952E5226495B0700B0A882 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E5126495B0700B0A882 /* CategoryCell.swift */; };
 		EA9B71232653B03A00C8233F /* CategoryServiceApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */; };
 		EA9B712526540CBE00C8233F /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA9B712426540CBE00C8233F /* CategoryCell.xib */; };
-		EA9B71282659444500C8233F /* DetailedEventController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B71272659444500C8233F /* DetailedEventController.swift */; };
-		EA9B712B2659446100C8233F /* DetailedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B712A2659446100C8233F /* DetailedEventView.swift */; };
-		EA9B712D2659576400C8233F /* DetailedEventDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9B712C2659576400C8233F /* DetailedEventDataSource.swift */; };
 		EAA0006125FB727A007426C1 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005D25FB727A007426C1 /* Assets.swift */; };
 		EAA0006225FB727A007426C1 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005E25FB727A007426C1 /* Text.swift */; };
 		EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */; };
@@ -137,6 +154,17 @@
 		EA14085D265C2E4D008DADF0 /* EventTypeModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeModels.swift; sourceTree = "<group>"; };
 		EA14085E265C2E4D008DADF0 /* EventTypeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeService.swift; sourceTree = "<group>"; };
 		EA14085F265C2E4D008DADF0 /* EventTypeServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTypeServiceApi.swift; sourceTree = "<group>"; };
+		EA140878265C5FF0008DADF0 /* EventViewModelItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelItem.swift; sourceTree = "<group>"; };
+		EA14087A265C6143008DADF0 /* EventViewModelItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModelItems.swift; sourceTree = "<group>"; };
+		EA14087C265C642F008DADF0 /* EventViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventViewModel.swift; sourceTree = "<group>"; };
+		EA14087F265C68F7008DADF0 /* EventDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescriptionCell.swift; sourceTree = "<group>"; };
+		EA140881265C691A008DADF0 /* EventDescriptionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDescriptionCell.xib; sourceTree = "<group>"; };
+		EA140886265C6BE2008DADF0 /* EventDateCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDateCell.swift; sourceTree = "<group>"; };
+		EA140888265C6C13008DADF0 /* EventParticipantsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventParticipantsCell.swift; sourceTree = "<group>"; };
+		EA14088A265C6C5C008DADF0 /* EventDateCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventDateCell.xib; sourceTree = "<group>"; };
+		EA14088E265C6C8C008DADF0 /* EventParticipantsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventParticipantsCell.xib; sourceTree = "<group>"; };
+		EA140890265D048C008DADF0 /* DetailedEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventController.swift; sourceTree = "<group>"; };
+		EA140893265F8AB4008DADF0 /* URLPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPath.swift; sourceTree = "<group>"; };
 		EA1AC23A2604CCD7001C9C2D /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
 		EA2076FB26419F4E008C5450 /* AddEventPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventPresenter.swift; sourceTree = "<group>"; };
 		EA2076FD26419F90008C5450 /* AddEventProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEventProtocols.swift; sourceTree = "<group>"; };
@@ -168,6 +196,15 @@
 		EA5AB58725FB6A3B000A46EE /* OnboardingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		EA5AB58B25FB6A3B000A46EE /* SlidesDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlidesDataSource.swift; sourceTree = "<group>"; };
 		EA5AB58C25FB6A3B000A46EE /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		EA64A992266021D300D8093A /* ProfileProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileProtocols.swift; sourceTree = "<group>"; };
+		EA64A994266021E100D8093A /* ProfilePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePresenter.swift; sourceTree = "<group>"; };
+		EA64A996266021ED00D8093A /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
+		EA64A9992660220A00D8093A /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		EA64A99C2660235100D8093A /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileService.swift; path = Toast/Services/ProfileService/ProfileService.swift; sourceTree = SOURCE_ROOT; };
+		EA64A99D2660235100D8093A /* ProfileModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileModels.swift; path = Toast/Services/ProfileService/ProfileModels.swift; sourceTree = SOURCE_ROOT; };
+		EA64A99E2660235100D8093A /* ProfileServiceApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileServiceApi.swift; path = Toast/Services/ProfileService/ProfileServiceApi.swift; sourceTree = SOURCE_ROOT; };
+		EA64A9A22660363C00D8093A /* DeepLinkType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkType.swift; sourceTree = "<group>"; };
+		EA64A9A42660384700D8093A /* DeepLinkNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkNavigator.swift; sourceTree = "<group>"; };
 		EA69620B265A5009008BB5D0 /* AddCategoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryProtocols.swift; sourceTree = "<group>"; };
 		EA69620D265A5029008BB5D0 /* AddCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryPresenter.swift; sourceTree = "<group>"; };
 		EA69620F265A5037008BB5D0 /* AddCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryController.swift; sourceTree = "<group>"; };
@@ -180,9 +217,6 @@
 		EA952E5126495B0700B0A882 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		EA9B71222653B03A00C8233F /* CategoryServiceApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryServiceApi.swift; sourceTree = "<group>"; };
 		EA9B712426540CBE00C8233F /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
-		EA9B71272659444500C8233F /* DetailedEventController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventController.swift; sourceTree = "<group>"; };
-		EA9B712A2659446100C8233F /* DetailedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventView.swift; sourceTree = "<group>"; };
-		EA9B712C2659576400C8233F /* DetailedEventDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedEventDataSource.swift; sourceTree = "<group>"; };
 		EAA0005D25FB727A007426C1 /* Assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assets.swift; sourceTree = "<group>"; };
 		EAA0005E25FB727A007426C1 /* Text.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		EAA0005F25FB727A007426C1 /* ButtonSecondary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonSecondary.swift; sourceTree = "<group>"; };
@@ -312,6 +346,52 @@
 			path = EventTypeService;
 			sourceTree = "<group>";
 		};
+		EA14087E265C68B1008DADF0 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EA140885265C6BBA008DADF0 /* ParticipantsCell */,
+				EA140884265C6BB3008DADF0 /* DateCell */,
+				EA140883265C6BA1008DADF0 /* DescriptionCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		EA140883265C6BA1008DADF0 /* DescriptionCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA14087F265C68F7008DADF0 /* EventDescriptionCell.swift */,
+				EA140881265C691A008DADF0 /* EventDescriptionCell.xib */,
+			);
+			path = DescriptionCell;
+			sourceTree = "<group>";
+		};
+		EA140884265C6BB3008DADF0 /* DateCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA140886265C6BE2008DADF0 /* EventDateCell.swift */,
+				EA14088A265C6C5C008DADF0 /* EventDateCell.xib */,
+			);
+			path = DateCell;
+			sourceTree = "<group>";
+		};
+		EA140885265C6BBA008DADF0 /* ParticipantsCell */ = {
+			isa = PBXGroup;
+			children = (
+				EA140888265C6C13008DADF0 /* EventParticipantsCell.swift */,
+				EA14088E265C6C8C008DADF0 /* EventParticipantsCell.xib */,
+			);
+			path = ParticipantsCell;
+			sourceTree = "<group>";
+		};
+		EA140892265ED7F8008DADF0 /* DeepLinks */ = {
+			isa = PBXGroup;
+			children = (
+				EA64A9A22660363C00D8093A /* DeepLinkType.swift */,
+				EA64A9A42660384700D8093A /* DeepLinkNavigator.swift */,
+			);
+			path = DeepLinks;
+			sourceTree = "<group>";
+		};
 		EA1960E92600B71A00E289A1 /* SignInController */ = {
 			isa = PBXGroup;
 			children = (
@@ -391,6 +471,7 @@
 				EA264C8525EF72340048FD41 /* Info.plist */,
 				EA264C8225EF72340048FD41 /* LaunchScreen.storyboard */,
 				EA264C7725EF72320048FD41 /* AppDelegate.swift */,
+				EA140892265ED7F8008DADF0 /* DeepLinks */,
 			);
 			path = MainFiles;
 			sourceTree = "<group>";
@@ -426,10 +507,12 @@
 		EA5AB55225FB65E4000A46EE /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				EA140893265F8AB4008DADF0 /* URLPath.swift */,
 				EA2076FF2641A2CE008C5450 /* AuthService */,
 				EA2077002641A2E1008C5450 /* EventService */,
 				EA070208264C645A00B5DE96 /* CategoryService */,
 				EA14085C265C2DE0008DADF0 /* EventTypeService */,
+				EA64A99B266022F000D8093A /* ProfileService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -560,6 +643,35 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		EA64A991266021B000D8093A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				EA64A992266021D300D8093A /* ProfileProtocols.swift */,
+				EA64A994266021E100D8093A /* ProfilePresenter.swift */,
+				EA64A996266021ED00D8093A /* ProfileController.swift */,
+				EA64A998266021F000D8093A /* View */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		EA64A998266021F000D8093A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				EA64A9992660220A00D8093A /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		EA64A99B266022F000D8093A /* ProfileService */ = {
+			isa = PBXGroup;
+			children = (
+				EA64A99D2660235100D8093A /* ProfileModels.swift */,
+				EA64A99C2660235100D8093A /* ProfileService.swift */,
+				EA64A99E2660235100D8093A /* ProfileServiceApi.swift */,
+			);
+			path = ProfileService;
+			sourceTree = "<group>";
+		};
 		EA69620A265A4EEC008BB5D0 /* AddCategoryController */ = {
 			isa = PBXGroup;
 			children = (
@@ -598,7 +710,7 @@
 		EA9B71262659440200C8233F /* DetailedEventController */ = {
 			isa = PBXGroup;
 			children = (
-				EA9B71272659444500C8233F /* DetailedEventController.swift */,
+				EA140890265D048C008DADF0 /* DetailedEventController.swift */,
 				EA9B71292659445000C8233F /* View */,
 			);
 			path = DetailedEventController;
@@ -607,8 +719,10 @@
 		EA9B71292659445000C8233F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EA9B712A2659446100C8233F /* DetailedEventView.swift */,
-				EA9B712C2659576400C8233F /* DetailedEventDataSource.swift */,
+				EA14087C265C642F008DADF0 /* EventViewModel.swift */,
+				EA140878265C5FF0008DADF0 /* EventViewModelItem.swift */,
+				EA14087A265C6143008DADF0 /* EventViewModelItems.swift */,
+				EA14087E265C68B1008DADF0 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -685,6 +799,7 @@
 			children = (
 				EAF6E7F926120A6300345E0C /* Authentication */,
 				EAF6E7FA26120B1100345E0C /* Events */,
+				EA64A991266021B000D8093A /* Profile */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -788,9 +903,12 @@
 				EAA0FFEA25FB6E6D007426C1 /* Localizable.strings in Resources */,
 				EA3C11B92604FD2500874546 /* EnterEmailView.xib in Resources */,
 				EA5AB59B25FB6A3B000A46EE /* AddEventView.xib in Resources */,
+				EA14088B265C6C5C008DADF0 /* EventDateCell.xib in Resources */,
 				EA264C8125EF72340048FD41 /* Assets.xcassets in Resources */,
 				EA9B712526540CBE00C8233F /* CategoryCell.xib in Resources */,
+				EA140882265C691A008DADF0 /* EventDescriptionCell.xib in Resources */,
 				EABE911D265A644000B15A31 /* AddCategoryView.xib in Resources */,
+				EA14088F265C6C8C008DADF0 /* EventParticipantsCell.xib in Resources */,
 				EABEAD522603A0B3007F2020 /* SignInView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -884,6 +1002,7 @@
 				EA952E4A26494D4C00B0A882 /* CategoryPresenter.swift in Sources */,
 				EA14084C265C27BE008DADF0 /* EventTypeCell.swift in Sources */,
 				EA140862265C2E4D008DADF0 /* EventTypeServiceApi.swift in Sources */,
+				EA140891265D048C008DADF0 /* DetailedEventController.swift in Sources */,
 				EA140842265C27B4008DADF0 /* EventType.swift in Sources */,
 				EA140854265C2B5B008DADF0 /* AddEventTypeProtocols.swift in Sources */,
 				EAEB82FF2604DCE000DCCCF9 /* ViewForInputAccesory.swift in Sources */,
@@ -894,6 +1013,7 @@
 				EA2076FE26419F90008C5450 /* AddEventProtocols.swift in Sources */,
 				EAAECF8926120F83000564C2 /* SlideCell.swift in Sources */,
 				EA5AB59025FB6A3B000A46EE /* EventsView.swift in Sources */,
+				EA140887265C6BE2008DADF0 /* EventDateCell.swift in Sources */,
 				EA5AB5A025FB6A3B000A46EE /* OnboardingView.swift in Sources */,
 				EA696210265A5037008BB5D0 /* AddCategoryController.swift in Sources */,
 				EA9B71232653B03A00C8233F /* CategoryServiceApi.swift in Sources */,
@@ -902,11 +1022,14 @@
 				EAA0007E25FBB650007426C1 /* StyleUtils.swift in Sources */,
 				EADF79662603AA4200B56C95 /* MDTextField.swift in Sources */,
 				EA5AB58D25FB6A3B000A46EE /* Event.swift in Sources */,
+				EA64A9A02660235100D8093A /* ProfileModels.swift in Sources */,
 				EA02BD54261F451300F1B1A6 /* Grid.swift in Sources */,
 				EA2076FC26419F4E008C5450 /* AddEventPresenter.swift in Sources */,
 				EAA0006425FB727A007426C1 /* ButtonDefault.swift in Sources */,
 				EA952E4826494D3A00B0A882 /* CategoryController.swift in Sources */,
 				EAA0FFF225FB706A007426C1 /* AuthService.swift in Sources */,
+				EA64A993266021D300D8093A /* ProfileProtocols.swift in Sources */,
+				EA64A9A52660384700D8093A /* DeepLinkNavigator.swift in Sources */,
 				EA070207264C0AFE00B5DE96 /* EventsProtocols.swift in Sources */,
 				EA140855265C2B5B008DADF0 /* AddEventTypePresenter.swift in Sources */,
 				EA140860265C2E4D008DADF0 /* EventTypeModels.swift in Sources */,
@@ -925,12 +1048,16 @@
 				EA140856265C2B5B008DADF0 /* EventTypeDto.swift in Sources */,
 				EAAECFB126149665000564C2 /* SignInProtocols.swift in Sources */,
 				EA952E4E2649554000B0A882 /* CategoryDataSource.swift in Sources */,
+				EA64A99A2660220A00D8093A /* ProfileView.swift in Sources */,
 				EA140843265C27B4008DADF0 /* EventTypeController.swift in Sources */,
 				EA5AB59925FB6A3B000A46EE /* AddEventController.swift in Sources */,
+				EA14087B265C6143008DADF0 /* EventViewModelItems.swift in Sources */,
+				EA140880265C68F7008DADF0 /* EventDescriptionCell.swift in Sources */,
 				EA5AB59625FB6A3B000A46EE /* SignUpController.swift in Sources */,
 				EAA0006125FB727A007426C1 /* Assets.swift in Sources */,
-				EA9B71282659444500C8233F /* DetailedEventController.swift in Sources */,
+				EA64A99F2660235100D8093A /* ProfileService.swift in Sources */,
 				EAAECFA526148EEE000564C2 /* StartPresenter.swift in Sources */,
+				EA140889265C6C13008DADF0 /* EventParticipantsCell.swift in Sources */,
 				EAC65809261DCE8F003EC46B /* SignUpProtocols.swift in Sources */,
 				EA14085A265C2B62008DADF0 /* AddEventTypeView.swift in Sources */,
 				EAA0007325FB7652007426C1 /* StartView.swift in Sources */,
@@ -942,25 +1069,30 @@
 				EAA0007625FB8669007426C1 /* ButtonSignIn.swift in Sources */,
 				EA5AB59125FB6A3B000A46EE /* EventCell.swift in Sources */,
 				EAAECFB62614CD8C000564C2 /* PasswordResetProtocols.swift in Sources */,
-				EA9B712B2659446100C8233F /* DetailedEventView.swift in Sources */,
 				EA5AB59C25FB6A3B000A46EE /* OnboardingController.swift in Sources */,
+				EA64A995266021E100D8093A /* ProfilePresenter.swift in Sources */,
 				EA2077022641A35F008C5450 /* EventModels.swift in Sources */,
+				EA64A9A32660363C00D8093A /* DeepLinkType.swift in Sources */,
 				EA69620C265A5009008BB5D0 /* AddCategoryProtocols.swift in Sources */,
+				EA64A9A12660235100D8093A /* ProfileServiceApi.swift in Sources */,
+				EA64A997266021ED00D8093A /* ProfileController.swift in Sources */,
 				EA5AB59D25FB6A3B000A46EE /* OnboardingModel.swift in Sources */,
 				EA5AB59325FB6A3B000A46EE /* StartController.swift in Sources */,
 				EA3C11BC26050CDB00874546 /* EnterEmailNextView.swift in Sources */,
 				EA2077062641A687008C5450 /* EventServiceApi.swift in Sources */,
+				EA14087D265C642F008DADF0 /* EventViewModel.swift in Sources */,
 				EA140861265C2E4D008DADF0 /* EventTypeService.swift in Sources */,
 				EABEAD4E2600E208007F2020 /* SignInView.swift in Sources */,
 				EAA0006325FB727A007426C1 /* ButtonSecondary.swift in Sources */,
 				EAAECF9D26147D35000564C2 /* PasswordReset.swift in Sources */,
 				EA264C7825EF72320048FD41 /* AppDelegate.swift in Sources */,
 				EADF79782603C68A00B56C95 /* MDScrollView.swift in Sources */,
+				EA140894265F8AB4008DADF0 /* URLPath.swift in Sources */,
 				EAA0FFF125FB706A007426C1 /* AuthModels.swift in Sources */,
 				EABE9120265A69A200B15A31 /* CategoryDto.swift in Sources */,
 				EABEAD4A2600BA93007F2020 /* SignInController.swift in Sources */,
-				EA9B712D2659576400C8233F /* DetailedEventDataSource.swift in Sources */,
 				EA5AB59225FB6A3B000A46EE /* DateSectionHeader.swift in Sources */,
+				EA140879265C5FF0008DADF0 /* EventViewModelItem.swift in Sources */,
 				EABE911E265A644000B15A31 /* AddCategoryView.swift in Sources */,
 				EAAECFA926148F4E000564C2 /* StartProtocols.swift in Sources */,
 				EA07020A264C647800B5DE96 /* CategoryModels.swift in Sources */,

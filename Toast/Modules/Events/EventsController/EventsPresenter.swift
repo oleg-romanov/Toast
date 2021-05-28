@@ -28,8 +28,19 @@ extension EventsPresenter: EventsViewOutput {
             case let .success(events: events):
                 self?.view?.loadEvents(events: events)
             case let .failure(error: error):
-                // TODO: Сделать показ ошибки
-                break
+                print(error)
+                // Сделать показ ошибки
+            }
+        }
+    }
+
+    func getEvent(id: Int) {
+        service.getEvent(id: id) { [weak self] result in
+            switch result {
+            case let .success(event: event):
+                self?.view?.presentDetailedEvent(event: event)
+            case let .failure(error: error):
+                print(error)
             }
         }
     }

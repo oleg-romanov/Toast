@@ -43,7 +43,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="0qP-R3-5FI">
-                                    <rect key="frame" x="0.0" y="140.5" width="414" height="216"/>
+                                    <rect key="frame" x="16" y="140.5" width="382" height="216"/>
                                 </datePicker>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Категория" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAc-Wm-wno">
                                     <rect key="frame" x="16" y="376.5" width="382" height="20"/>
@@ -131,7 +131,7 @@
                                 <constraint firstItem="W9W-Ye-UVy" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" id="Lro-MC-sp3"/>
                                 <constraint firstAttribute="trailing" secondItem="7sv-Jo-WkN" secondAttribute="trailing" constant="16" id="MiZ-40-TCb"/>
                                 <constraint firstItem="Xdw-8i-RWo" firstAttribute="centerY" secondItem="W9W-Ye-UVy" secondAttribute="centerY" id="Omy-Z3-yby"/>
-                                <constraint firstItem="0qP-R3-5FI" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" id="OvF-ai-YCl"/>
+                                <constraint firstItem="0qP-R3-5FI" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" constant="16" id="OvF-ai-YCl"/>
                                 <constraint firstAttribute="trailing" secondItem="sGp-kK-eic" secondAttribute="trailing" constant="16" id="QOY-yP-Ydr"/>
                                 <constraint firstItem="Dvh-Yv-FLT" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" id="RHQ-T1-3SG"/>
                                 <constraint firstAttribute="trailing" secondItem="Dvh-Yv-FLT" secondAttribute="trailing" id="RQG-uI-VpZ"/>
@@ -148,7 +148,7 @@
                                 <constraint firstItem="MaM-mP-n3l" firstAttribute="trailing" secondItem="sGp-kK-eic" secondAttribute="trailing" id="pYU-JP-jM0"/>
                                 <constraint firstAttribute="trailing" secondItem="q3b-8D-z7n" secondAttribute="trailing" constant="16" id="pxd-Dy-LLw"/>
                                 <constraint firstItem="YtX-wn-gOQ" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" constant="16" id="qJ2-6a-1aR"/>
-                                <constraint firstAttribute="trailing" secondItem="0qP-R3-5FI" secondAttribute="trailing" id="x95-qV-IA6"/>
+                                <constraint firstAttribute="trailing" secondItem="0qP-R3-5FI" secondAttribute="trailing" constant="16" id="x95-qV-IA6"/>
                             </constraints>
                         </view>
                     </subviews>

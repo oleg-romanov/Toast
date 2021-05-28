@@ -6,6 +6,7 @@
 //  Copyright © 2020 Oleg Romanov. All rights reserved.
 //
 
+import KeychainSwift
 import UIKit
 
 @UIApplicationMain
@@ -14,21 +15,38 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
 
     lazy var window: UIWindow? = UIWindow()
 
+    let keychain = KeychainSwift(keyPrefix: Keys.keyPrefix)
+
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         AppDelegate.shared = self
-//        if UserDefaults.standard.string(forKey: "token") == nil {
-//            window?.rootViewController = OnboardingController()
-//        } else {
-//            let navigationController = UINavigationController(rootViewController: EventsContoller())
-//            window?.rootViewController = navigationController
-//        }
-        let viewController = StartController()
-        let presenter = StartPresenter(view: viewController)
-        viewController.presenter = presenter
+        let firstController: UIViewController
+        if keychain.get(Keys.token) == nil {
+            let viewController = StartController()
+            let presenter = StartPresenter(view: viewController)
+            viewController.presenter = presenter
+            firstController = viewController
+        } else {
+            let viewController = EventsContoller()
+            let presenter = EventsPresenter(view: viewController)
+            viewController.presenter = presenter
+            firstController = viewController
+        }
 
-        let nav = UINavigationController(rootViewController: viewController)
+        let nav = UINavigationController(rootViewController: firstController)
         window?.rootViewController = nav
         window?.makeKeyAndVisible()
+        DeepLinkNavigator.shared.window = window
+        return true
+    }
+
+    func application(
+        _ app: UIApplication,
+        open url: URL,
+        options: [UIApplication.OpenURLOptionsKey: Any] = [:]
+    ) -> Bool {
+        if let deepLink = DeepLinkType.handle(url: url) {
+            DeepLinkNavigator.shared.proceedToDeepLink(deepLink)
+        }
         return true
     }
 }

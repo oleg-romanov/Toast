@@ -24,6 +24,7 @@ struct Event: Decodable {
     var category: Category
     var eventType: EventType
     var user: User
+    var participants: [User]
 }
 
 struct User: Codable {

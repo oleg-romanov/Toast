@@ -1,24 +1,23 @@
 //
-//  EventTypeServiceApi.swift
+//  EventServiceApi.swift
 //  Toast
 //
-//  Created by Олег Романов on 5/24/21.
+//  Created by Олег Романов on 5/4/21.
 //
 
 import Foundation
 import KeychainSwift
 import Moya
 
-enum EventTypeServiceApi {
-    case createEventType(eventType: EventTypeDto)
-    case getAllEventTypes
+enum ProfileServiceApi {
+    case getProfile
 }
 
-extension EventTypeServiceApi: AccessTokenAuthorizable {
+extension ProfileServiceApi: AccessTokenAuthorizable {
     public var authorizationType: AuthorizationType? { return .bearer }
 }
 
-extension EventTypeServiceApi: TargetType {
+extension ProfileServiceApi: TargetType {
     var keychain: KeychainSwift {
         return KeychainSwift(keyPrefix: Keys.keyPrefix)
     }
@@ -29,18 +28,14 @@ extension EventTypeServiceApi: TargetType {
 
     var path: String {
         switch self {
-        case .createEventType:
-            return "/type"
-        case .getAllEventTypes:
-            return "/type"
+        case .getProfile:
+            return "/user"
         }
     }
 
     var method: Moya.Method {
         switch self {
-        case .createEventType:
-            return .post
-        case .getAllEventTypes:
+        case .getProfile:
             return .get
         }
     }
@@ -51,10 +46,7 @@ extension EventTypeServiceApi: TargetType {
 
     var task: Task {
         switch self {
-        case let .createEventType(eventType):
-            let requestBody = CreateEventTypeRequest(name: eventType.name)
-            return .requestJSONEncodable(requestBody)
-        case .getAllEventTypes:
+        case .getProfile:
             return .requestPlain
         }
     }

@@ -16,7 +16,7 @@ enum AuthServiceApi {
 
 extension AuthServiceApi: TargetType {
     var baseURL: URL {
-        return URL(string: "http://localhost:8080")!
+        return URL(string: URLPath.path)!
     }
 
     var path: String {

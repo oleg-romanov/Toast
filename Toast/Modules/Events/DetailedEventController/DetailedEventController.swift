@@ -2,15 +2,58 @@
 //  DetailedEventController.swift
 //  Toast
 //
-//  Created by Олег Романов on 5/22/21.
+//  Created by Олег Романов on 5/25/21.
 //
 
 import UIKit
 
 class DetailedEventController: UIViewController {
-    var customView = DetailedEventView()
+    let viewModel: EventViewModel
+    let event: Event
+    var tableView = UITableView()
 
     override func loadView() {
-        view = customView
+        view = tableView
+    }
+
+    init(event: Event) {
+        self.event = event
+        self.viewModel = EventViewModel(event: event)
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        tableView.dataSource = viewModel
+
+        tableView.estimatedRowHeight = 100
+        tableView.rowHeight = UITableView.automaticDimension
+
+        tableView.register(EventParticipantsCell.nib, forCellReuseIdentifier: "ParticipantCell")
+        tableView.register(EventDateCell.nib, forCellReuseIdentifier: "DateCell")
+        tableView.register(EventDescriptionCell.nib, forCellReuseIdentifier: "DescriptionCell")
+
+        setupNavItem()
+    }
+
+    private func setupNavItem() {
+        let shareButton = UIBarButtonItem(title: "Share", style: .plain, target: self, action: #selector(share))
+        navigationItem.rightBarButtonItem = shareButton
+    }
+
+    @objc
+    private func share() {
+        let text = "toast://event?id=\(event.id)"
+        let activityController = UIActivityViewController(
+            activityItems: [text], applicationActivities: nil
+        )
+        activityController.popoverPresentationController?.sourceView = view
+        present(activityController, animated: true, completion: nil)
     }
 }

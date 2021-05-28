@@ -18,9 +18,22 @@ final class EventsContoller: UIViewController {
 
     // MARK: - Life cycle
 
-    override func loadView() {
+    init() {
+        super.init(nibName: nil, bundle: nil)
         view = customView
+        setup()
+        addActionHandlers()
     }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
+//    override func loadView() {
+//        view = customView
+//
+//    }
 
     override func viewDidLoad() {
         setup()
@@ -30,6 +43,9 @@ final class EventsContoller: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         reloadEvents()
+        customView.dataSource?.detailedEventClosure = { [weak self] event in
+            self?.presentDetailedEvent(event: event)
+        }
     }
 
     // MARK: - Init
@@ -38,6 +54,7 @@ final class EventsContoller: UIViewController {
         presenter = EventsPresenter(view: self)
         navigationItem.title = Text.Events.title
         navigationItem.rightBarButtonItem = customView.addPersonButton
+        customView.initDataSource()
     }
 
     // MARK: - Action handlers
@@ -53,6 +70,12 @@ final class EventsContoller: UIViewController {
         addEventController.presenter = addEventPresenter
 //        addEventController.delegate = self
         navigationController?.pushViewController(addEventController, animated: true)
+    }
+
+    // MARK: - In
+
+    func showEvent(id: Int) {
+        presenter?.getEvent(id: id)
     }
 }
 
@@ -70,6 +93,11 @@ final class EventsContoller: UIViewController {
 // }
 
 extension EventsContoller: EventsViewInput {
+    func presentDetailedEvent(event: Event) {
+        let detailedVC = DetailedEventController(event: event)
+        navigationController?.pushViewController(detailedVC, animated: true)
+    }
+
     func reloadEvents() {
         presenter?.getAllEvents()
     }

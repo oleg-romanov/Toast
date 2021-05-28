@@ -20,6 +20,8 @@ class EventTypeDataSource: NSObject {
 
     var addEventTypeClosure: (() -> Void)?
 
+    var selectedCellForIndexPath: IndexPath?
+
     var tableView: UITableView
 
     init(tableView: UITableView) {
@@ -59,35 +61,17 @@ extension EventTypeDataSource: UITableViewDataSource {
 extension EventTypeDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-
-//        if indexPath.row < tableView.numberOfRows(inSection: 0) - 1 {
-//            if cell?.accessoryType != .checkmark, !oneCellChosen {
-//                oneCellChosen = true
-//                cell?.accessoryType = .checkmark
-//                closure?(data[indexPath.row].id, data[indexPath.row].name)
-//            } else if cell?.accessoryType == .checkmark {
-//                cell?.accessoryType = .none
-//                oneCellChosen = false
-//            }
-//        } else {
-//            addEventTypeClosure?()
-//        }
-
-        if indexPath.row == tableView.numberOfRows(inSection: 0) - 1 {
+        if let selectedIndexPath = selectedCellForIndexPath {
+            tableView.cellForRow(at: selectedIndexPath)?.accessoryType = .none
+        }
+        if indexPath.row != tableView.numberOfRows(inSection: 0) - 1 {
+            selectedCellForIndexPath = indexPath
+            cell?.accessoryType = .checkmark
+        } else {
             addEventTypeClosure?()
             return
         }
-
-        for row in 0 ..< tableView.numberOfRows(inSection: 0) - 1 {
-            let myIndexPath = IndexPath(row: row, section: 0)
-            if tableView.cellForRow(at: myIndexPath)?.accessoryType == .checkmark {
-                tableView.cellForRow(at: myIndexPath)?.accessoryType = .none
-            }
-        }
-
-        cell?.accessoryType = .checkmark
         closure?(data[indexPath.row].id, data[indexPath.row].name)
-
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
