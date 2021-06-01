@@ -77,7 +77,6 @@ extension SignInController: SignInViewInput {
         let eventsVC = EventsContoller()
         let eventsPresenter = EventsPresenter(view: eventsVC)
         eventsVC.presenter = eventsPresenter
-        let navigationController = UINavigationController(rootViewController: eventsVC)
         guard let window = AppDelegate.shared?.window else {
             return
         }
