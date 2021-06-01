@@ -8,9 +8,9 @@
 import UIKit
 
 class Tabbar: UITabBarController {
-    init() {
+    init(_ fromDeepLink: Bool = false, _ eventId: Int? = nil) {
         super.init(nibName: nil, bundle: nil)
-        setup()
+        setup(fromDeepLink, eventId)
     }
 
     @available(*, unavailable)
@@ -18,7 +18,7 @@ class Tabbar: UITabBarController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setup() {
+    private func setup(_ fromDeepLink: Bool = false, _ eventId: Int? = nil) {
         let profileVC = ProfileController()
         let profilPresenter = ProfilePresenter(view: profileVC)
         profileVC.presenter = profilPresenter
@@ -35,6 +35,9 @@ class Tabbar: UITabBarController {
         profileNav.title = "Профиль"
         eventsNav.title = "События"
 
+        if fromDeepLink, let id = eventId {
+            eventsVC.showEvent(id: id)
+        }
         viewControllers = [eventsNav, profileNav]
     }
 }

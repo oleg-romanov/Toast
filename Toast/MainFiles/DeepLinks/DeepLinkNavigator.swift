@@ -18,8 +18,7 @@ class DeepLinkNavigator {
             let eventsVC = EventsContoller()
             let eventsPresenter = EventsPresenter(view: eventsVC)
             eventsVC.presenter = eventsPresenter
-            let tabbar = Tabbar()
-            eventsVC.showEvent(id: id)
+            let tabbar = Tabbar(true, id)
             window?.rootViewController = tabbar
         }
     }
