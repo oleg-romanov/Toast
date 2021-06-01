@@ -128,7 +128,7 @@ class StartView: UIView {
             if ScreenSize.current != .sizeIPhoneSE {
                 make.bottom.equalTo(signInAsGuest.snp.top).inset(-appearance.xxxlSpace)
             } else {
-                make.bottom.equalTo(signInAsGuest.snp.top).inset(-appearance.lSpace)
+                make.bottom.equalTo(signInAsGuest.snp.top).inset(-appearance.mSpace)
             }
             // на se коэфф: 0,5; на 7: 0,7 на 10: 1
             make.centerX.equalToSuperview()
@@ -139,19 +139,27 @@ class StartView: UIView {
             make.centerX.equalToSuperview()
             make.height.equalTo(Appearance.heightOfButton)
             make.width.equalTo(Appearance.buttonWidth)
-            make.bottom.equalTo(signInWithEmail.snp.top).inset(-appearance.xxxlSpace)
+            if ScreenSize.current != .sizeIPhoneSE {
+                make.bottom.equalTo(signInWithEmail.snp.top).inset(-appearance.xxxlSpace)
+            } else {
+                make.bottom.equalTo(signInWithEmail.snp.top).inset(-appearance.xxlSpace)
+            }
         }
         signInWithFacebook.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(Appearance.heightOfButton)
             make.width.equalTo(Appearance.buttonWidth)
-            make.bottom.equalTo(signInWithGoogle.snp.top).inset(-appearance.mSpace)
+            if ScreenSize.current != .sizeIPhoneSE {
+                make.bottom.equalTo(signInWithGoogle.snp.top).inset(-appearance.sSpace)
+            } else {
+                make.bottom.equalTo(signInWithGoogle.snp.top).inset(-appearance.sSpace)
+            }
         }
         signInWithApple.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.height.equalTo(Appearance.heightOfButton)
             make.width.equalTo(Appearance.buttonWidth)
-            make.bottom.equalTo(signInWithFacebook.snp.top).inset(-appearance.mSpace)
+            make.bottom.equalTo(signInWithFacebook.snp.top).inset(-appearance.sSpace)
         }
         signInAsGuest.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
