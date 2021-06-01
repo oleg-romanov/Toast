@@ -69,8 +69,9 @@ extension SignUpController: SignUpInput {
         else {
             return
         }
+        let tabbar = Tabbar()
         UIView.transition(with: window, duration: 0.3, options: .transitionFlipFromLeft, animations: {
-            window.rootViewController = navigationController
+            window.rootViewController = tabbar
         })
     }
 
