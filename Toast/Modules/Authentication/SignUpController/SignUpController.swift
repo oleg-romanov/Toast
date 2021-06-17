@@ -55,11 +55,17 @@ class SignUpController: UIViewController {
             print("Пароли не совпадают...")
             return
         }
+        customView?.spinner.isHidden = false
+        customView?.spinner.startAnimating()
         presenter?.signUpWithEmail(email: email, password: password, name: name)
     }
 }
 
 extension SignUpController: SignUpInput {
+    func stopAnimating() {
+        customView?.spinner.stopAnimating()
+    }
+
     func presentEvents() {
         let eventsVC = EventsContoller()
         let eventsPresenter = EventsPresenter(view: eventsVC)

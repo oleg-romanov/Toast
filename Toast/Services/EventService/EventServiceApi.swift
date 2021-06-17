@@ -13,6 +13,7 @@ enum EventServiceApi {
     case createEvent(event: EventDto)
     case getAllEvents
     case getEvent(id: Int)
+    case deleteEvent(id: Int)
 }
 
 extension EventServiceApi: AccessTokenAuthorizable {
@@ -36,6 +37,8 @@ extension EventServiceApi: TargetType {
             return "/event"
         case let .getEvent(id):
             return "/event/\(id)"
+        case let .deleteEvent(id):
+            return "/event/\(id)"
         }
     }
 
@@ -47,6 +50,8 @@ extension EventServiceApi: TargetType {
             return .get
         case .getEvent:
             return .get
+        case .deleteEvent:
+            return .delete
         }
     }
 
@@ -66,6 +71,8 @@ extension EventServiceApi: TargetType {
         case .getAllEvents:
             return .requestPlain
         case .getEvent:
+            return .requestPlain
+        case .deleteEvent:
             return .requestPlain
         }
     }

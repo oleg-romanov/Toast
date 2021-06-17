@@ -9,10 +9,6 @@
 import SPAlert
 import UIKit
 
-// protocol AddEventControllerDelegate: AnyObject {
-//    func addEvent(_ person: Event)
-// }
-
 class AddEventController: UIViewController {
     // MARK: - Properties
 
@@ -87,12 +83,16 @@ class AddEventController: UIViewController {
         }
 
         let event = EventDto(name: name, description: descriptionTextView, date: date, categoryId: categoryId, eventTypeId: eventTypeId)
+        customView?.spinner.isHidden = false
+        customView?.spinner.startAnimating()
         presenter?.createEvent(event: event) { [weak self] result in
             switch result {
-            case .success():
+            case let .success(event):
+                SPAlert.present(title: event.name, message: "Событие создано", preset: .done)
                 self?.navigationController?.popViewController(animated: true)
             case let .failure(error):
-                print("Ошибка: \(error)")
+                self?.showError(error: error)
+                self?.navigationController?.popViewController(animated: true)
             }
         }
     }
@@ -124,10 +124,15 @@ class AddEventController: UIViewController {
 
 extension AddEventController: AddEventViewInput {
     func showError(error: Error) {
-        SPAlert.present(message: error.localizedDescription)
+        let alert = SPAlertView(title: "Событие не создано", message: "Ошибка:  \(error.localizedDescription)", preset: .error)
+        alert.duration = 3
+        alert.present()
     }
 }
 
 extension AddEventController: CategoryDelegate {
     func sendCategoryId(categoryId: Int) {}
+    func stopAnimating() {
+        customView?.spinner.stopAnimating()
+    }
 }

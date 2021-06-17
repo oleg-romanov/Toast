@@ -21,6 +21,7 @@ class AddEventView: UIView {
     @IBOutlet var categoryButton: UIButton!
     @IBOutlet var typeButton: UIButton!
     @IBOutlet var descriptionTextView: UITextView!
+    @IBOutlet var spinner: UIActivityIndicatorView!
 
     lazy var doneButton = UIBarButtonItem(
         title: Text.AddEvent.done, style: .done, target: nil, action: nil
@@ -34,6 +35,7 @@ class AddEventView: UIView {
     }
 
     private func setupStyle() {
+        spinner.isHidden = true
         descriptionTextView.delegate = self
         descriptionTextView.text = "Нажмите, чтобы добавить описание"
         descriptionTextView.textColor = .lightGray

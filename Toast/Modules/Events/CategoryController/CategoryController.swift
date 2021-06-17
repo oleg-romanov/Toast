@@ -23,10 +23,6 @@ class CategoryController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         reloadCategories()
         customView.dataSource?.addCategoryClosure = { [weak self] in
@@ -36,8 +32,6 @@ class CategoryController: UIViewController {
 
     private func setup() {
         navigationItem.title = Text.Categories.title
-//        navigationItem.rightBarButtonItem = customView.addPersonButton
-//        customView?.dataSource?.delegate = self
         customView.initDataSource()
     }
 }

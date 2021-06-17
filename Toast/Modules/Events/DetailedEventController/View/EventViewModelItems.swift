@@ -23,25 +23,25 @@ class EventViewModelDateItem: EventViewModelItem {
     }
 }
 
-class EventViewModelParticipantItem: EventViewModelItem {
-    var type: EventViewModelItemType {
-        return .participants
-    }
-
-    var sectionTitle: String {
-        return "Участники"
-    }
-
-    var participants: [User]
-
-    var rowCount: Int {
-        return participants.count
-    }
-
-    init(participants: [User]) {
-        self.participants = participants
-    }
-}
+// class EventViewModelParticipantItem: EventViewModelItem {
+//    var type: EventViewModelItemType {
+//        return .participants
+//    }
+//
+//    var sectionTitle: String {
+//        return ""
+//    }
+//
+//    var participants: [User]
+//
+//    var rowCount: Int {
+//        return participants.count
+//    }
+//
+//    init(participants: [User]) {
+//        self.participants = participants
+//    }
+// }
 
 class EventViewModelDescriptionItem: EventViewModelItem {
     var type: EventViewModelItemType {

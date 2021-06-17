@@ -17,6 +17,7 @@ class SignInView: UIView {
     @IBOutlet var passwordRecoveryButton: UIButton!
     @IBOutlet var registrationButton: UIButton!
     lazy var signInButton = ButtonDefault(title: "Войти")
+    @IBOutlet var spinner: UIActivityIndicatorView!
 
     // MARK: - Init
 
@@ -24,6 +25,7 @@ class SignInView: UIView {
         addSubview(signInButton)
         makeConstraints()
         addActionHandlers()
+        spinner.isHidden = true
     }
 
     private func makeConstraints() {

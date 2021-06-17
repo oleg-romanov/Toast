@@ -113,6 +113,13 @@
                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 </textView>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Swq-bG-spz">
+                                    <rect key="frame" x="157" y="358.5" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="6jf-lM-Fbo"/>
+                                        <constraint firstAttribute="width" constant="100" id="mz3-DG-8rk"/>
+                                    </constraints>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -124,6 +131,7 @@
                                 <constraint firstAttribute="bottom" secondItem="0qP-R3-5FI" secondAttribute="bottom" constant="460.5" id="7ij-rv-yXH"/>
                                 <constraint firstItem="jBb-aO-Wzv" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" constant="16" id="7om-76-2ZC"/>
                                 <constraint firstItem="q3b-8D-z7n" firstAttribute="top" secondItem="jBb-aO-Wzv" secondAttribute="bottom" constant="8" id="9hb-Zx-8Nv"/>
+                                <constraint firstItem="Swq-bG-spz" firstAttribute="centerY" secondItem="2a8-LO-Guo" secondAttribute="centerY" id="BN2-hC-FnH"/>
                                 <constraint firstItem="fAc-Wm-wno" firstAttribute="leading" secondItem="2a8-LO-Guo" secondAttribute="leading" constant="16" id="FcK-6s-czD"/>
                                 <constraint firstAttribute="trailing" secondItem="fAc-Wm-wno" secondAttribute="trailing" constant="16" id="Ibd-O6-EeV"/>
                                 <constraint firstItem="fAc-Wm-wno" firstAttribute="top" secondItem="0qP-R3-5FI" secondAttribute="bottom" constant="20" id="K7n-EC-TNb"/>
@@ -139,6 +147,7 @@
                                 <constraint firstAttribute="trailing" secondItem="YtX-wn-gOQ" secondAttribute="trailing" constant="16" id="Y1F-YT-aXK"/>
                                 <constraint firstItem="7sv-Jo-WkN" firstAttribute="centerY" secondItem="Dvh-Yv-FLT" secondAttribute="centerY" id="Znf-ik-xMV"/>
                                 <constraint firstItem="MaM-mP-n3l" firstAttribute="top" secondItem="sGp-kK-eic" secondAttribute="bottom" constant="25" id="dkL-zU-ftB"/>
+                                <constraint firstItem="Swq-bG-spz" firstAttribute="centerX" secondItem="2a8-LO-Guo" secondAttribute="centerX" id="dnI-wV-fgh"/>
                                 <constraint firstItem="Dvh-Yv-FLT" firstAttribute="top" secondItem="YtX-wn-gOQ" secondAttribute="bottom" constant="10" id="l8v-6g-VlR"/>
                                 <constraint firstItem="MaM-mP-n3l" firstAttribute="leading" secondItem="sGp-kK-eic" secondAttribute="leading" id="lft-PT-Q4r"/>
                                 <constraint firstItem="jBb-aO-Wzv" firstAttribute="top" secondItem="Dvh-Yv-FLT" secondAttribute="bottom" constant="20" id="llR-sD-tL7"/>
@@ -179,6 +188,7 @@
                 <outlet property="descriptionTextView" destination="q3b-8D-z7n" id="ibt-YG-LQU"/>
                 <outlet property="nameTextField" destination="sGp-kK-eic" id="ziA-z2-BQQ"/>
                 <outlet property="scrollView" destination="f3h-8u-BMP" id="Ncp-9N-K9E"/>
+                <outlet property="spinner" destination="Swq-bG-spz" id="gpE-WE-Kgb"/>
                 <outlet property="typeButton" destination="Dvh-Yv-FLT" id="xQc-xe-gzm"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="144.64285714285714"/>

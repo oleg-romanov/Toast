@@ -64,6 +64,13 @@
                                         <color key="titleColor" name="Blue"/>
                                     </state>
                                 </button>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="3fl-sN-XLU">
+                                    <rect key="frame" x="157" y="100" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="2Cz-wq-HJc"/>
+                                        <constraint firstAttribute="width" constant="100" id="dxD-qh-KYQ"/>
+                                    </constraints>
+                                </activityIndicatorView>
                             </subviews>
                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
@@ -75,6 +82,8 @@
                                 <constraint firstItem="59Y-hb-aX6" firstAttribute="top" secondItem="9oJ-pi-8O1" secondAttribute="bottom" id="fkL-Im-kH4"/>
                                 <constraint firstAttribute="trailing" secondItem="9oJ-pi-8O1" secondAttribute="trailing" constant="32" id="iSo-cZ-8Xa"/>
                                 <constraint firstItem="xNi-af-c3t" firstAttribute="top" secondItem="59Y-hb-aX6" secondAttribute="bottom" constant="26" id="ki2-sw-Fhc"/>
+                                <constraint firstItem="3fl-sN-XLU" firstAttribute="centerX" secondItem="Vle-dW-mle" secondAttribute="centerX" id="ntr-Hf-679"/>
+                                <constraint firstItem="3fl-sN-XLU" firstAttribute="centerY" secondItem="Vle-dW-mle" secondAttribute="centerY" id="pdh-bU-a2I"/>
                                 <constraint firstItem="59Y-hb-aX6" firstAttribute="leading" secondItem="Vle-dW-mle" secondAttribute="leading" constant="32" id="tfA-gb-M6Q"/>
                                 <constraint firstAttribute="trailing" secondItem="59Y-hb-aX6" secondAttribute="trailing" constant="32" id="xTc-MI-NVU"/>
                                 <constraint firstItem="9oJ-pi-8O1" firstAttribute="leading" secondItem="Vle-dW-mle" secondAttribute="leading" constant="32" id="xdb-4v-OE8"/>
@@ -105,6 +114,7 @@
                 <outlet property="passwordTextField" destination="59Y-hb-aX6" id="Eyw-M9-vOt"/>
                 <outlet property="registrationButton" destination="gko-L2-cih" id="NRK-c2-JUd"/>
                 <outlet property="scrollView" destination="4er-Mh-kM2" id="DGL-xR-7OC"/>
+                <outlet property="spinner" destination="3fl-sN-XLU" id="chw-FA-eVF"/>
             </connections>
             <point key="canvasLocation" x="128.98550724637681" y="108.48214285714285"/>
         </view>

@@ -44,4 +44,17 @@ extension EventsPresenter: EventsViewOutput {
             }
         }
     }
+
+    func deleteEvent(by id: Int, complition: @escaping (Result<String, Error>) -> Void) {
+        service.deleteEvent(id: id) { [weak self] result in
+            switch result {
+            case let .success(message: event):
+                complition(.success(event))
+//                self?.view?.presentDetailedEvent(event: event)
+            case let .failure(error: error):
+                complition(.failure(error))
+                print(error)
+            }
+        }
+    }
 }

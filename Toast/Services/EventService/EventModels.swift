@@ -36,3 +36,7 @@ struct GetAllEventsResponse: Decodable {
 struct GetOneEvent: Decodable {
     let event: Event
 }
+
+struct CreateEvent: Encodable {
+    let id: Int
+}

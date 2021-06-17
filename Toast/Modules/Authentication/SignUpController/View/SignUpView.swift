@@ -16,6 +16,7 @@ class SignUpView: UIView {
     @IBOutlet var emailTextField: MDTextField!
     @IBOutlet var passwordTextField: MDTextField!
     @IBOutlet var confirmPassTextField: MDTextField!
+    @IBOutlet var spinner: UIActivityIndicatorView!
 
     lazy var signUpButton = ButtonDefault(title: "Зарегистрироваться")
 
@@ -34,6 +35,7 @@ class SignUpView: UIView {
 
     private func setupStyle() {
         nameTextField.autocapitalizationType = .words
+        spinner.isHidden = true
     }
 
     private func makeContraints() {

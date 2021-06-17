@@ -22,12 +22,13 @@ final class AddEventPresener {
 }
 
 extension AddEventPresener: AddEventViewOutput {
-    func createEvent(event: EventDto, complition: @escaping (Result<Void, Error>) -> Void) {
+    func createEvent(event: EventDto, complition: @escaping (Result<Event, Error>) -> Void) {
         service.createEvent(event: event) { [weak self] result in
+            self?.view?.stopAnimating()
             switch result {
-            case let .success(event: event):
-                complition(.success(()))
-            case let .failure(error): // mistake here
+            case let .success(event):
+                complition(.success(event))
+            case let .failure(error):
                 complition(.failure(error))
                 self?.view?.showError(error: error)
             }

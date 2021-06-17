@@ -52,7 +52,6 @@ final class EventsView: UIView {
 
     private func setupStyle() {
         backgroundColor = Assets.background1.color
-//        dataSource.setTableView(tableView)
     }
 
     private func addSubviews() {

@@ -10,6 +10,7 @@ import Foundation
 protocol SignUpInput: AnyObject {
     func showError(message: String)
     func presentEvents()
+    func stopAnimating()
 }
 
 protocol SignUpOutput: AnyObject {

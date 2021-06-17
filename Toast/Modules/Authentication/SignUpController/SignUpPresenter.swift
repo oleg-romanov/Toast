@@ -24,6 +24,7 @@ final class SignUpPresenter {
 extension SignUpPresenter: SignUpOutput {
     func signUpWithEmail(email: String, password: String, name: String) {
         authService.signUp(name: name, email: email, password: password, completion: ({ [weak self] result in
+            self?.view?.stopAnimating()
             switch result {
             case let .success(tokenResponse):
                 self?.keychain.set(tokenResponse.token, forKey: Keys.token)

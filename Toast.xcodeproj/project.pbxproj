@@ -84,6 +84,7 @@
 		EA69620E265A5029008BB5D0 /* AddCategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620D265A5029008BB5D0 /* AddCategoryPresenter.swift */; };
 		EA696210265A5037008BB5D0 /* AddCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA69620F265A5037008BB5D0 /* AddCategoryController.swift */; };
 		EA6B9A162661011600EF9CB1 /* Tabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6B9A152661011600EF9CB1 /* Tabbar.swift */; };
+		EA89C83C26777E4A00FE783E /* HeaderForSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA89C83B26777E4A00FE783E /* HeaderForSections.swift */; };
 		EA952E4626494C5C00B0A882 /* CategoryProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */; };
 		EA952E4826494D3A00B0A882 /* CategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4726494D3A00B0A882 /* CategoryController.swift */; };
 		EA952E4A26494D4C00B0A882 /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */; };
@@ -210,6 +211,7 @@
 		EA69620D265A5029008BB5D0 /* AddCategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryPresenter.swift; sourceTree = "<group>"; };
 		EA69620F265A5037008BB5D0 /* AddCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryController.swift; sourceTree = "<group>"; };
 		EA6B9A152661011600EF9CB1 /* Tabbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabbar.swift; sourceTree = "<group>"; };
+		EA89C83B26777E4A00FE783E /* HeaderForSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderForSections.swift; sourceTree = "<group>"; };
 		EA952E4526494C5C00B0A882 /* CategoryProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProtocols.swift; sourceTree = "<group>"; };
 		EA952E4726494D3A00B0A882 /* CategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryController.swift; sourceTree = "<group>"; };
 		EA952E4926494D4C00B0A882 /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
@@ -354,6 +356,7 @@
 				EA140885265C6BBA008DADF0 /* ParticipantsCell */,
 				EA140884265C6BB3008DADF0 /* DateCell */,
 				EA140883265C6BA1008DADF0 /* DescriptionCell */,
+				EA89C83B26777E4A00FE783E /* HeaderForSections.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1035,6 +1038,7 @@
 				EA64A9A52660384700D8093A /* DeepLinkNavigator.swift in Sources */,
 				EA070207264C0AFE00B5DE96 /* EventsProtocols.swift in Sources */,
 				EA140855265C2B5B008DADF0 /* AddEventTypePresenter.swift in Sources */,
+				EA89C83C26777E4A00FE783E /* HeaderForSections.swift in Sources */,
 				EA140860265C2E4D008DADF0 /* EventTypeModels.swift in Sources */,
 				EAAECF8E26120FFF000564C2 /* PasswordResetController.swift in Sources */,
 				EAAECFA026147D7B000564C2 /* PasswordResetPresenter.swift in Sources */,

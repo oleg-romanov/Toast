@@ -15,21 +15,21 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-rl-AKF">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hB-rl-AKF">
+                    <rect key="frame" x="16" y="0.0" width="382" height="60"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                     <color key="textColor" systemColor="labelColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6hB-rl-AKF" secondAttribute="trailing" id="LCs-lh-La6"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6hB-rl-AKF" secondAttribute="trailing" constant="16" id="LCs-lh-La6"/>
                 <constraint firstItem="6hB-rl-AKF" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Vez-Sx-LAl"/>
-                <constraint firstItem="6hB-rl-AKF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="awY-LP-guy"/>
+                <constraint firstItem="6hB-rl-AKF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="awY-LP-guy"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6hB-rl-AKF" secondAttribute="bottom" id="qlj-Jf-iqP"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

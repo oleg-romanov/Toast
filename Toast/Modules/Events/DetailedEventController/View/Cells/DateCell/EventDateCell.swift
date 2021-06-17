@@ -16,8 +16,8 @@ class EventDateCell: UITableViewCell {
                 return
             }
             let dateFormatter = DateFormatter()
-            dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .medium
+            dateFormatter.dateFormat = "d MMMM YYYY"
+            dateFormatter.locale = Locale(identifier: "Ru")
             dateLabel.text = dateFormatter.string(from: item.date)
         }
     }

@@ -30,11 +30,6 @@ final class EventsContoller: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-//    override func loadView() {
-//        view = customView
-//
-//    }
-
     override func viewDidLoad() {
         setup()
         addActionHandlers()
@@ -45,6 +40,9 @@ final class EventsContoller: UIViewController {
         reloadEvents()
         customView.dataSource?.detailedEventClosure = { [weak self] event in
             self?.presentDetailedEvent(event: event)
+        }
+        customView.dataSource?.deleteEventClosure = { [weak self] id in
+            self?.deleteEvent(by: id)
         }
     }
 
@@ -68,7 +66,6 @@ final class EventsContoller: UIViewController {
         let addEventController = AddEventController()
         let addEventPresenter = AddEventPresener(view: addEventController)
         addEventController.presenter = addEventPresenter
-//        addEventController.delegate = self
         navigationController?.pushViewController(addEventController, animated: true)
     }
 
@@ -79,22 +76,11 @@ final class EventsContoller: UIViewController {
     }
 }
 
-// MARK: - AddEventControllerDelegate
-
-// extension EventsContoller: AddEventControllerDelegate {
-//    func addEvent(_ event: Event) {
-//        customView.addEvent(event)
-//        SPAlert.present(
-//            title: Text.Events.done,
-//            message: "\(event.name)" + Text.Events.message,
-//            preset: .done
-//        )
-//    }
-// }
-
 extension EventsContoller: EventsViewInput {
     func presentDetailedEvent(event: Event) {
         let detailedVC = DetailedEventController(event: event)
+        detailedVC.title = event.name
+        navigationItem.backButtonTitle = ""
         navigationController?.pushViewController(detailedVC, animated: true)
     }
 
@@ -104,5 +90,22 @@ extension EventsContoller: EventsViewInput {
 
     func loadEvents(events: [Event]) {
         customView.updateData(events)
+    }
+
+    func deleteEvent(by id: Int) {
+        if let presenter = presenter {
+            presenter.deleteEvent(by: id) { [weak self] result in
+                switch result {
+                case let .success(event):
+                    SPAlert.present(title: event, message: "Событие удалено", preset: .done)
+                case let .failure(error):
+                    self?.showError(message: error.localizedDescription)
+                }
+            }
+        }
+    }
+
+    func showError(message: String) {
+        SPAlert.present(title: "Событие не удалено", message: message, preset: .error)
     }
 }

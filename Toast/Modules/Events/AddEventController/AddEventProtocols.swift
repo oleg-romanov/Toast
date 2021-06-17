@@ -8,10 +8,10 @@
 import Foundation
 
 protocol AddEventViewInput: AnyObject {
-//    func presentCategories()
     func showError(error: Error)
+    func stopAnimating()
 }
 
 protocol AddEventViewOutput: AnyObject {
-    func createEvent(event: EventDto, complition: @escaping (Result<Void, Error>) -> Void)
+    func createEvent(event: EventDto, complition: @escaping (Result<Event, Error>) -> Void)
 }

@@ -66,11 +66,17 @@ class SignInController: UIViewController {
         else {
             return
         }
+        customView?.spinner.isHidden = false
+        customView?.spinner.startAnimating()
         presenter?.signInWithEmail(email: email, password: password)
     }
 }
 
 extension SignInController: SignInViewInput {
+    func stopAnimating() {
+        customView?.spinner.stopAnimating()
+    }
+
     func showError(message: String) {}
 
     func presentEvents() {

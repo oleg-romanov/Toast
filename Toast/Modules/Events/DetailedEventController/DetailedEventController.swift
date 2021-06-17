@@ -10,7 +10,11 @@ import UIKit
 class DetailedEventController: UIViewController {
     let viewModel: EventViewModel
     let event: Event
-    var tableView = UITableView()
+    var tableView: UITableView = {
+        let tableView = UITableView(frame: UIScreen.main.bounds, style: .plain)
+        tableView.tableFooterView = UIView()
+        return tableView
+    }()
 
     override func loadView() {
         view = tableView
@@ -31,6 +35,7 @@ class DetailedEventController: UIViewController {
         super.viewDidLoad()
 
         tableView.dataSource = viewModel
+        tableView.delegate = viewModel
 
         tableView.estimatedRowHeight = 100
         tableView.rowHeight = UITableView.automaticDimension

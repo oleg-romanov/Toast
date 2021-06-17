@@ -30,3 +30,7 @@ struct Event: Decodable {
 struct User: Codable {
     var name: String
 }
+
+struct Body: Decodable {
+    var body: String
+}

@@ -14,6 +14,7 @@ final class EventsDataSource: NSObject {
     private var data: [[Event]] = []
     private var tableView: UITableView?
     var detailedEventClosure: ((Event) -> Void)?
+    var deleteEventClosure: ((Int) -> Void)?
 
     init(tableView: UITableView) {
         self.tableView = tableView
@@ -24,12 +25,6 @@ final class EventsDataSource: NSObject {
     }
 
     // MARK: - Internal methods
-
-//    func setTableView(_ tableView: UITableView) {
-//        self.tableView = tableView
-//        tableView.delegate = self
-//        tableView.register(EventCell.self, forCellReuseIdentifier: "TableCell")
-//    }
 
     func updateData(_ data: [Event]) {
         self.data = []
@@ -119,5 +114,21 @@ extension EventsDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         detailedEventClosure?(data[indexPath.section][indexPath.row])
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") { _, indexPath in
+//            self.deleteEventClosure?(self.data[indexPath.section][indexPath.row].id)
+//            self.data[indexPath.section].remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .automatic)
+//            tableView.reloadData()
+//        }
+//        return [deleteAction]
+//    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        deleteEventClosure?(data[indexPath.section][indexPath.row].id)
+        data[indexPath.section].remove(at: indexPath.row)
+        tableView.reloadData()
     }
 }

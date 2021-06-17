@@ -21,6 +21,6 @@ extension EventViewModelItem {
 
 enum EventViewModelItemType {
     case date
-    case participants
+//    case participants
     case description
 }
